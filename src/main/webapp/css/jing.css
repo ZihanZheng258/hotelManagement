@@ -1,0 +1,81 @@
+header h2{
+    text-align: center;
+    font-size: 25px;
+}
+.hotel-info{
+    overflow: hidden;
+}
+.hotel-left {
+    float: left;
+    width: 60%;
+}
+.hotel-right{
+    float: right;
+    width: 40%;
+}
+.hotel-pic{
+    height: 200px;
+    width: 100%;
+}
+.hotel-detail-link{
+    margin: 20px 0;
+}
+.hotel-price {
+    bottom: 20%;
+}
+.hotel-rate {
+    top: 30%;
+}
+.hotel-rate, .hotel-price {
+    font-size: 20px;
+    color: #332211;
+    right: 5%;
+    position: absolute;
+    padding: 10px;
+    border: 2px solid #0a0;
+    border-radius: 10px;
+}
+
+.hotel-detail-image {
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 10px 1%;
+    height: 300px;
+}
+.hotel-description{
+    margin: 20px auto;
+}
+.hotel-service h5{
+    font-size: 18px;
+}
+.hotel-description p,  .hotel-service li, .hotel-room .table, .hotel-comment p{
+    font-size: 16px;
+}
+.hotel-comment {
+    margin: 30px auto;
+    width: 300px;
+    border: 2px solid #0a0;
+    border-radius: 10px;
+    padding: 10px;
+}
+.hotel-list {
+    margin-top: calc(10vh);
+    flex-direction: column;
+    justify-content: center;
+}
+.header{
+    height: calc(10vh);
+    margin-top: calc(5vh);
+}
+.hotel-name {
+    font-weight: bold;
+}
+.hotel-nation{
+    font-style: italic;
+}
+.hotel-frame{
+    padding: 10px;
+    border: 2px solid #0a0;
+    border-radius: 15px;
+}
