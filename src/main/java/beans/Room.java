@@ -14,7 +14,21 @@ public class Room {
     private double price;
     private int score;
     private String remark;
-    public int getId() {
+    private int level;
+    
+    public String getPicture() {
+		return picture;
+	}
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+	public int getLevel() {
+		return level;
+	}
+	public void setLevel(int level) {
+		this.level = level;
+	}
+	public int getId() {
 		return id;
 	}
 	public void setId(int id) {

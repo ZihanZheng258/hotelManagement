@@ -7,7 +7,6 @@ public class User {
     private String password;
     private String phoneNumber;
     private UserType type;
-    private String nickName;
     private String picture;
     private int ID;
     private double balance;
@@ -35,12 +34,6 @@ public class User {
 	}
 	public void setType(UserType type) {
 		this.type = type;
-	}
-	public String getNickName() {
-		return nickName;
-	}
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
 	}
 	public String getPicture() {
 		return picture;
