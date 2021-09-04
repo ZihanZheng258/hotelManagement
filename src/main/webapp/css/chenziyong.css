@@ -1,0 +1,70 @@
+
+
+.hr1{
+	 border: 0;
+	      border: 0;
+	       padding: 6px;
+	       background: linear-gradient(135deg, red, orange,green, blue, purple);
+	       --mask-image: repeating-linear-gradient(135deg, #000 0px, #000 1px, transparent 1px, transparent 6px);
+	       -webkit-mask-image: var(--mask-image);
+	       mask-image: var(--mask-image);
+		   width: 90%;
+}
+
+.card {
+    border: medium none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 32px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.card-overlay {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.card-img {
+    height: 300px;
+    object-fit: cover;
+    width: 120%;
+}
+.card-overlay .card-img-overlay {
+    margin: auto;  
+    text-align: center;
+    top: auto;
+	
+}
+
+ .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+
+  margin-bottom: 20px;
+}
+
+
+.tourist{
+	height: 200px;
+	object-fit: cover;
+	width: 120%;
+}
+
+.carousel {
+  width:100%;
+  height:100%;
+}
+.carousel img{
+	height: 500px;
+	object-fit: cover;
+	width: 100%;
+}
