@@ -2,18 +2,18 @@
   Created by IntelliJ IDEA.
   User: jingl
   Date: 2021/9/4
-  Time: 20:07
+  Time: 20:04
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Xiangyuan Villa</title>
-    <link rel="stylesheet" href="../utils/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jing.css">
-    <script src="../utils/jquery-3.6.0.min.js"></script>
-    <script src="../utils/bootstrap/js/bootstrap.js"></script>
+    <title>Li Jiang Apartment</title>
+    <link rel="stylesheet" href="../../utils/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jing.css">
+    <script src="../../utils/jquery-3.6.0.min.js"></script>
+    <script src="../../utils/bootstrap/js/bootstrap.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,13 +50,13 @@
                 <a class="nav-link" href="#">  Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> <img src="../image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
+                <a class="nav-link" href="#"> <img src="../../image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../image/image1/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
+                <a class="nav-link" href="#">  <img src="../../image/image1/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../image/image1/car.svg" alt="Bootstrap" width="10" >Car rentals</a>
+                <a class="nav-link" href="#">  <img src="../../image/image1/car.svg" alt="Bootstrap" width="10" >Car rentals</a>
             </li>
         </ul>
 
@@ -66,32 +66,31 @@
             </li>
             <li class="list-inline-item">
 
-                <a class="btn btn-success" href="//网站"> <img src="../image/image1/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
+                <a class="btn btn-success" href="//网站"> <img src="../../image/image1/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
             </li>
         </div>
     </div>
 </nav>
-
 <header>
-    <h2><b>Xiangyuan Villa</b></h2>
+    <h2><b>Li Jiang Apartment</b></h2>
     <hr>
     <div class="container">
-        <img src="../image/image1/villapicture5.jpg" class="hotel-detail-image" alt="hotel image detail">
-        <img src="../image/image1/villapicture6.jpg" class="hotel-detail-image" alt="hotel image detail">
+        <img src="../../image/image1/apartmentpicture5.jpg" class="hotel-detail-image" alt="hotel image detail">
+        <img src="../../image/image1/apartmentpicture6.jpg" class="hotel-detail-image" alt="hotel image detail">
     </div>
     <div class="hotel-description container">
-        <p>Xiangyuan villa is located in Beijing, China, surrounded by mountains, with a large swimming pool inside.</p>
-        <p>The villa offers free WiFi and free private parking inside</p>
-        <p>2.5km away from the villa, there is a great lake where residents can experience a fishing experience</p>
-        <p>Guest can also walk along the forest path and enjoy the natural scenery in the mountains</p>
+        <p>Li jiang apartment is located on Huaning Avenue in Shanghai, China, close to the harbor. The guest room can view the city through its own room window.</p>
+        <p>Each room has a fully equipped kitchenette and free wifi.</p>
+        <p>The apartment hotel also has a gym and breakfast buffet</p>
+        <p>The 700 meters away from the hotel is the famous Oriental Pearl scenic spot. Visitors can visit the scenery of Shanghai.</p>
     </div>
     <div class="hotel-service container text-warning">
         <h5>Popular services:</h5>
         <ol>
             <li>Free WIFI</li>
-            <li>one swimming pool</li>
             <li>Free parking</li>
             <li>Non smoking room</li>
+            <li>Gym</li>
             <li>Family room</li>
         </ol>
     </div>
@@ -110,63 +109,84 @@
             <tbody>
             <tr class="text-info">
                 <td>
-                    <p>Villa</p>
+                    <p>one bedroom apartment</p>
                     <p>Guest room facilities:</p>
-                    <p>Room area: 190 square meters</p>
-                    <p>Bedroom 1: 2 single beds: 1.8m x 2m</p>
-                    <p>Bedroom 2: 1 double beds: 1.8m x 2m</p>
-                    <p>Bedroom 3: 2 queens beds: 2.2m x 2m</p>
-                    <p>Bedroom 4: 1 double beds: 1.8m x 2m</p>
-                    <p>Free WiFi <br/>
-                        Washing machine,Independent shower and bathroom,living room<br/>
-                        Carpet,dryer,sofa,clothes dryer,Tea / coffee making machine<br/>
-                        Fully open kitchen:<br/>
-                        Refrigerator, microwave oven, electric kettle,roaster,<br/>
+                    <p>Room area: 43 square meters</p>
+                    <p>Bedroom 1: 1 queens bed: 2.2m x 2m</p>
+                    <p>Free WIFI<br/>
+                        Free toiletries,Independent bathroom,<br/>
+                        Carpet,hair drier,desk,Coffee machine<br/>
+                        small open kitchen:<br/>
+                        Refrigerator, microwave oven, electric kettle,Stove table<br/>
                         Wardrobe / wardrobe, air conditioner, TV<br/>
-                        Telephone, bedding,  Outdoor dining area,large table</p>
+                        Telephone, bedding, Elevator direct</p>
                 </td>
                 <td>
-                    <p>Eight <br/> occupancy</p>
+                    <p>ONe <br/> occupancy</p>
                 </td>
                 <td>
-                    <p>1000</p>
+                    <p>200</p>
                 </td>
                 <td>
-                    <p>3/10</p>
+                    <p>6/10</p>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
+                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
                 </td>
             </tr>
             <tr class="text-info">
                 <td>
-                    <p>Villa with private swimming</p>
+                    <p>Two bedroom apartment</p>
                     <p>Guest room facilities:</p>
-                    <p>Room area: 210 square meters</p>
-                    <p>Bedroom 1: 2 Queen bed: 2.2m x 2m,</p>
-                    <p>Bedroom 2: 1 single beds: 1.8m x 2m</p>
-                    <p>Bedroom 3: 2 single bed: 1.5m x 1.8m</p>
-                    <p>Bedroom 4: 2 king bed: 2.2m x 1.8m</p>
-                    <p>Bedroom 5: 1 single bed: 1.5m x 1.8m</p>
-                    <p>Free WiFi <br/>
-                        Washing machine,Independent shower and bathroom,living room<br/>
-                        Carpet,dryer,sofa,clothes dryer,Tea / coffee making machine<br/>
-                        Fully open kitchen:<br/>
-                        Refrigerator, microwave oven, electric kettle,roaster,<br/>
+                    <p>Room area: 59 square meters</p>
+                    <p>Bedroom 1: 1 single bed: 1.5m x 2m</p>
+                    <p>Bedroom 2: 1 single bed: 1.5m x 2m</p>
+                    <p>Free WIFI<br/>
+                        Free toiletries,Independent bathroom,<br/>
+                        Carpet,hair drier,desk,Coffee machine<br/>
+                        small open kitchen:<br/>
+                        Refrigerator, microwave oven, electric kettle,Stove table<br/>
                         Wardrobe / wardrobe, air conditioner, TV<br/>
-                        Telephone, bedding,  Outdoor dining area,large table</p>
+                        Telephone, bedding, Elevator direct</p>
                 </td>
                 <td>
-                    <p> Ten<br/> occupancy</p>
+                    <p>Double <br/> occupancy</p>
                 </td>
                 <td>
-                    <p>1200</p>
+                    <p>300</p>
                 </td>
                 <td>
-                    <p>2/10</p>
+                    <p>7/10</p>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
+                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
+                </td>
+            </tr>
+            <tr class="text-info">
+                <td>
+                    <p>Double bed one bedroom apartment</p>
+                    <p>Guest room facilities:</p>
+                    <p>Room area: 65 square meters</p>
+                    <p>Bedroom 1: 2 single bed: 1.8m x 2m,</p>
+                    <p>Free WiFi <br/>
+                        Free toiletries,Independent bathroom,<br/>
+                        Carpet,hair drier,desk,Coffee machine<br/>
+                        small open kitchen:<br/>
+                        Refrigerator, microwave oven, electric kettle,Stove table<br/>
+                        Wardrobe / wardrobe, air conditioner, TV<br/>
+                        Telephone, bedding, Elevator direct</p>
+                </td>
+                <td>
+                    <p>Double <br/> occupancy</p>
+                </td>
+                <td>
+                    <p>400</p>
+                </td>
+                <td>
+                    <p>8/10</p>
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
                 </td>
             </tr>
             </tbody>
@@ -175,8 +195,8 @@
     <hr>
     <div class="hotel-comment">
         <h4>Customer comments:</h4>
-        <p><i class="rate">9.1</i> Great</p>
-        <p>-1037 guest comment</p>
+        <p><i class="rate">9.0</i> Great</p>
+        <p>-1075 guest comment</p>
         <p><a href="javascript:void(0)">View all comments</a></p>
     </div>
 </header>

@@ -51,8 +51,8 @@
 
     <div class="container">
       <p class="text-center">
-        <a href="./forgotpassword.html">
-          <button type="button" class="btn btn-default">Forgot Passsword</button>
+        <a href="ForgotPassword.jsp">
+          <button type="button" class="btn btn-default" >Forgot Passsword</button>
         </a>>
       </p>
     </div>

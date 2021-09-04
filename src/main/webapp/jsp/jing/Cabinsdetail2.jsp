@@ -2,18 +2,18 @@
   Created by IntelliJ IDEA.
   User: jingl
   Date: 2021/9/4
-  Time: 20:04
+  Time: 20:05
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Li Jiang Apartment</title>
-    <link rel="stylesheet" href="../utils/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jing.css">
-    <script src="../utils/jquery-3.6.0.min.js"></script>
-    <script src="../utils/bootstrap/js/bootstrap.js"></script>
+    <title>Aisha Cabin</title>
+    <link rel="stylesheet" href="../../utils/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jing.css">
+    <script src="../../utils/jquery-3.6.0.min.js"></script>
+    <script src="../../utils/bootstrap/js/bootstrap.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,13 +50,13 @@
                 <a class="nav-link" href="#">  Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> <img src="../image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
+                <a class="nav-link" href="#"> <img src="../../image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../image/image1/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
+                <a class="nav-link" href="#">  <img src="../../image/image1/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../image/image1/car.svg" alt="Bootstrap" width="10" >Car rentals</a>
+                <a class="nav-link" href="#">  <img src="../../image/image1/car.svg" alt="Bootstrap" width="10" >Car rentals</a>
             </li>
         </ul>
 
@@ -66,32 +66,34 @@
             </li>
             <li class="list-inline-item">
 
-                <a class="btn btn-success" href="//网站"> <img src="../image/image1/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
+                <a class="btn btn-success" href="//网站"> <img src="../../image/image1/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
             </li>
         </div>
     </div>
 </nav>
+
 <header>
-    <h2><b>Li Jiang Apartment</b></h2>
+    <h2><b>Aisha Cabin</b></h2>
     <hr>
     <div class="container">
-        <img src="../image/image1/apartmentpicture5.jpg" class="hotel-detail-image" alt="hotel image detail">
-        <img src="../image/image1/apartmentpicture6.jpg" class="hotel-detail-image" alt="hotel image detail">
+        <img src="../../image/image1/cabinpicture4.jpg" class="hotel-detail-image" alt="hotel image detail">
+        <img src="../../image/image1/cabinpicture6.jpg" class="hotel-detail-image" alt="hotel image detail">
     </div>
     <div class="hotel-description container">
-        <p>Li jiang apartment is located on Huaning Avenue in Shanghai, China, close to the harbor. The guest room can view the city through its own room window.</p>
-        <p>Each room has a fully equipped kitchenette and free wifi.</p>
-        <p>The apartment hotel also has a gym and breakfast buffet</p>
-        <p>The 700 meters away from the hotel is the famous Oriental Pearl scenic spot. Visitors can visit the scenery of Shanghai.</p>
+        <p>Aisha wooden house is located in morzinne, France. It is surrounded by mountain scenery. At the same time, it is a 5-minute walk away from the ski resort.</p>
+        <p>It is equipped with free WiFi and free parking.</p>
+        <p>Each wooden house is equipped with an oven, refrigerator and microwave oven. Some wooden houses even provide a sauna.</p>
+        <p>Each room has a flat screen TV and a private hot water bathroom</p>
+        <p>There is also a ski cable car 2km away from the cabin. Tenants can experience the cable car and skiing</p>
     </div>
     <div class="hotel-service container text-warning">
         <h5>Popular services:</h5>
         <ol>
             <li>Free WIFI</li>
             <li>Free parking</li>
-            <li>Non smoking room</li>
-            <li>Gym</li>
-            <li>Family room</li>
+            <li>Sauna room</li>
+            <li>Ski facilities</li>
+            <li>family room</li>
         </ol>
     </div>
     <div class="hotel-room container">
@@ -109,84 +111,89 @@
             <tbody>
             <tr class="text-info">
                 <td>
-                    <p>one bedroom apartment</p>
+                    <p>Standard cabin</p>
                     <p>Guest room facilities:</p>
-                    <p>Room area: 43 square meters</p>
-                    <p>Bedroom 1: 1 queens bed: 2.2m x 2m</p>
-                    <p>Free WIFI<br/>
-                        Free toiletries,Independent bathroom,<br/>
-                        Carpet,hair drier,desk,Coffee machine<br/>
-                        small open kitchen:<br/>
-                        Refrigerator, microwave oven, electric kettle,Stove table<br/>
-                        Wardrobe / wardrobe, air conditioner, TV<br/>
-                        Telephone, bedding, Elevator direct</p>
-                </td>
-                <td>
-                    <p>ONe <br/> occupancy</p>
-                </td>
-                <td>
-                    <p>200</p>
-                </td>
-                <td>
-                    <p>6/10</p>
-                </td>
-                <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
-                </td>
-            </tr>
-            <tr class="text-info">
-                <td>
-                    <p>Two bedroom apartment</p>
-                    <p>Guest room facilities:</p>
-                    <p>Room area: 59 square meters</p>
-                    <p>Bedroom 1: 1 single bed: 1.5m x 2m</p>
-                    <p>Bedroom 2: 1 single bed: 1.5m x 2m</p>
-                    <p>Free WIFI<br/>
-                        Free toiletries,Independent bathroom,<br/>
-                        Carpet,hair drier,desk,Coffee machine<br/>
-                        small open kitchen:<br/>
-                        Refrigerator, microwave oven, electric kettle,Stove table<br/>
-                        Wardrobe / wardrobe, air conditioner, TV<br/>
-                        Telephone, bedding, Elevator direct</p>
-                </td>
-                <td>
-                    <p>Double <br/> occupancy</p>
-                </td>
-                <td>
-                    <p>300</p>
-                </td>
-                <td>
-                    <p>7/10</p>
-                </td>
-                <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
-                </td>
-            </tr>
-            <tr class="text-info">
-                <td>
-                    <p>Double bed one bedroom apartment</p>
-                    <p>Guest room facilities:</p>
-                    <p>Room area: 65 square meters</p>
-                    <p>Bedroom 1: 2 single bed: 1.8m x 2m,</p>
+                    <p>Room area: 85 square meters</p>
+                    <p>Bedroom 1: 1 Queen bed: 1.8m x 2m</p>
+                    <p>Bedroom 2: 1 Queen bed: 1.8m x 2m</p>
                     <p>Free WiFi <br/>
-                        Free toiletries,Independent bathroom,<br/>
-                        Carpet,hair drier,desk,Coffee machine<br/>
-                        small open kitchen:<br/>
-                        Refrigerator, microwave oven, electric kettle,Stove table<br/>
+                        Free toiletries, independent shower, bathroom,<br/>
+                        sofa, hair dryer, Iron,carpet, heating<br/>
+                        Fully open kitchen:<br/>
+                        Refrigerator, microwave oven, electric kettle<br/>
                         Wardrobe / wardrobe, air conditioner, TV<br/>
-                        Telephone, bedding, Elevator direct</p>
+                        Telephone, bedding, Tea/coffee making supplies</p>
                 </td>
                 <td>
                     <p>Double <br/> occupancy</p>
                 </td>
                 <td>
-                    <p>400</p>
+                    <p>250</p>
                 </td>
                 <td>
-                    <p>8/10</p>
+                    <p>5/10</p>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
+                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
+                </td>
+            </tr>
+            <tr class="text-info">
+                <td>
+                    <p>Three bedroom cabin</p>
+                    <p>Guest room facilities:</p>
+                    <p>Room area: 95 square meters</p>
+                    <p>Bedroom 1: 1 single bed: 1.8m x 2m</p>
+                    <p>Bedroom 2: 1 single bed: 1.8m x 2m</p>
+                    <p>Bedroom 3: 1 Queen bed: 2.2m x 2m</p>
+                    <p>Free WiFi <br/>
+                        Free toiletries, independent shower, bathroom,<br/>
+                        sofa, hair dryer, Iron,carpet, heating<br/>
+                        Fully open kitchen:<br/>
+                        Refrigerator, microwave oven, electric kettle,roaster<br/>
+                        Wardrobe / wardrobe, air conditioner, TV<br/>
+                        Telephone, bedding, Tea/coffee making supplies</p>
+                </td>
+                <td>
+                    <p>Four <br/> occupancy</p>
+                </td>
+                <td>
+                    <p>350</p>
+                </td>
+                <td>
+                    <p>3/10</p>
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
+                </td>
+            </tr>
+            <tr class="text-info">
+                <td>
+                    <p>Superior cabin</p>
+                    <p>Guest room facilities:</p>
+                    <p>Room area: 108 square meters</p>
+                    <p>Bedroom 1: 1 single bed: 1.8m x 2m</p>
+                    <p>Bedroom 2: 2 single bed: 1.8m x 2m</p>
+                    <p>Bedroom 3: 1 Queen bed: 2.2m x 2m</p>
+                    <p>Bedroom 4: 1 Queen bed: 2.2m x 2m</p>
+                    <p>Free WiFi <br/>
+                        Free toiletries, independent shower, bathroom,<br/>
+                        sofa, hair dryer, Iron,carpet, heating,fireplace<br/>
+                        Fully open kitchen:<br/>
+                        Refrigerator, microwave oven, electric kettle,roaster,dishwasher<br/>
+                        Wardrobe / wardrobe, air conditioner, TV, washing machine<br/>
+                        Telephone, bedding, Tea/coffee making supplies,desk</p>
+                </td>
+                <td>
+                    <p>Six <br/> occupancy</p>
+                </td>
+                <td>
+                    <p>500</p>
+                </td>
+                <td>
+                    <p>2/10</p>
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
                 </td>
             </tr>
             </tbody>
@@ -196,7 +203,7 @@
     <div class="hotel-comment">
         <h4>Customer comments:</h4>
         <p><i class="rate">9.0</i> Great</p>
-        <p>-1075 guest comment</p>
+        <p>-796 guest comment</p>
         <p><a href="javascript:void(0)">View all comments</a></p>
     </div>
 </header>

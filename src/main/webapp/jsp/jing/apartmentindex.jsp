@@ -10,10 +10,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Apartment</title>
-    <link rel="stylesheet" href="../utils/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jing.css">
-    <script src="../utils/jquery-3.6.0.min.js"></script>
-    <script src="../utils/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../utils/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jing.css">
+    <script src="../../utils/jquery-3.6.0.min.js"></script>
+    <script src="../../utils/bootstrap/js/bootstrap.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,13 +50,13 @@
                 <a class="nav-link" href="#">  Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> <img src="../image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
+                <a class="nav-link" href="#"> <img src="../../image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../image/image1/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
+                <a class="nav-link" href="#">  <img src="../../image/image1/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../image/image1/car.svg" alt="Bootstrap" width="10" >Car rentals</a>
+                <a class="nav-link" href="#">  <img src="../../image/image1/car.svg" alt="Bootstrap" width="10" >Car rentals</a>
             </li>
         </ul>
 
@@ -66,7 +66,7 @@
             </li>
             <li class="list-inline-item">
 
-                <a class="btn btn-success" href="//网站"> <img src="../image/image1/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
+                <a class="btn btn-success" href="//网站"> <img src="../../image/image1/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
             </li>
         </div>
     </div>
@@ -83,7 +83,7 @@
                     <div class="hotel-left">
                         <h3 class="hotel-name">Niko Apartment</h3>
                         <p class="hotel-nation">London</p>
-                        <img class="hotel-pic" src="../image/image1/apartmentpicture1.jpg" alt="hotel pic">
+                        <img class="hotel-pic" src="../../image/image1/apartmentpicture1.jpg" alt="hotel pic">
                         <p class="hotel-detail-link"><a href="apartmentdetail1.jsp" target="_blank"><b>View more information</b></a></p>
                     </div>
                     <div class="hotel-right">
@@ -99,7 +99,7 @@
                     <div class="hotel-left">
                         <h3 class="hotel-name">Li Jiang Apartment</h3>
                         <p class="hotel-nation">Shang Hai</p>
-                        <img class="hotel-pic" src="../image/image1/apartmentpicture2.jpg" alt="hotel pic">
+                        <img class="hotel-pic" src="../../image/image1/apartmentpicture2.jpg" alt="hotel pic">
                         <p class="hotel-detail-link"><a href="apartmentdetail2.jsp" target="_blank"><b>View more information</b></a></p>
                     </div>
                     <div class="hotel-right">

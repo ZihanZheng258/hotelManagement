@@ -10,10 +10,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Wadorf Cabin</title>
-    <link rel="stylesheet" href="../utils/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jing.css">
-    <script src="../utils/jquery-3.6.0.min.js"></script>
-    <script src="../utils/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../utils/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/jing.css">
+    <script src="../../utils/jquery-3.6.0.min.js"></script>
+    <script src="../../utils/bootstrap/js/bootstrap.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,13 +49,13 @@
                 <a class="nav-link" href="#">  Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> <img src="../image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
+                <a class="nav-link" href="#"> <img src="../../image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../image/image1/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
+                <a class="nav-link" href="#">  <img src="../../image/image1/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../image/image1/car.svg" alt="Bootstrap" width="10" >Car rentals</a>
+                <a class="nav-link" href="#">  <img src="../../image/image1/car.svg" alt="Bootstrap" width="10" >Car rentals</a>
             </li>
         </ul>
 
@@ -65,7 +65,7 @@
             </li>
             <li class="list-inline-item">
 
-                <a class="btn btn-success" href="//网站"> <img src="../image/image1/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
+                <a class="btn btn-success" href="//网站"> <img src="../../image/image1/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
             </li>
         </div>
     </div>
@@ -76,8 +76,8 @@
     <h2><b>Wadorf Cabin</b></h2>
     <hr>
     <div class="container">
-        <img src="../image/image1/cabinspicture3.jpg" class="hotel-detail-image" alt="hotel image detail">
-        <img src="../image/image1/cabinspicture5.jpg" class="hotel-detail-image" alt="hotel image detail">
+        <img src="../../image/image1/cabinspicture3.jpg" class="hotel-detail-image" alt="hotel image detail">
+        <img src="../../image/image1/cabinspicture5.jpg" class="hotel-detail-image" alt="hotel image detail">
     </div>
     <div class="hotel-description container">
         <p>Waldorf cabin hotel is located in a valley of Chamonix Blanc, only three kilometers away from the ski resort. The house has a living room and a semi open kitchen.</p>
@@ -132,7 +132,7 @@
                     <p>5/10</p>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
+                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
                 </td>
             </tr>
             <tr class="text-info">
@@ -160,7 +160,7 @@
                     <p>2/10</p>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
+                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
                 </td>
             </tr>
             <tr class="text-info">
@@ -189,7 +189,7 @@
                     <p>3/10</p>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
+                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
                 </td>
             </tr>
             </tbody>

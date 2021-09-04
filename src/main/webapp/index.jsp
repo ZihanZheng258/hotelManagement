@@ -54,11 +54,11 @@
 
         <div class="btn float-right">
             <li class="list-inline-item">
-                <a class="btn btn-link" href="//网站"> <span class="glyphicon glyphicon-user"></span> Sign In</a>
+                <a class="btn btn-link" href="jsp/signin.jsp"> <span class="glyphicon glyphicon-user"></span> Sign In</a>
             </li>
             <li class="list-inline-item">
 
-                <a class="btn btn-success" href="//网站"> <img src="image/svg/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
+                <a class="btn btn-success" href="jsp/signup.jsp"> <img src="image/svg/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
             </li>
         </div>
     </div>
@@ -124,7 +124,9 @@
     <div class="row">
         <div class="col-lg-3">
             <div class="card card-overlay">
-                <img class="card-img" src="image/house%20type/Cabins.jpg">
+                <a href="jsp/jing/Cabinsindex.jsp">
+                    <img class="card-img" src="image/house%20type/Cabins.jpg">
+                </a>
                 <div class="card-img-overlay">
                     <h3 class="card-title text-white">Cabins</h3>
                     <p class="card-text text-white">16 Properties</p>
@@ -134,7 +136,9 @@
 
         <div class="col-lg-3">
             <div class="card card-overlay">
+                <a href="jsp/jing/Cottageindex.jsp">
                 <img class="card-img" src="image/house%20type/Cottages.jpg">
+                </a>
                 <div class="card-img-overlay">
                     <h3 class="card-title text-white">Cottages</h3>
                     <p class="card-text text-white">265 Properties</p>
@@ -143,7 +147,9 @@
         </div>
         <div class="col-lg-3">
             <div class="card card-overlay">
-                <img class="card-img" src="image/house%20type/Serviced%20apartments.jpg">
+                <a href="jsp/jing/apartmentindex.jsp">
+                    <img class="card-img" src="image/house%20type/Serviced%20apartments.jpg">
+                </a>
                 <div class="card-img-overlay">
                     <h3 class="card-title text-white">Apartments</h3>
                     <p class="card-text text-white">620 Properties</p>
@@ -152,7 +158,9 @@
         </div>
         <div class="col-lg-3">
             <div class="card card-overlay">
+                <a href="jsp/jing/villaindex.jsp">
                 <img class="card-img" src="image/house%20type/Villas.jpg" alt="Card image">
+                </a>
                 <div class="card-img-overlay">
                     <h3 class="card-title text-white">Philadelphia</h3>
                     <p class="card-text text-white">28 Properties</p>
