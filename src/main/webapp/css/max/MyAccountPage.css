@@ -1,0 +1,35 @@
+.dashboard{
+    position: absolute;
+    left: 100px;
+}
+
+.title{
+    padding: 5px 0 15px;
+    font-size: 36px;
+    color: #0072bc;
+}
+
+.subtitle{
+    display: block;
+    font-size: 14px;
+    color: #b7b7b7;
+}
+
+.infolist{
+    list-style-type: none;
+    padding: 5px 15px;
+    color: #636363;
+    text-align: left;
+}
+
+.label{
+    padding: 5px 15px;
+    color: #636363;
+    display: inline-block;
+    width: 149px;
+    text-align: left;
+}
+
+.btnedit{
+
+}
