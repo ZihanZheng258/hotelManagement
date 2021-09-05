@@ -70,7 +70,9 @@
 
 
 <div class="container">
+  <a href="AdminPage.jsp">
   <button type="submit" class="btn btn-success btn-block">ADD</button>
+  </a>>
   <button type=“reset” class="btn btn-danger btn-block">RESET</button>
 </div>
 </body>
