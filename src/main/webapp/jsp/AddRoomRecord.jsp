@@ -88,8 +88,14 @@
 
 
 <div class="container">
-  <button type="submit" class="btn btn-success btn-block">ADD</button>
-  <button type=“reset” class="btn btn-danger btn-block">RESET</button>
+
+  <a href="AdminPage.jsp">
+    <button type="submit" class="btn btn-success btn-block">ADD</button>
+  </a>>
+  <!--关闭页面-->
+  <a href="AdminPage.jsp">
+    <button class="btn btn-danger btn-block">CANCEL</button>
+  </a>>
 </div>
 </body>
 </html>

@@ -67,6 +67,14 @@
   <a href="RoomRecord.jsp">
     <button class="btn btn-lg btn-primary btn-block" type="submit">ROOMRECORD</button>
   </a>
+  <hr>
+  <a href="Admin_Manage/ManageUsers.jsp">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">ManageUsers</button>
+  </a>
+  <hr>
+  <a href="Admin_Manage/MyAccount.jsp">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">MyAccount</button>
+  </a>
 
   </form>
 

@@ -194,28 +194,28 @@
     <!-- 轮播图片 -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="carousel-img" src="image/fongjing/11.jpg" >
+            <img  src="image/fongjing/11.jpg" >
             <div class="carousel-caption">
                 <h3>first</h3>
                 <p>price</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="carousel-img" src="image/fongjing/Darlin_harbour_siidney.jpg" >
+            <img  src="image/fongjing/Darlin_harbour_siidney.jpg" >
             <div class="carousel-caption">
                 <h3>first</h3>
                 <p>price</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="carousel-img" src="image/house%20type/Cottages.jpg">
+            <img  src="image/house%20type/Cottages.jpg">
             <div class="carousel-caption">
                 <h3>first</h3>
                 <p>price</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="image/house%20type/Cabins.jpg" style="display: inline-block" alt="php">
+            <img  src="image/house%20type/Cabins.jpg" style="display: inline-block" alt="php">
             <div class="carousel-caption">
                 <h3>first</h3>
                 <p>price</p>
@@ -253,7 +253,7 @@
             <a class="btn btn-link" href="//网站"> <span class="glyphicon glyphicon-user"></span> Sign In</a>
         </li>
         <li class="list-inline-item">
-            <a class="btn btn-link" href="//网站"> <span class="glyphicon glyphicon-user"></span> Sign In</a>
+            <a class="btn btn-link" href="jsp/AdminPage.jsp"> <span class="glyphicon glyphicon-user"></span> admin in</a>
         </li>
 
 

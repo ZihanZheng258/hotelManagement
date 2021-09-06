@@ -70,9 +70,13 @@
 
 <div class="container">
     <!--添加按钮 将以上所有信息添加并显示到表单-->
+    <a href="AdminPage.jsp">
     <button type="submit" class="btn btn-success btn-block">ADD</button>
+    </a>>
     <!--关闭页面-->
+    <a href="AdminPage.jsp">
     <button class="btn btn-danger btn-block">CANCEL</button>
+    </a>>
 </div>
 </body>
 </html>

@@ -53,18 +53,4 @@ body {
 }
 
 
-.tourist{
-	height: 200px;
-	object-fit: cover;
-	width: 120%;
-}
 
-.carousel {
-  width:100%;
-  height:100%;
-}
-.carousel img{
-	height: 500px;
-	object-fit: cover;
-	width: 100%;
-}
