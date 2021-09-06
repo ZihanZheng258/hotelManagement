@@ -50,10 +50,10 @@
     <div class="container">
         <a href="AdminPage.jsp">
         <button type="submit" class="btn btn-warning btn-block">Pay</button>
-        </a>>
+        </a>
             <a href="AdminPage.jsp">
         <button class="btn btn-info btn-block">Cancel</button>
-            </a>>
+            </a>
     </div>
 </header>
 </body>

@@ -91,11 +91,11 @@
 
   <a href="AdminPage.jsp">
     <button type="submit" class="btn btn-success btn-block">ADD</button>
-  </a>>
+  </a>
   <!--关闭页面-->
   <a href="AdminPage.jsp">
     <button class="btn btn-danger btn-block">CANCEL</button>
-  </a>>
+  </a>
 </div>
 </body>
 </html>

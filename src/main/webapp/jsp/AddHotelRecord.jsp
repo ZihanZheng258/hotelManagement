@@ -72,10 +72,10 @@
 <div class="container">
   <a href="AdminPage.jsp">
   <button type="submit" class="btn btn-success btn-block">ADD</button>
-  </a>>
+  </a>
   <a href="AdminPage.jsp">
   <button type=“reset” class="btn btn-danger btn-block">RESET</button>
-  </a>>
+  </a>
 </div>
 </body>
 </html>
