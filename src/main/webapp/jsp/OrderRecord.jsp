@@ -87,10 +87,29 @@
       </td>
     </tr>
 
-    </tbody>
     <%     }
     }
     %>
+    <tr>
+      <td>o-0000001</td>
+      <td>u-0000001</td>
+      <td>r-0000001</td>
+      <td>2021/4/3</td>
+      <td>2021/4/9</td>
+      <td>1000</td>
+      <td>good</td>
+      <td>FINISH</td>
+      <!--添加删改按钮-->
+      <td>
+        <a href="AdminPage.jsp">
+          <button class="btn btn-info btn-sm">Edit</button>
+        </a>
+        <a href="AdminPage.jsp">
+          <button class="btn btn-danger btn-sm">Delete</button>
+        </a>
+      </td>
+    </tr>
+    </tbody>
   </table>
 
 </div>

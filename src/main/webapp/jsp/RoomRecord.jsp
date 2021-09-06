@@ -105,6 +105,33 @@
         <%   }
             }
         %>
+        <tr>
+            <td>r-0000001</td>
+            <td>single bed room</td>
+            <td>15</td>
+            <td>none</td>
+            <td>single</td>
+            <td>60</td>
+            <td>180*120</td>
+            <td>60</td>
+            <td>ocuupied</td>
+            <td>3</td>
+            <td>good</td>
+            <td>h-00000001</td>
+            <td>occupied</td>
+
+
+            <td>
+                <!--添加编辑按钮 超级管理员及管理员权限-->
+                <a href="AdminPage.jsp">
+                    <button class="btn btn-info btn-sm">Edit</button>
+                </a>
+                <!--添加删除按钮 超级管理员权限-->
+                <a href="AdminPage.jsp">
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                </a>
+            </td>
+        </tr>
     </table>
 
 </div>
