@@ -5,21 +5,21 @@ import enums.HotelType;
 public class Hotel {
 
 
-	private String id;
+	private int id;
 	private String name;
 	private String address;
-	private HotelType type;
+	private String type;
 	private double area;
 	private int star;
 	private int score;
 	private String introduction;
-	private String picture;
+	private int picture;
 	
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -34,10 +34,10 @@ public class Hotel {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public HotelType getType() {
+	public String getType() {
 		return type;
 	}
-	public void setType(HotelType type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 	public double getArea() {
@@ -64,10 +64,10 @@ public class Hotel {
 	public void setIntroduction(String introduction) {
 		this.introduction = introduction;
 	}
-	public String getpicture() {
+	public int getpicture() {
 		return picture;
 	}
-	public void setpicture(String photo) {
+	public void setpicture(int photo) {
 		this.picture = photo;
 	}
 

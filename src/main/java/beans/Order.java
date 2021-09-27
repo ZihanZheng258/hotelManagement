@@ -13,7 +13,7 @@ private int id;
    private Date end_time;
    private double amount;
    private String remark;
-   private OrderStatus status;
+   private String status;
    
    public int getId() {
 		return id;
@@ -57,10 +57,10 @@ private int id;
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-	public OrderStatus getStatus() {
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(OrderStatus status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 }

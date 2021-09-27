@@ -6,20 +6,21 @@ public class Room {
 	private int id;
     private String name;
     private int number;
-    private RoomType type;
-	private String picture;
+    private String type;
+	private int picture;
     private double area;
     private double bedWidth;
-    private RoomBookedStatus bookStatus;
+    private String bookStatus;
     private double price;
     private int score;
     private String remark;
     private int level;
+    private int hotelID;
     
-    public String getPicture() {
+    public int getPicture() {
 		return picture;
 	}
-	public void setPicture(String picture) {
+	public void setPicture(int picture) {
 		this.picture = picture;
 	}
 	public int getLevel() {
@@ -46,16 +47,16 @@ public class Room {
 	public void setNumber(int number) {
 		this.number = number;
 	}
-	public RoomType getType() {
+	public String getType() {
 		return type;
 	}
-	public void setType(RoomType type) {
+	public void setType(String type) {
 		this.type = type;
 	}
-	public String getpicture() {
+	public int getpicture() {
 		return picture;
 	}
-	public void setpicture(String photo) {
+	public void setpicture(int photo) {
 		this.picture = photo;
 	}
 	public double getArea() {
@@ -70,10 +71,10 @@ public class Room {
 	public void setBedWidth(double bedWidth) {
 		this.bedWidth = bedWidth;
 	}
-	public RoomBookedStatus getBookStatus() {
+	public String getBookStatus() {
 		return bookStatus;
 	}
-	public void setBookStatus(RoomBookedStatus bookStatus) {
+	public void setBookStatus(String bookStatus) {
 		this.bookStatus = bookStatus;
 	}
 	public double getPrice() {
@@ -93,5 +94,11 @@ public class Room {
 	}
 	public void setRemark(String remark) {
 		this.remark = remark;
+	}
+	public int getHotelID() {
+		return hotelID;
+	}
+	public void setHotelID(int hotelID) {
+		this.hotelID = hotelID;
 	}
 }

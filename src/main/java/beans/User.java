@@ -6,8 +6,8 @@ public class User {
 	private String name;
     private String password;
     private String phoneNumber;
-    private UserType type;
-    private String picture;
+    private String type;
+    private int picture;
     private int ID;
     private double balance;
 	private String payPassword;
@@ -29,16 +29,16 @@ public class User {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public UserType getType() {
+	public String getType() {
 		return type;
 	}
-	public void setType(UserType type) {
+	public void setType(String type) {
 		this.type = type;
 	}
-	public String getPicture() {
+	public int getPicture() {
 		return picture;
 	}
-	public void setPicture(String photo) {
+	public void setPicture(int photo) {
 		this.picture = photo;
 	}
 	public int getID() {
