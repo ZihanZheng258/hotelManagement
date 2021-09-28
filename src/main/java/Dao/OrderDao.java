@@ -76,6 +76,32 @@ public class OrderDao implements BaseDao<Order>{
 		System.out.print(order.toString());
 		return order;
 	}
+	public List<Order> findByUserID(Integer id) throws Exception {
+		ps = conn.prepareStatement("SELECT * FROM t_order WHERE t_order.user_id = ?;");
+		ps.setObject(1, String.valueOf(id));
+		List<Order> orders = new ArrayList<Order>();
+        try (ResultSet rs = ps.executeQuery()) {
+            while (rs.next()) {
+            	orders.add(beanfactory.generateBeaninstance(rs));
+            }
+            }
+        System.out.print(orders.toString());
+		return orders;
+	}
+	public List<Order> findByUserIDAndStatus(Integer id,String status) throws Exception {
+		ps = conn.prepareStatement("SELECT * FROM t_order WHERE t_order.user_id = ? And t_order.status = ?;");
+		ps.setObject(1, String.valueOf(id));
+		ps.setObject(2, status);
+		List<Order> orders = new ArrayList<Order>();
+        try (ResultSet rs = ps.executeQuery()) {
+            while (rs.next()) {
+            	orders.add(beanfactory.generateBeaninstance(rs));
+            }
+            }
+        System.out.print(orders.toString());
+		return orders;
+	}
+	
 	@Override
 	public List<Order> findAll() throws Exception {
 		ps = conn.prepareStatement("SELECT * FROM t_order;");

@@ -23,7 +23,7 @@ public class UserDao implements BaseDao<User>{
 	public boolean doCreate(User beanObject) throws Exception {
         ps = conn.prepareStatement("INSERT INTO `hotel`.`t_user`(`id`, `name`, `password`, `type`, "
         		+ "`phone_number`, `picture_id`, `balance`, `pay_pwd`) "
-        		+ "VALUES (？, ？, ？, ？, ？, ？, ？, ？);");
+        		+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
 
 	        ps.setObject(1,beanObject.getID());
 	        ps.setObject(2,beanObject.getName());
@@ -39,9 +39,9 @@ public class UserDao implements BaseDao<User>{
 
 	@Override
 	public boolean doUpdate(User beanObject) throws Exception {
-		ps = conn.prepareStatement("UPDATE `hotel`.`t_user` SET `name` = ？, `password` = ？, "
-				+ "`type` = ？, `phone_number` = ？, "
-				+ "`picture_id` = ？, `balance` = ？, `pay_pwd` = ？ WHERE `id` = ？;");
+		ps = conn.prepareStatement("UPDATE `hotel`.`t_user` SET `name` = ?, `password` = ?, "
+				+ "`type` = ?, `phone_number` = ?, "
+				+ "`picture_id` = ?, `balance` = ?, `pay_pwd` = ? WHERE `id` = ?;");
         
         ps.setObject(1,beanObject.getName());
         ps.setObject(2,beanObject.getPassword());

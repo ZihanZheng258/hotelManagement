@@ -5,6 +5,9 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import beans.Hotel;
+import beans.Order;
+import beans.Room;
+import beans.User;
 import dbc.DBConnector;
 
 public class Test {
@@ -13,10 +16,12 @@ public class Test {
 	{
        DBConnector connector = new DBConnector();
        DaoManager manager = new DaoManager(connector.openConnection());
-       Hotel hotel = manager.hotel_find_by_ID(10000);
-       hotel.setType("test_success");
-       manager.hotel_update(hotel);
-       System.out.print(manager.hotel_find_by_name("am"));
+       User user = manager.user_find_by_ID(20);
+       user.setPassword("test_successful");
+       manager.user_update(user);
+       user.setID(15);
+       manager.user_create(user);
+       
        
 	}
 

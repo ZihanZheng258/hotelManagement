@@ -93,14 +93,17 @@ public class RoomDao implements BaseDao<Room>{
 	}
 	
 	
-	public Room findByHotelId(Integer id) throws Exception {
+	public List<Room> findByHotelId(Integer id) throws Exception {
 		ps = conn.prepareStatement("SELECT * FROM t_room WHERE t_room.hotel_id = ?;");
 		ps.setObject(1, String.valueOf(id));
-		ResultSet result = ps.executeQuery();
-		result.next();
-	    Room room = beanfactory.generateBeaninstance(result);
-		System.out.print(room.toString());
-		return room;
+		List<Room> rooms = new ArrayList<Room>();
+        try (ResultSet rs = ps.executeQuery()) {
+            while (rs.next()) {
+            	rooms.add(beanfactory.generateBeaninstance(rs));
+            }
+            }
+        System.out.print(rooms.toString());
+		return rooms;
 	}
 	@Override
 	public List<Room> findAll() throws Exception {
