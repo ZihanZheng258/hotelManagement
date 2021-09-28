@@ -67,7 +67,7 @@
 
 
 
-
+//vers
 
 <div class="container">
     <div class="text-left mb-5">
@@ -79,7 +79,7 @@
             <div class="col-md-4">
                 <div class="input-group">
                     <div class="input-group-addon"><img src="image/svg/pin-map.svg" alt="Bootstrap" ></div>
-                    <input class="form-control" placeholder="Enter addrress" type="text">
+                    <input class="form-control" placeholder="Enter Addrress" type="text">
                 </div>
             </div>
 
@@ -109,7 +109,7 @@
     </form>
 </div>
 
-
+//vers
 
 
 <hr class="hr1">

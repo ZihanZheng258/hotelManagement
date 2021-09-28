@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="beans.User"%>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -34,25 +35,29 @@
 </head>
 
 <body>
-
+// servel
 <div class="container">
+    <div><span class="time" id="time" ></span></div>
+    <%
+        User user = (User)session.getAttribute("user");
+        String updated = request.getParameter("updated");
+    %>
+    <form class="form-signin" method="post" action="../java/Servlet/ForgotPasswordServlet">
 
-    <form class="form-signin">
         <h2 class="form-signin-heading">Enter email to reset your password</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input id="inputId" class="form-control" type="text" placeholder="User id" name="id">
 
         <label for="inputVerificationCode" class="sr-only">Verification Code</label>
         <input type="verificationcode" id="inputVerificationCode" class="form-control" placeholder="Verification Code" required>
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input id="inputPassword" type="verificationcode" class="form-control" placeholder="Card number" name="password">
 
         <label for="inputConfirmPassword" class="sr-only">Confirm password</label>
         <input type="confirmpassword" id="inputConfirmPassword" class="form-control" placeholder="Confirm password" required>
 
         <a href="">
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Reset Password</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" value="Find">Reset Password</button>
         </a>
 
     </form>
