@@ -44,9 +44,9 @@
         <label for="inputMobilePhone" class="sr-only">Mobile Phone</label>
         <input type="mobilephone" id="inputMobilePhone" class="form-control" placeholder="Mobile Phone" required>
 
-        <a href="AdminPage.jsp">
+          <a href="">
           <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-        </a>
+          </a>
         
       </form>
 
