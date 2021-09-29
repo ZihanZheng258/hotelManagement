@@ -51,7 +51,7 @@
         <input type="verificationcode" id="inputVerificationCode" class="form-control" placeholder="Verification Code" required>
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input id="inputPassword" type="verificationcode" class="form-control" placeholder="Card number" name="password">
+        <input id="inputPassword" type="verificationcode" class="form-control" placeholder="Password" name="password">
 
         <label for="inputConfirmPassword" class="sr-only">Confirm password</label>
         <input type="confirmpassword" id="inputConfirmPassword" class="form-control" placeholder="Confirm password" required>

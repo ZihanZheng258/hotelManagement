@@ -89,15 +89,15 @@
                     <input class="form-control " type="text" name="daterange" />
                 </div>
             </div>
-
+bh m,./
             <div class="col-md-3">
                 <div class="input-group">
                     <div class="input-group-addon"><img src="image/svg/house.svg" alt="Bootstrap" width="20"></div>
-                    <select class="form-control">
-                        <option value="">Cabins</option>
-                        <option value="">Cotages</option>
-                        <option value="">Apartments</option>
-                        <option value="">Philadelphia</option>
+                    <select class="form-control" name="type">
+                        <option value="Cabins">Cabins</option>
+                        <option value="Cotages">Cotages</option>
+                        <option value="Apartments">Apartments</option>
+                        <option value="Philadelphia">Philadelphia</option>
                     </select>
                 </div>
             </div>

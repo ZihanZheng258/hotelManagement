@@ -9,31 +9,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import Dao.DaoManager;
+import beans.Hotel;
 import beans.User;
-import dbc.DBConnector;
 
-public class ForgotPasswordServlet extends HttpServlet {
+public class HomeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        HttpSession session = request.getSession();
-        int id = Integer.parseInt(request.getParameter("id"));
-        String password = request.getParameter("password");
+        HttpSession session = request.getSession();
+        String address = request.getParameter("address");
+        String type= request.getParameter("type");
+        DaoManager manager = (DaoManager) session.getAttribute("manager");
 
         try {
-//            DaoManager manager = (DaoManager) session.getAttribute("manager");
-            DaoManager manager = new DaoManager(new DBConnector().openConnection());
-            User user = null;
-            user = manager.user_find_by_ID(id);
-            if( user != null){
-//                session.setAttribute("Change",manager.user_update_password(id,password));
-                manager.user_update_password(id,password);
-                System.out.println("change password");
+             manager.hotel_find_by_type_and_address(type,address);
+
+                System.out.println("show all");
 
 
-            }else{
-                System.out.println("null");
-            }
         }catch (SQLException ex) {
             System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
         } catch (Exception e) {

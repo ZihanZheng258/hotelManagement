@@ -55,11 +55,12 @@ public class UserDao implements BaseDao<User>{
 	}
 
 	public boolean doUpdate_password(int ID, String password) throws Exception {
-		ps = conn.prepareStatement("UPDATE `hotel`.`t_user` SET `password` = ? WHERE `id` = ?;");
+		ps = conn.prepareStatement("UPDATE t_user SET `password` = ? WHERE `id` = ?;");
         
         ps.setObject(1,password);
         ps.setObject(2,ID);
-		return false;
+        ps.executeUpdate();
+		return true;
 	}
 	@Override
 	public boolean doRemoveBatch(int...ids) throws Exception {
