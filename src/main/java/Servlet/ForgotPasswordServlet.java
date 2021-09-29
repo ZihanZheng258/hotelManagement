@@ -26,6 +26,7 @@ public class ForgotPasswordServlet extends HttpServlet {
             if( user != null){
                 session.setAttribute("Change",manager.user_update_password(id,password));
                 System.out.println("change password");
+
             }else{
                 System.out.println("null");
             }
@@ -34,5 +35,6 @@ public class ForgotPasswordServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        request.getRequestDispatcher("/index.jsp").forward(request,response);
     }
 }
