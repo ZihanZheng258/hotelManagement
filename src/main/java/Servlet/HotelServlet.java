@@ -14,7 +14,7 @@ import Dao.DaoManager;
 import beans.Hotel;
 import dbc.DBConnector;
 
-public class HomeServlet extends HttpServlet {
+public class HotelServlet extends HttpServlet {
 
     @Override
 

@@ -29,7 +29,7 @@ public class SignupServlet extends HttpServlet {
         String password = request.getParameter("password");
         String phoneNumber = request.getParameter("phone_number");
         int ID = Integer.parseInt(request.getParameter("ID"));
-
+   
         DaoManager manager = (DaoManager) session.getAttribute("manager");
 
         try

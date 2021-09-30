@@ -39,6 +39,6 @@ public class ForgotPasswordServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("/index.jsp").forward(request,response);
+        request.getRequestDispatcher("/jsp/signin.jsp").forward(request,response);
     }
 }

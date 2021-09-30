@@ -122,7 +122,7 @@
         <div class="col-lg-3">
             <div class="card card-overlay">
                 <a href="jsp/jing/Cabinsindex.jsp">
-                    <img class="card-img" src="http://localhost:8080/hotelManagement_war_exploded/image/house%20type/Cabins.jpg">
+                    <img class="card-img" src="image/house%20type/Cabins.jpg">
                 </a>
                 <div class="card-img-overlay">
                     <h3 class="card-title text-white">Cabins</h3>

@@ -18,11 +18,11 @@
   </servlet-mapping>
 
   <servlet>
-    <servlet-name>HomeServlet</servlet-name>
-    <servlet-class>Servlet.HomeServlet</servlet-class>
+    <servlet-name>HotelServlet</servlet-name>
+    <servlet-class>Servlet.HotelServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>HomeServlet</servlet-name>
+    <servlet-name>HotelServlet</servlet-name>
     <url-pattern>/index</url-pattern>
   </servlet-mapping>
 

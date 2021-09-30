@@ -53,7 +53,10 @@
       <p class="text-center">
         <a href="ForgotPassword.jsp">
           <button type="button" class="btn btn-default" >Forgot Passsword</button>
-        </a>>
+            <a href="../index.jsp">
+                <button type="button" class="btn btn-default" >Homepage</button>
+            </a>
+        </a>
       </p>
     </div>
 
