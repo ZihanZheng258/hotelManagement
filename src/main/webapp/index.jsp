@@ -74,12 +74,12 @@
         <h1 class="display-4 mt-10 font-weight-bold text-shadow">Provide you with the best accommodation</h1>
         <h6 class="subtitle text-shadow text-dark">Uncover the best offers on the real estate market.</h6>
     </div>
-    <form>
+    <form action="index">
         <div class="row no-gutters">
             <div class="col-md-4">
                 <div class="input-group">
                     <div class="input-group-addon"><img src="image/svg/pin-map.svg" alt="Bootstrap" ></div>
-                    <input class="form-control" placeholder="Enter Addrress" type="text">
+                    <input class="form-control" placeholder="Enter Addrress" type="text" name= "address">
                 </div>
             </div>
 
@@ -89,7 +89,6 @@
                     <input class="form-control " type="text" name="daterange" />
                 </div>
             </div>
-bh m,./
             <div class="col-md-3">
                 <div class="input-group">
                     <div class="input-group-addon"><img src="image/svg/house.svg" alt="Bootstrap" width="20"></div>
@@ -102,8 +101,7 @@ bh m,./
                 </div>
             </div>
             <div class="col-md-2">
-                <button type="submit"
-                        class="btn btn-success btn-block no-radius font-weight-bold">SEARCH</button>
+                <button type="submit" class="btn btn-success btn-block no-radius font-weight-bold">SEARCH</button>
             </div>
         </div>
     </form>

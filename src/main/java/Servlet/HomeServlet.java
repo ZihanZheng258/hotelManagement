@@ -1,6 +1,8 @@
 package Servlet;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -10,21 +12,25 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import Dao.DaoManager;
 import beans.Hotel;
-import beans.User;
+import dbc.DBConnector;
 
 public class HomeServlet extends HttpServlet {
+
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+
+            protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession();
         String address = request.getParameter("address");
-        String type= request.getParameter("type");
-        DaoManager manager = (DaoManager) session.getAttribute("manager");
+        String type = request.getParameter("type");
 
         try {
-             manager.hotel_find_by_type_and_address(type,address);
+            DaoManager manager = new DaoManager(new DBConnector().openConnection());
+            HttpSession session = request.getSession();
+            List<Hotel> hotel = manager.hotel_find_by_type_and_address(type,address);
+            session.setAttribute("hotel", hotel);
+            request.getRequestDispatcher("error.jsp").forward(request, response);
 
-                System.out.println("show all");
+                System.out.println("show all"+hotel.toString());
 
 
         }catch (SQLException ex) {
@@ -32,6 +38,6 @@ public class HomeServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("/index.jsp").forward(request,response);
+        request.getRequestDispatcher("/error.jsp").forward(request,response);
     }
 }
