@@ -24,8 +24,8 @@ steps:
     goals: 'package'
 
 - task: ziyongtest
-    inputs:
     displayName: check hotel change password
+      inputs:
       bulidPlatform: 'Windows'
       testRunner: JUnit
       testResultsFiles: '**/src/main/java/Servlet/HotelServletTest'
