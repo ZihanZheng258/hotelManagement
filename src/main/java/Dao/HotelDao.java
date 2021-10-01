@@ -22,7 +22,7 @@ public class HotelDao implements BaseDao<Hotel>{
 	}
 	@Override
 	public boolean doCreate(Hotel beanObject) throws Exception {
-        ps = conn.prepareStatement("INSERT INTO `hotel`.`t_hotel`(`id`, `name`, `address`, `type`, `area`, `star`, `score`, `introduction`, `picture_id`) "
+        ps = conn.prepareStatement("INSERT INTO `t_hotel`(`id`, `name`, `address`, `type`, `area`, `star`, `score`, `introduction`, `picture_id`) "
         		+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);");
 
 	        ps.setObject(1,beanObject.getId());

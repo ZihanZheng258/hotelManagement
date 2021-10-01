@@ -22,60 +22,61 @@
   <h1 class="text-center">Add New Hotel <small>Super Administrator Authority</small></h1>
 
   <!--录入旅店表单-->
-  <form action="AddHotelServlet" method="post">
+  <form action="AddHotelRecord">
     <div class="form-group">
       <label for="InputHotelID">Hotel ID</label>
-      <input class="form-control" id="InputHotelID" placeholder="Please Enter Hotel ID">
+      <input class="form-control" id="InputHotelID" name="hotelID" value="" placeholder="Please Enter Hotel ID">
     </div>
     <div class="form-group">
       <label for="InputHotelName">Hotel Name</label>
-      <input class="form-control" id="InputHotelName" placeholder="Please Enter Hotel Name">
+      <input class="form-control" id="InputHotelName" name="hotelName" value="" placeholder="Please Enter Hotel Name">
     </div>
     <div class="form-group">
       <label for="InputHotelAddress">Hotel Address</label>
-      <input class="form-control" id="InputHotelAddress" placeholder="Please Enter Hotel Name">
+      <input class="form-control" id="InputHotelAddress" name="hotelAddress" value="" placeholder="Please Enter Hotel Name">
     </div>
     <div class="form-group">
       <label for="InputArea">FloorArea(hectare)</label>
-      <input class="form-control" id="InputArea" placeholder="Please Enter Floor Area (hectare)">
+      <input class="form-control" id="InputArea" name="hotelArea" value="" placeholder="Please Enter Floor Area (hectare)">
     </div>
     <div class="form-group">
       <label for="InputHotelType">Hotel Type</label>
-      <input class="form-control" id="InputHotelType" placeholder="Please Enter Hotel Type">
+      <input class="form-control" id="InputHotelType" name="hotelType" value="" placeholder="Please Enter Hotel Type">
     </div>
     <div class="form-group">
       <label for="InputStars">Stars</label>
-      <input class="form-control" id="InputStars" placeholder="Please Enter Stars">
+      <input class="form-control" id="InputStars" name="hotelStar" value="" placeholder="Please Enter Stars">
     </div>
     <div class="form-group">
       <label for="InputScore">Score</label>
-      <input class="form-control" id="InputScore" placeholder="Please Enter Score">
+      <input class="form-control" id="InputScore" name="hotelScore" value="" placeholder="Please Enter Score">
     </div>
     <div class="form-group">
       <label for="InputIntroduction">Introduction</label>
-      <textarea class="form-control" id="InputIntroduction" placeholder="Please Enter Introduction" rows="4"></textarea>
+      <textarea class="form-control" id="InputIntroduction" name="hotelIntroduction"  placeholder="Please Enter Introduction" rows="4"></textarea>
     </div>
     <br>
     <div class="form-group">
       <label for="exampleInputFile">Upload Hotel image</label>
-      <input type="file" id="exampleInputFile">
+      <input type="file" id="exampleInputFile" name="hotelPicture">
     </div>
 
 
     <br>
+    <div class="container">
+
+      <button type="submit" class="btn btn-success btn-block">ADD</button>
+
+      <a href="AdminPage.jsp">
+        <button type=“reset” class="btn btn-danger btn-block">RESET</button>
+      </a>
+    </div>
 
   </form>
 
 </div>
 
 
-<div class="container">
-  <a href="AdminPage.jsp">
-  <button type="submit" class="btn btn-success btn-block">ADD</button>
-  </a>
-  <a href="AdminPage.jsp">
-  <button type=“reset” class="btn btn-danger btn-block">RESET</button>
-  </a>
-</div>
+
 </body>
 </html>

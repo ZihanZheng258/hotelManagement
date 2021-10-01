@@ -1,5 +1,7 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="beans.Hotel" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="beans.Hotel" %>
+<%@ page import="Dao.DaoManager" %>
+<%@ page import="dbc.DBConnector" %><%--
   Created by IntelliJ IDEA.
   User: yangk
   Date: 2021/8/30
@@ -8,7 +10,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
-<%ArrayList<Hotel> hotels = (ArrayList<Hotel>)session.getAttribute("hotels");%>
+<%--用jsp语句，将servlet传过来的list数据拿到并放在一个list里--%>
+<%
+    List hotelList = (List) request.getAttribute("hotelList");
+%>
 <head>
     <meta charset="UTF-8">
     <title>HotelRecord</title>
@@ -65,36 +70,41 @@
             <th>Introduction</th>
             <th>Edit/Delete</th>
         </tr>
+        <%--继续使用jsp语句， 循环放入list中的Hotel 实体类数据--%>
 
         <%
-        if(hotels != null){
-            System.out.println(hotels.size());
-            for (int i=0; i<hotels.size();i++){ %>
+
+            if(hotelList != null){
+                System.out.println(hotelList.size());
+
+                for (int i=0; i<hotelList.size();i++){
+                    Hotel hotel = (Hotel) hotelList.get(i);
+        %>
         <tbody>
         <tr>
-            <td><%=hotels.get(i).getId()%></td>
-            <td><%=hotels.get(i).getName()%></td>
-            <td><%=hotels.get(i).getAddress()%></td>
-            <td><%=hotels.get(i).getArea()%></td>
-            <td><%=hotels.get(i).getpicture()%></td>
-            <td><%=hotels.get(i).getType()%></td>
-            <td><%=hotels.get(i).getStar()%></td>
-            <td><%=hotels.get(i).getScore()%></td>
-            <td><%=hotels.get(i).getIntroduction()%></td>
+            <td><%=hotel.getId()%></td>
+            <td><%=hotel.getName()%></td>
+            <td><%=hotel.getAddress()%></td>
+            <td><%=hotel.getArea()%></td>
+            <td><%=hotel.getpicture()%></td>
+            <td><%=hotel.getType()%></td>
+            <td><%=hotel.getStar()%></td>
+            <td><%=hotel.getScore()%></td>
+            <td><%=hotel.getIntroduction()%></td>
 
 
             <td>
                 <!--添加编辑按钮 超级管理员及管理员权限-->
                 <a href="AdminPage.jsp">
-                <button class="btn btn-info btn-sm">Edit</button>
+                    <button class="btn btn-info btn-sm">Edit</button>
                 </a>
                 <!--添加删除按钮 超级管理员权限-->
-                    <a href="AdminPage.jsp">
-                <button class="btn btn-danger btn-sm">Delete</button>
-                    </a>
+                <a href="AdminPage.jsp">
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                </a>
             </td>
         </tr>
-        <%   }
+            <%   }
             }
         %>
 
