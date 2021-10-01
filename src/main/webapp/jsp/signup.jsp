@@ -30,22 +30,23 @@
 
     <div class="container">
 
-      <form class="form-signin">
+      <form class="form-signin" action="Signup">
         <h2 class="form-signin-heading">Sign up</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+
+        <label for="inputName" class="sr-only">User Name</label>
+        <input type="name" id="inputName" class="form-control" placeholder="User Name" name="name">
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password">
 
         <label for="inputConfirmPassword" class="sr-only">Confirm password</label>
         <input type="confirmpassword" id="inputConfirmPassword" class="form-control" placeholder="Confirm password" required>
 
         <label for="inputMobilePhone" class="sr-only">Mobile Phone</label>
-        <input type="mobilephone" id="inputMobilePhone" class="form-control" placeholder="Mobile Phone" required>
+        <input type="mobilephone" id="inputMobilePhone" class="form-control" placeholder="Mobile Phone" name="phone_number">
 
           <a href="">
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+          <button class="btn btn-lg btn-primary btn-block" type="submit" value="Find">Sign up</button>
           </a>
         
       </form>

@@ -21,7 +21,7 @@ public class UserDao implements BaseDao<User>{
 	}
 	@Override
 	public boolean doCreate(User beanObject) throws Exception {
-        ps = conn.prepareStatement("INSERT INTO `hotel`.`t_user`(`id`, `name`, `password`, `type`, "
+        ps = conn.prepareStatement("INSERT INTO `t_user`(`id`, `name`, `password`, `type`, "
         		+ "`phone_number`, `picture_id`, `balance`, `pay_pwd`) "
         		+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
 

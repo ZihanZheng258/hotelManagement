@@ -11,49 +11,73 @@ import java.util.logging.Logger;
 
 import beans.User;
 import Dao.DaoManager;
+import dbc.DBConnector;
 
-@WebServlet(name = "RegisterServlet", value = "/RegisterServlet")
+@WebServlet(name = "SignupServlet", value = "/SignupServlet")
 public class SignupServlet extends HttpServlet {
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
+        //HttpSession session = request.getSession();
 
         //User user = (User)session.getAttribute("user");
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         String phoneNumber = request.getParameter("phone_number");
-        int ID = Integer.parseInt(request.getParameter("ID"));
+        String type = request.getParameter("type");
+
+        //int id = Integer.parseInt(request.getParameter("id"));
+        //int id = 0;
+        //User user_exist = null;
+        //User user = null;
+//        user.setID(0);
+//        user.setPicture(0);
+//        user.setPhoneNumber(phoneNumber);
+//        user.setPassword(password);
+//        user.setPicture(0);
+//        user.setBalance(0);
+//        user.setName(name);
+//        user.setPayPassword(null);
+//        user.setType(null);
    
-        DaoManager manager = (DaoManager) session.getAttribute("manager");
+        //DaoManager manager = (DaoManager) session.getAttribute("manager");
 
         try
         {
-            User exist = manager.user_find_by_ID(ID);
-            User user = (User)session.getAttribute("user");
-            if (exist != null)
-            {
-                session.setAttribute("existErr", "User alrteady exists in the Database!");
-                request.getRequestDispatcher("register.jsp").include(request, response);
-            }
-            else
-            {
-                manager.user_create(user);
+            DaoManager manager = new DaoManager(new DBConnector().openConnection());
+//            user_exist = manager.user_find_by_ID(id);
+//
+//            if (user_exist != null)
+//            {
+//                //session.setAttribute("existErr", "User already exists in the Database!");
+//                System.out.println("User already exists in the Database!");
+//                user.setID(0);
+//                User user_exist = null;
+//            }
+//            else
+//            {
+                User user = null;
+            //user.setID(0);
+//            user.setName(name);
+//            user.setPassword(password);
+//            user.setType(type);
+//            user.setPhoneNumber(phoneNumber);
+//            user.setPicture(1);
+//            user.setBalance(1);
+//            user.setPayPassword(password);
+//                manager.user_create(user);
+                System.out.println("Account Created");
                 //User user = new User(user);
-                session.setAttribute("user", user);
-                request.getRequestDispatcher("index.jsp").include(request, response);
-            }
+                //session.setAttribute("user", user);
+//            }
         }
         catch (SQLException ex)
         {
-            Logger.getLogger(SignupServlet.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
         }
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 }
