@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="beans.Hotel" %>
+<%@ page import="java.util.List" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,6 +42,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
+<%List<Hotel> hotel = (List<Hotel>)session.getAttribute("hotel"); %>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">陈总booking</a>
@@ -109,6 +112,29 @@
                 </div>
             </div>
         </div>
+        <%
+            if(hotel != null){
+                for (int i =0;i<hotel.size();i++){  %>
+        <div class="col-md-6">
+            <div class="hotel-frame">
+                <div class="hotel-info">
+                    <div class="hotel-left">
+                        <h3 class="hotel-name"><%= hotel.get(i).getName()%></h3>
+                        <p class="hotel-nation"><%= hotel.get(i).getAddress()%></p>
+                        <img class="hotel-pic" src="../../image/image1/cabinpicture2.jpg" alt="hotel pic">
+                        <p class="hotel-detail-link"><a href="Cabinsdetail2.jsp" target="_blank"><b>View more information</b></a></p>
+                    </div>
+                    <div class="hotel-right">
+                        <i class="hotel-rate"><%= hotel.get(i).getScore()%></i>
+                        <i class="hotel-price">250-500$/night</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%
+                }
+            }
+        %>
     </div>
 </div>
 <br><br>

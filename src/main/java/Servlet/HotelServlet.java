@@ -28,7 +28,7 @@ public class HotelServlet extends HttpServlet {
             HttpSession session = request.getSession();
             List<Hotel> hotel = manager.hotel_find_by_type_and_address(type,address);
             session.setAttribute("hotel", hotel);
-            request.getRequestDispatcher("error.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/jing/Cabinsindex.jsp").forward(request, response);
 
                 System.out.println("show all"+hotel.toString());
 
@@ -38,6 +38,6 @@ public class HotelServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("/error.jsp").forward(request,response);
+        request.getRequestDispatcher("/jsp/jing/Cabinsindex.jsp").forward(request,response);
     }
 }
