@@ -1,5 +1,6 @@
 package Servlet;
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +23,8 @@ public class HotelServlet extends HttpServlet {
             throws ServletException, IOException {
         String address = request.getParameter("address");
         String type = request.getParameter("type");
-
         try {
+
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             HttpSession session = request.getSession();
             List<Hotel> hotel = manager.hotel_find_by_type_and_address(type,address);

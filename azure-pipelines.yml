@@ -22,3 +22,10 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
+- task:
+  displayName: check hotel change password
+  bulidPlatform: 'Windows'
+  testRunner: JUnit
+  testResultsFiles: '**/src/main/java/Servlet/HotelServletTest'
+  failTaskOnFailedTests: true #test fail

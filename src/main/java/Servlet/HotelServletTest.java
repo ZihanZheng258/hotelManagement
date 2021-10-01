@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import beans.Hotel;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -30,8 +31,21 @@ class HotelServletTest {
 
     @Test
     void doGet() throws Exception {
-
-        List<Hotel> hotel = manager.hotel_find_by_type_and_address("cabins","123");
-        Assertions.assertNotNull(hotel);
+        Connection conn = DaoManager.getconnection();
+        Hotel hotel = new Hotel();
+        hotel.setName("123");
+        hotel.setId(127);
+        hotel.setAddress("roseville");
+        hotel.setpicture(1);
+        hotel.setArea(123);
+        hotel.setScore(12);
+        hotel.setStar(12);
+        hotel.setIntroduction("lol");
+        hotel.setType("cabins");
+        DbunitSaveHotel.savehotel(hotel);
+        List<Hotel> hoteltest = manager.hotel_find_by_type_and_address("cabins","roseville");
+        Assertions.assertNotNull(hoteltest);
+        Assertions.assertEquals(hotel.getAddress(),"roseville");
+        conn.close();
     }
 }

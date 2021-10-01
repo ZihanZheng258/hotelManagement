@@ -24,6 +24,11 @@ public class DaoManager {
 		   
 		   
 		}
+		public static Connection getconnection() throws ClassNotFoundException,SQLException{
+		Class.forName("com.mysql.jdbc.Driver");
+		return DriverManager.getConnection("jdbc:mysql://localhost:3306/chenzonghotel?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true","root","chen1234");
+
+		}
 	
 	// hotel related Dao
 	public boolean hotel_delete(int...IDs) throws Exception {

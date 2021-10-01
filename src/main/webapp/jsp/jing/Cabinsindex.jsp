@@ -14,6 +14,7 @@
     <title>Cabin</title>
     <link rel="stylesheet" href="../../utils/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/jing.css">
+    <link rel="stylesheet" href="http://localhost:8080/hotelManagement_war/../../css/jing.css">
     <script src="../../utils/jquery-3.6.0.min.js"></script>
     <script src="../../utils/bootstrap/js/bootstrap.js"></script>
 
@@ -80,38 +81,6 @@
 </header>
 <div class="container hotel-list">
     <div class="row">
-        <div class="col-md-6">
-            <div class="hotel-frame">
-                <div class="hotel-info">
-                    <div class="hotel-left">
-                        <h3 class="hotel-name">Wadorf Cabin</h3>
-                        <p class="hotel-nation">United States</p>
-                        <img class="hotel-pic" src="../../image/image1/cabinpicture1.jpg" alt="hotel pic">
-                        <p class="hotel-detail-link"><a href="Cabinsdetail1.jsp" target="_blank"><b>View more information</b></a></p>
-                    </div>
-                    <div class="hotel-right">
-                        <i class="hotel-rate">8.7</i>
-                        <i class="hotel-price">200-400$/night</i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="hotel-frame">
-                <div class="hotel-info">
-                    <div class="hotel-left">
-                        <h3 class="hotel-name">Aisha Cabin</h3>
-                        <p class="hotel-nation">Morzinne </p>
-                        <img class="hotel-pic" src="../../image/image1/cabinpicture2.jpg" alt="hotel pic">
-                        <p class="hotel-detail-link"><a href="Cabinsdetail2.jsp" target="_blank"><b>View more information</b></a></p>
-                    </div>
-                    <div class="hotel-right">
-                        <i class="hotel-rate">8.8</i>
-                        <i class="hotel-price">250-500$/night</i>
-                    </div>
-                </div>
-            </div>
-        </div>
         <%
             if(hotel != null){
                 for (int i =0;i<hotel.size();i++){  %>
