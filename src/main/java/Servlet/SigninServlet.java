@@ -17,7 +17,7 @@ public class SigninServlet extends HttpServlet {
 
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         int id = Integer.parseInt(request.getParameter("id"));
         String password = request.getParameter("password");
@@ -29,7 +29,7 @@ public class SigninServlet extends HttpServlet {
             user = manager.user_find_for_login(id, password);
             if (user != null) {
                 System.out.println("Login Succeed");
-                //.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+                request.getRequestDispatcher("/jsp/Admin_Manage/UserPage.jsp").forward(request, response);
             } else {
                 System.out.println("Login failed");
             }

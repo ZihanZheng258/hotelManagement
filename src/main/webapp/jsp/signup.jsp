@@ -45,6 +45,21 @@
         <label for="inputMobilePhone" class="sr-only">Mobile Phone</label>
         <input type="mobilephone" id="inputMobilePhone" class="form-control" placeholder="Mobile Phone" name="phone_number">
 
+        <label for="inputId" class="sr-only">ID</label>
+        <input type="id" id="inputId" class="form-control" placeholder="Id" name="id">
+
+        <label for="inputType" class="sr-only">Type</label>
+        <input type="type" id="inputType" class="form-control" placeholder="Type" name="type">
+
+        <label for="inputPicture" class="sr-only">Picture</label>
+        <input type="picture" id="inputPicture" class="form-control" placeholder="Picture" name="picture_id">
+
+        <label for="inputBalance" class="sr-only">Balance</label>
+        <input type="balance" id="inputBalance" class="form-control" placeholder="Balance" name="balance">
+
+        <label for="inputPayPassword" class="sr-only">PayPassword</label>
+        <input type="paypassword" id="inputPayPassword" class="form-control" placeholder="Paypassword" name="paypassword">
+
           <a href="">
           <button class="btn btn-lg btn-primary btn-block" type="submit" value="Find">Sign up</button>
           </a>

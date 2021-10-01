@@ -19,58 +19,40 @@ public class SignupServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //HttpSession session = request.getSession();
 
-        //User user = (User)session.getAttribute("user");
+        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String password = request.getParameter("password");
-        String phoneNumber = request.getParameter("phone_number");
         String type = request.getParameter("type");
+        String phoneNumber = request.getParameter("phone_number");
+        int picture = Integer.parseInt(request.getParameter("picture_id"));
+        double balance = Double.parseDouble(request.getParameter("balance"));
+        String paypassword = request.getParameter("paypassword");
 
-        //int id = Integer.parseInt(request.getParameter("id"));
-        //int id = 0;
-        //User user_exist = null;
-        //User user = null;
-//        user.setID(0);
-//        user.setPicture(0);
-//        user.setPhoneNumber(phoneNumber);
-//        user.setPassword(password);
-//        user.setPicture(0);
-//        user.setBalance(0);
-//        user.setName(name);
-//        user.setPayPassword(null);
-//        user.setType(null);
-   
-        //DaoManager manager = (DaoManager) session.getAttribute("manager");
+        User user = new User();
+        user.setID(id);
+        user.setName(name);
+        user.setPassword(password);
+        user.setType(type);
+        user.setPhoneNumber(phoneNumber);
+        user.setPicture(picture);
+        user.setBalance(balance);
+        user.setPayPassword(paypassword);
 
         try
         {
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
-//            user_exist = manager.user_find_by_ID(id);
-//
-//            if (user_exist != null)
-//            {
-//                //session.setAttribute("existErr", "User already exists in the Database!");
-//                System.out.println("User already exists in the Database!");
-//                user.setID(0);
-//                User user_exist = null;
-//            }
-//            else
-//            {
-                User user = null;
-            //user.setID(0);
-//            user.setName(name);
-//            user.setPassword(password);
-//            user.setType(type);
-//            user.setPhoneNumber(phoneNumber);
-//            user.setPicture(1);
-//            user.setBalance(1);
-//            user.setPayPassword(password);
-//                manager.user_create(user);
-                System.out.println("Account Created");
-                //User user = new User(user);
-                //session.setAttribute("user", user);
-//            }
+            manager.user_create(user);
+            User user_exist = manager.user_find_by_ID(id);
+
+            if (user_exist != null) {
+                System.out.println(user);
+                request.setAttribute("user_exist", user_exist);
+                request.getRequestDispatcher("/jsp/Admin_Manage/UserPage.jsp").forward(request, response);
+            } else {
+                System.out.println("Create failed");
+                request.getRequestDispatcher("signup.jsp").forward(request, response);
+            }
         }
         catch (SQLException ex)
         {
@@ -78,6 +60,5 @@ public class SignupServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 }
