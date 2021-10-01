@@ -23,8 +23,8 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-- task: ziyongtest
-    displayName: check hotel change password
+- task: ziyongtest@1
+    displayName: 'check hotel change password'
       inputs:
       bulidPlatform: 'Windows'
       testRunner: JUnit
