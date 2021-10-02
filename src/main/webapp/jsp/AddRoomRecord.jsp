@@ -22,54 +22,54 @@
   <h1 class="text-center">Add New Room <small>Super Administrator Authority</small></h1>
 
   <!--录入旅店表单-->
-  <form action="AddRoomServlet" method="post">
+  <form action="AddRoomRecord" method="get">
     <div class="form-group">
       <label for="InputRoomID">Room ID</label>
-      <input class="form-control" id="InputRoomID" placeholder="Please Enter Room ID">
+      <input class="form-control" id="InputRoomID" name = "roomID" value="" placeholder="Please Enter Room ID">
     </div>
     <div class="form-group">
       <label for="InputRoomName">Room Name</label>
-      <input class="form-control" id="InputRoomName" placeholder="Please Enter Room Name">
+      <input class="form-control" id="InputRoomName" name = "roomName" value="" placeholder="Please Enter Room Name">
     </div>
     <div class="form-group">
       <label for="InputRoomNumber">Room Number</label>
-      <input class="form-control" id="InputRoomNumber" placeholder="Please Enter Room Number">
+      <input class="form-control" id="InputRoomNumber" name = "roomNumber" value="" placeholder="Please Enter Room Number">
     </div>
     <div class="form-group">
       <label for="InputRoomType">Room Type</label>
-      <input class="form-control" id="InputRoomType" placeholder="Please Enter Room Type">
+      <input class="form-control" id="InputRoomType" name = "roomType" value="" placeholder="Please Enter Room Type">
     </div>
     <div class="form-group">
       <label for="InputArea">Room Area</label>
-      <input class="form-control" id="InputArea" placeholder="Please Enter Room Area">
+      <input class="form-control" id="InputArea" name = "roomArea" value="" placeholder="Please Enter Room Area">
     </div>
     <div class="form-group">
       <label for="InputBedWidth">Bed Width</label>
-      <input class="form-control" id="InputBedWidth" placeholder="Please Enter Bed Width">
+      <input class="form-control" id="InputBedWidth" name = "roomBedWidth" value="" placeholder="Please Enter Bed Width">
     </div>
     <div class="form-group">
       <label for="InputPrice">Price</label>
-      <input class="form-control" id="InputPrice" placeholder="Please Enter Price">
+      <input class="form-control" id="InputPrice" name = "roomPrice" value="" placeholder="Please Enter Price">
     </div>
     <div class="form-group">
       <label for="InputBookStatus">Book Status</label>
-      <input class="form-control" id="InputBookStatus" placeholder="Please Enter Book Status">
+      <input class="form-control" id="InputBookStatus" name = "roomBookStatus" value="" placeholder="Please Enter Book Status">
     </div>
     <div class="form-group">
       <label for="InputScore">Score</label>
-      <input class="form-control" id="InputScore" placeholder="Please Enter Score">
+      <input class="form-control" id="InputScore" name = "roomScore" value="" placeholder="Please Enter Score">
     </div>
     <div class="form-group">
       <label for="InputHotelID">Hotel ID</label>
-      <input class="form-control" id="InputHotelID" placeholder="Please Enter Hotel ID">
+      <input class="form-control" id="InputHotelID" name = "roomHotelID" value="" placeholder="Please Enter Hotel ID">
     </div>
     <div class="form-group">
-      <label for="InputStatus">Status</label>
-      <input class="form-control" id="InputStatus" placeholder="Please Enter Status">
+      <label for="InputLevel">Level</label>
+      <input class="form-control" id="InputLevel" name = "roomLevel" value="" placeholder="Please Enter Level">
     </div>
     <div class="form-group">
       <label for="InputRemark">Remark</label>
-      <textarea class="form-control" id="InputRemark" placeholder="Please Enter Remark" rows="4"></textarea>
+      <textarea class="form-control" id="InputRemark" name = "roomRemark" placeholder="Please Enter Remark" rows="4"></textarea>
     </div>
 
 
@@ -81,7 +81,13 @@
 
 
     <br>
-
+    <a href="AdminPage.jsp">
+      <button type="submit" class="btn btn-success btn-block">ADD</button>
+    </a>
+    <!--关闭页面-->
+    <a href="AdminPage.jsp">
+      <button class="btn btn-danger btn-block">CANCEL</button>
+    </a>
   </form>
 
 </div>
@@ -89,13 +95,6 @@
 
 <div class="container">
 
-  <a href="AdminPage.jsp">
-    <button type="submit" class="btn btn-success btn-block">ADD</button>
-  </a>
-  <!--关闭页面-->
-  <a href="AdminPage.jsp">
-    <button class="btn btn-danger btn-block">CANCEL</button>
-  </a>
 </div>
 </body>
 </html>

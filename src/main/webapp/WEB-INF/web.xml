@@ -74,5 +74,22 @@
     <url-pattern>/DeleteHotelRecord</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>RoomServlet</servlet-name>
+    <servlet-class>Servlet.RoomServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RoomServlet</servlet-name>
+    <url-pattern>/jsp/AddRoomRecord</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ShowRoomServlet</servlet-name>
+    <servlet-class>Servlet.ShowRoomServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowRoomServlet</servlet-name>
+    <url-pattern>/ShowRoom</url-pattern>
+  </servlet-mapping>
 
 </web-app>

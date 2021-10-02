@@ -1,6 +1,8 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="beans.Hotel" %>
-<%@ page import="beans.Room" %><%--
+<%@ page import="beans.Room" %>
+<%@ page import="Dao.DaoManager" %>
+<%@ page import="dbc.DBConnector" %><%--
   Created by IntelliJ IDEA.
   User: yangk
   Date: 2021/8/30
@@ -66,7 +68,6 @@
             <th>Score</th>
             <th>Remark</th>
             <th>Hotel ID</th>
-            <th>Status</th>
             <th>Edit/Delete</th>
         </tr>
 
@@ -87,8 +88,8 @@
             <td><%=rooms.get(i).getBookStatus()%></td>
             <td><%=rooms.get(i).getScore()%></td>
             <td><%=rooms.get(i).getRemark()%></td>
+            <td><%=rooms.get(i).getLevel()%></td>
             <td><%=hotels.get(i).getId()%></td>
-            <td><%=rooms.get(i).getBookStatus()%></td>
 
 
             <td>
