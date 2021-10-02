@@ -55,11 +55,14 @@
   <a href="CreateAdmin.jsp">
     <button class="btn btn-lg btn-primary btn-block" type="submit">CREATE ADMIN</button>
   </a>
+  <form action="Admin">
   <hr>
   <a href="HotelRecord.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">HOTEL RECORD</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" >HOTEL RECORD</button>
   </a>
+  </form>
   <hr>
+
   <a href="OrderRecord.jsp">
     <button class="btn btn-lg btn-primary btn-block" type="submit">ORDER RECORD</button>
   </a>
