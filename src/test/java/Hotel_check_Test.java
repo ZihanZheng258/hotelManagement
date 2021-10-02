@@ -7,6 +7,8 @@ class Hotel_check_Test {
 	@Test
 	void test() {
 		assertNotNull(Hotel_check.hotel(123).getId());
+		assertNotNull(Hotel_check.hotel(123).getType());
+		assertNotNull(Hotel_check.hotel(123).getAddress());
 	}
     
 }
