@@ -7,7 +7,7 @@ public class Hotel_check {
 
 
     public static Hotel hotel(int id) {
-        Hotel hotel = null;
+        Hotel hotel = new Hotel();
         hotel.setName("id");
         hotel.setId(id);
         hotel.setAddress("roseville");
