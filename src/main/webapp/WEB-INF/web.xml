@@ -61,6 +61,10 @@
     <servlet-name>ShowHotelRecordServlet</servlet-name>
     <url-pattern>/ShowHotelRecord</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowHotelRecordServlet</servlet-name>
+    <url-pattern>/jsp/Admin</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>DeleteHotelRecordServlet</servlet-name>
     <servlet-class>Servlet.DeleteHotelRecordServlet</servlet-class>
