@@ -12,6 +12,11 @@ import java.util.logging.Logger;
 import beans.User;
 import Dao.DaoManager;
 import dbc.DBConnector;
+import services.Encryption_Services;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+
 
 @WebServlet(name = "SignupServlet", value = "/SignupServlet")
 public class SignupServlet extends HttpServlet {
@@ -22,7 +27,7 @@ public class SignupServlet extends HttpServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        String password = request.getParameter("password");
+        String password = Encryption_Services.MD5Encryption(request.getParameter("password"));
         String type = request.getParameter("type");
         String phoneNumber = request.getParameter("phone_number");
         int picture = Integer.parseInt(request.getParameter("picture_id"));

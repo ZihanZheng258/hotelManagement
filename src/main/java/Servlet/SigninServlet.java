@@ -3,6 +3,7 @@ package Servlet;
 import Dao.DaoManager;
 import beans.User;
 import dbc.DBConnector;
+import services.Encryption_Services;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,7 @@ public class SigninServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         int id = Integer.parseInt(request.getParameter("id"));
-        String password = request.getParameter("password");
+        String password = Encryption_Services.MD5Encryption(request.getParameter("password"));
 
         try
         {
