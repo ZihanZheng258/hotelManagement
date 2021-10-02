@@ -45,20 +45,24 @@ public class AddHotelRecordServlet extends HttpServlet {
 
                 System.out.println(hotel);
                 req.setAttribute("hotel1", hotel1);
-                req.getRequestDispatcher("HotelRecord.jsp").forward(req, resp);
-
+                //req.getRequestDispatcher("HotelRecord.jsp").forward(req, resp);
+                req.getRequestDispatcher("AddHotelRecordSuccess.jsp").forward(req, resp);
             } else {
                 System.out.println("添加失败");
-                req.getRequestDispatcher("AddHotelRecord.jsp").forward(req, resp);
+                //req.getRequestDispatcher("AddHotelRecord.jsp").forward(req, resp);
+                req.getRequestDispatcher("AddHotelRecordError.jsp").forward(req, resp);
             }
 
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+            req.getRequestDispatcher("AddHotelRecordError.jsp").forward(req, resp);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+            req.getRequestDispatcher("AddHotelRecordError.jsp").forward(req, resp);
         } catch (Exception e) {
             e.printStackTrace();
+            req.getRequestDispatcher("AddHotelRecordError.jsp").forward(req, resp);
         }
 
 

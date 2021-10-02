@@ -67,12 +67,13 @@
 
       <button type="submit" class="btn btn-success btn-block">ADD</button>
 
-      <a href="AdminPage.jsp">
-        <button type=“reset” class="btn btn-danger btn-block">RESET</button>
-      </a>
+
     </div>
 
   </form>
+  <a href="HotelRecord.jsp">
+    <button class="btn btn-danger btn-block">RESET</button>
+  </a>
 
 </div>
 

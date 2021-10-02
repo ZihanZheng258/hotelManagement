@@ -86,8 +86,7 @@
                     Hotel hotel = (Hotel) hotelList.get(i);
         %>
         <tbody>
-<%--        <jsp:useBean id="hotelList" scope="request" type="java.util.List"/>--%>
-<%--        <c:forEach items="${hotelList}" var="hotel" varStatus="hotels">--%>
+
         <tr>
             <td><%=hotel.getId()%></td>
             <td><%=hotel.getName()%></td>
@@ -98,15 +97,7 @@
             <td><%=hotel.getStar()%></td>
             <td><%=hotel.getScore()%></td>
             <td><%=hotel.getIntroduction()%></td>
-<%--    <td>${hotel.id }</td>--%>
-<%--    <td>${hotel.name }</td>--%>
-<%--    <td>${hotel.address }</td>--%>
-<%--    <td>${hotel.area }</td>--%>
-<%--    <td>${hotel.picture }</td>--%>
-<%--    <td>${hotel.type}</td>--%>
-<%--    <td>${hotel.star}</td>--%>
-<%--    <td>${hotel.score}</td>--%>
-<%--    <td>${hotel.introduction}</td>--%>
+
 
 
 
@@ -121,34 +112,12 @@
                 </a>
             </td>
         </tr>
-<%--        </c:forEach>--%>
+
             <%   }
             }
         %>
 
-<%--        <tr>--%>
-<%--            <td>h-000000001</td>--%>
-<%--            <td>Four Season</td>--%>
-<%--            <td>RHODE St. 48 2007</td>--%>
-<%--            <td>40</td>--%>
-<%--            <td>None</td>--%>
-<%--            <td>Business</td>--%>
-<%--            <td>5</td>--%>
-<%--            <td>4.5</td>--%>
-<%--            <td>5 star Business Hotel</td>--%>
 
-
-<%--            <td>--%>
-<%--                <!--添加编辑按钮 超级管理员及管理员权限-->--%>
-<%--                <a href="AdminPage.jsp">--%>
-<%--                    <button class="btn btn-info btn-sm">Edit</button>--%>
-<%--                </a>--%>
-<%--                <!--添加删除按钮 超级管理员权限-->--%>
-<%--                <a href="AdminPage.jsp">--%>
-<%--                    <button class="btn btn-danger btn-sm">Delete</button>--%>
-<%--                </a>--%>
-<%--            </td>--%>
-<%--        </tr>--%>
     </table>
 
 </div>
