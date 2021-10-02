@@ -7,7 +7,7 @@ class Hotel_check_Test {
 	@Test
 	void test() {
 		assertNotNull(Hotel_check.hotel(123));
-		assertEquals(Hotel_check.hotel(123).getId(),123);
+		assertNull(Hotel_check.hotel(123));
 	}
     
 }
