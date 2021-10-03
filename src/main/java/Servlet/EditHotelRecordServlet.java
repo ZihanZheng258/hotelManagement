@@ -17,13 +17,13 @@ public class EditHotelRecordServlet extends HttpServlet
     {
         //retrieve info from page
         String name = request.getParameter("Name");
-        String address = request.getParameter("address");
-        String type = request.getParameter("type");
-        String area = request.getParameter("area");
-        String star = request.getParameter("star");
-        String score = request.getParameter("score");
-        String introduction = request.getParameter("v");
-        String picture = request.getParameter("picture");
+        String address = request.getParameter("Address");
+        String type = request.getParameter("Type");
+        String area = request.getParameter("Area");
+        String star = request.getParameter("Star");
+        String score = request.getParameter("Score");
+        String introduction = request.getParameter("Introduction");
+        String picture = request.getParameter("Picture");
 
         try
         {
@@ -43,7 +43,7 @@ public class EditHotelRecordServlet extends HttpServlet
             //update hotel in DB
             manager.hotel_update(hotel);
 
-            request.getRequestDispatcher("Admin").forward(request, response);
+            request.getRequestDispatcher("").forward(request, response);
         }
         catch (Exception e)
         {
@@ -53,11 +53,17 @@ public class EditHotelRecordServlet extends HttpServlet
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         try
         {
+            HttpSession session = request.getSession();
+            DaoManager manager = new DaoManager(new DBConnector().openConnection());
+            Hotel hotel = manager.hotel_find_by_ID(Integer.parseInt(request.getParameter("hotelObj")));
+            System.out.println("Editing Hotel ID: " + request.getParameter("hotelObj"));
+            session.setAttribute("editHotel", hotel);
 
+            request.getRequestDispatcher("/jsp/EditHotelRecord.jsp").forward(request, response);
         }
         catch (Exception e)
         {

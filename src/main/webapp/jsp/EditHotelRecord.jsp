@@ -71,7 +71,7 @@
             <ul class="infolist">
                 <li><span class="label">Hotel ID:</span><%=hotel.getId()%></li>
                 <li><span class="label">Hotel Name:</span><input type="text" name="Name" placeholder=<%=hotel.getName()%>></li>
-                <li><span class="label">Hotel Address:</span><input type="text" name="Address" placeholder=<%=hotel.getAddress()%>></li>s
+                <li><span class="label">Hotel Address:</span><input type="text" name="Address" placeholder=<%=hotel.getAddress()%>></li>
                 <li><span class="label">Hotel Type:</span><input type="text" name="Type" placeholder=<%=hotel.getType()%>></li>
                 <li><span class="label">Hotel Area:</span><input type="text" name="Area" placeholder=<%=hotel.getArea()%>></li>
                 <li><span class="label">Hotel Star:</span><input type="text" name="Star" placeholder=<%=hotel.getStar()%>></li>

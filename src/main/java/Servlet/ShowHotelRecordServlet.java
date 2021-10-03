@@ -43,5 +43,20 @@ public class ShowHotelRecordServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doPost(req, resp);
+        try
+        {
+            HttpSession session = req.getSession();
+            DaoManager manager = new DaoManager(new DBConnector().openConnection());
+            Hotel hotel = manager.hotel_find_by_ID(Integer.parseInt(req.getParameter("hotelObj")));
+            System.out.println("Editing Hotel ID: " + req.getParameter("hotelObj"));
+            session.setAttribute("editHotel", hotel);
+            //req.getRequestDispatcher("EditHotelRecord.jsp").forward(req, resp);
+        }
+        catch (Exception e)
+        {
+
+        }
+
+
     }
 }

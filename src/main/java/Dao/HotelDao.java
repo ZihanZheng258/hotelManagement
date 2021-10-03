@@ -41,7 +41,7 @@ public class HotelDao implements BaseDao<Hotel>{
 
 	@Override
 	public boolean doUpdate(Hotel beanObject) throws Exception {
-		ps = conn.prepareStatement("UPDATE `hotel`.`t_hotel` SET `name` = ?, `address` = ?, `type` = ?,"
+		ps = conn.prepareStatement("UPDATE `t_hotel` SET `name` = ?, `address` = ?, `type` = ?,"
 				+ " `area` = ?, `star` = ?, `score` = ?, "
 				+ "`introduction` = ?, `picture_id` = ? WHERE `id` = ?");
 		ps.setObject(1,beanObject.getName());

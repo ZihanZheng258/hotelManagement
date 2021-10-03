@@ -39,7 +39,7 @@ public class UserEditPageServlet extends HttpServlet
             //update user in DB'
             System.out.println(user.getID());
 
-            boolean check =manager.user_update(user);
+            boolean check = manager.user_update(user);
             if (check == false){
                 System.out.println("fail update");
             }

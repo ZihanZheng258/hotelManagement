@@ -108,11 +108,9 @@
 
 
                 <!--添加编辑按钮 超级管理员及管理员权限-->
-                <form action="EditHotelRecord" method="get">
-                    <input type="hidden" name="hotelObj" value=<%=hotel%>>
+                <form action="EditHotelRecord" method="post">
+                    <input type="hidden" name="hotelObj" value=<%=hotel.getId()%>>
                     <input type="submit" value="Edit">
-
-
 
 <%--                    <button class="btn btn-info btn-sm">Edit</button>--%>
                 </form>
