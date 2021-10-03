@@ -133,4 +133,13 @@
     <url-pattern>/jsp/UserEditPage</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>EditHotelRecordServlet</servlet-name>
+    <servlet-class>Servlet.EditHotelRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditHotelRecordServlet</servlet-name>
+    <url-pattern>/jsp/EditHotelRecord</url-pattern>
+  </servlet-mapping>
+
 </web-app>
