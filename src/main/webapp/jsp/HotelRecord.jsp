@@ -31,7 +31,9 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-2">
-            <button class="btn btn-link">logout</button>
+            <a href="AdminPage.jsp">
+                <button class="btn btn-link">Back</button>
+            </a>
         </div>
         <div class="col-sm-8"><h1 class="text-center">Hotel Record <small> HMS-V1.0</small></h1></div>
         <div class="col-sm-2"><h3 class="text-center" style="margin-top: 26px">Welcome：xxx</h3></div>
@@ -85,6 +87,7 @@
                 for (int i=0; i<hotelList.size();i++){
                     Hotel hotel = (Hotel) hotelList.get(i);
         %>
+
         <tbody>
 
         <tr>
@@ -102,20 +105,27 @@
 
 
             <td>
+
                 <!--添加编辑按钮 超级管理员及管理员权限-->
                 <a href="AdminPage.jsp">
                     <button class="btn btn-info btn-sm">Edit</button>
                 </a>
+
                 <!--添加删除按钮 超级管理员权限-->
-                <a href="AdminPage.jsp">
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </a>
+                <form action="DeleteHotelRecord" method="get">
+                    <input type="hidden" name="hotelID" value=<%=hotel.getId()%>>
+                    <input type="submit" value="Delete">
+<%--                <button class="btn btn-danger btn-sm" type="submit">Delete</button>--%>
+                </form>
             </td>
         </tr>
+
 
             <%   }
             }
         %>
+
+
 
 
     </table>

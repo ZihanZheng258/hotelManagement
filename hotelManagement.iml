@@ -58,6 +58,8 @@
     <orderEntry type="library" name="Maven: org.webjars.bower:jquery:3.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:bootstrap:5.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:popper.js:2.9.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: httpunit:httpunit:1.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: jtidy:jtidy:4aug2000r7-dev" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.dbunit:dbunit:2.4.9" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.5" level="project" />

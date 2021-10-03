@@ -78,6 +78,15 @@
       <artifactId>bootstrap</artifactId>
       <version>5.1.0</version>
     </dependency>
+      <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+      <!-- https://mvnrepository.com/artifact/httpunit/httpunit -->
+      <dependency>
+          <groupId>httpunit</groupId>
+          <artifactId>httpunit</artifactId>
+          <version>1.7</version>
+          <scope>test</scope>
+      </dependency>
+
 
       <dependency>
           <groupId>org.dbunit</groupId>

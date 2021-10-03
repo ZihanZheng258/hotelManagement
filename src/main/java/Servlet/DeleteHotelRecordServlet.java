@@ -18,7 +18,8 @@ public class DeleteHotelRecordServlet extends HttpServlet {
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             boolean flag = manager.hotel_delete(hotelID);
             if(flag==true){
-                resp.sendRedirect("/jsp/HotelRecord.jsp");
+                req.getRequestDispatcher("ShowHotelRecord").forward(req, resp);
+                //resp.sendRedirect("/jsp/HotelRecord.jsp");
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -27,5 +28,6 @@ public class DeleteHotelRecordServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        //req.getRequestDispatcher("ShowHotelRecord").forward(req, resp);
     }
 }

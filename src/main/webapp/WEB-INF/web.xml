@@ -73,6 +73,10 @@
     <servlet-name>DeleteHotelRecordServlet</servlet-name>
     <url-pattern>/DeleteHotelRecord</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteHotelRecordServlet</servlet-name>
+    <url-pattern>/jsp/HotelRecord</url-pattern>
+  </servlet-mapping>
 
   <servlet>
     <servlet-name>RoomServlet</servlet-name>
