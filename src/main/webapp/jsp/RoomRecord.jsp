@@ -84,7 +84,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-2">
-            <button class="btn btn-link">logout</button>
+            <button class="btn btn-link"><a href="./AdminPage.jsp">Back</a></button>
         </div>
         <div class="col-sm-8"><h1 class="text-center">Room Record <small> HMS-V1.0</small></h1></div>
         <div class="col-sm-2"><h3 class="text-center" style="margin-top: 26px">Welcome：xxx</h3></div>
