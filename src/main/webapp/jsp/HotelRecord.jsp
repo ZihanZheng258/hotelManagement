@@ -106,10 +106,16 @@
 
             <td>
 
+
                 <!--添加编辑按钮 超级管理员及管理员权限-->
-                <a href="AdminPage.jsp">
-                    <button class="btn btn-info btn-sm">Edit</button>
-                </a>
+                <form action="EditHotelRecord" method="get">
+                    <input type="hidden" name="hotelObj" value=<%=hotel%>>
+                    <input type="submit" value="Edit">
+
+
+
+<%--                    <button class="btn btn-info btn-sm">Edit</button>--%>
+                </form>
 
                 <!--添加删除按钮 超级管理员权限-->
                 <form action="HotelRecord" method="get">
@@ -117,6 +123,7 @@
                     <input type="submit" value="Delete">
                     <%--                <button class="btn btn-danger btn-sm" type="submit">Delete</button>--%>
                 </form>
+
             </td>
         </tr>
 
