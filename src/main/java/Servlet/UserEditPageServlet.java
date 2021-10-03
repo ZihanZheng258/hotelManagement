@@ -10,7 +10,7 @@ import java.io.IOException;
 import beans.User;
 import Dao.DaoManager;
 import dbc.DBConnector;
-import services.Encryption_Services;
+
 
 @WebServlet(name = "UserEditPageServlet", value = "/UserEditPageServlet")
 public class UserEditPageServlet extends HttpServlet
@@ -18,16 +18,15 @@ public class UserEditPageServlet extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-
+        //retrieve info from page
         String name = request.getParameter("Name");
         String password = request.getParameter("Password");
         String phoneNumber = request.getParameter("PhoneNumber");
         String payPassword = request.getParameter("PayPassword");
 
-        //get user from session and update info
-
         try
         {
+            //get user from session and update info
             HttpSession session = request.getSession();
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             User user = (User) session.getAttribute("user");
@@ -36,8 +35,6 @@ public class UserEditPageServlet extends HttpServlet
             user.setPhoneNumber(phoneNumber);
             user.setPayPassword(payPassword);
             session.setAttribute("user", user);
-            //retrieve info from page
-
 
             //update user in DB'
             System.out.println(user.getID());

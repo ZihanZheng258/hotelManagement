@@ -3,7 +3,8 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
-        <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/HotelRecord.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/jsp/Admin_Manage/UserPage.jsp" value="file://$PROJECT_DIR$/src/main/webapp/jsp/Admin_Manage" />
       </map>
     </option>
   </component>
