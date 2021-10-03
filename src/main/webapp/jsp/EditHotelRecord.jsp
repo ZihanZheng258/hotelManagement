@@ -31,6 +31,7 @@
     <!-- Bootstrap -->
     <link href="../utils/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/max/ManageUserPage.css">
+    <link href="../css/max/MyAccountPage.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
