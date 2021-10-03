@@ -1,12 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
   User: DKpoosh
-  Date: 2/09/2021
-  Time: 9:53 pm
+  Date: 3/10/2021
+  Time: 5:53 pm
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="beans.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%
     //DEBUG TESTING
     User user1 = new User();
@@ -85,16 +86,17 @@
     <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
     <h2> Account Info </h2>
     <ul class="infolist">
-        <li><span class="label">Account ID:</span><%=user.getID()%></li>
-        <li><span class="label">Account Name:</span><%=user.getName()%></li>
+        <li><span class="label">Account ID:</span><input type="text" name="ID" placeholder=<%=user.getID()%>></li>
+        <li><span class="label">Account Name:</span><input type="text" name="Name" placeholder=<%=user.getName()%>></li>
         <li><span class="label">Account Type:</span><%=user.getType()%></li>
-        <li><span class="label">Password</span><%=user.getPassword()%></li>
-        <li><span class="label">Phone Number:</span><%=user.getPhoneNumber()%></li>
+        <li><span class="label">Password</span><input type="text" name="Password" placeholder=<%=user.getPassword()%>></li>
+        <li><span class="label">Phone Number:</span><input type="text" name="PhoneNumber" placeholder=<%=user.getPhoneNumber()%>></li>
         <li><span class="label">Balance</span>$<%=user.getBalance()%></li>
+        <li><span class="label">PayPassword</span><input type="text" name="PayPassword" placeholder=<%=user.getPayPassword()%>></li>
     </ul> </div>
 
     <li class="list-inline-item">
-        <a class="btn btn-link" href="UserEditPage.jsp"> <span class="bi bi-pencil-square"></span>Edit</a>
+        <a class="btn btn-link" href="//网站"> <span class="bi bi-pencil-square"></span>Done</a>
     </li>
 
 </div>
