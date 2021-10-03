@@ -89,7 +89,10 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ShowRoomServlet</servlet-name>
-    <url-pattern>/ShowRoom</url-pattern>
+    <url-pattern>/jsp/RoomRecord</url-pattern>
   </servlet-mapping>
-
+  <servlet-mapping>
+    <servlet-name>ShowRoomServlet</servlet-name>
+    <url-pattern>/jsp/AdminPage</url-pattern>
+  </servlet-mapping>
 </web-app>

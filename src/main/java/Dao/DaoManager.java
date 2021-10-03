@@ -72,7 +72,7 @@ public class DaoManager {
 	public boolean room_delete(int... IDs)throws Exception{
 		return roomDao.doRemoveBatch(IDs);
 	}
-	public List<Room> room_find_all(int ID)throws Exception{
+	public List<Room> room_find_all()throws Exception{
 		return roomDao.findAll();
 	}
 	public List<Room> room_find_by_hotel_ID(int ID )throws Exception{
