@@ -52,6 +52,14 @@
     <servlet-name>AddHotelRecordServlet</servlet-name>
     <url-pattern>/jsp/AddHotelRecord</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>AddOrderRecordServlet</servlet-name>
+    <servlet-class>Servlet.AddOrderRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddOrderRecordServlet</servlet-name>
+    <url-pattern>/jsp/AddOrderRecord</url-pattern>
+  </servlet-mapping>
 
   <servlet>
     <servlet-name>ShowHotelRecordServlet</servlet-name>
