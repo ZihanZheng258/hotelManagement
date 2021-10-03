@@ -13,8 +13,6 @@
 <%User user = (User) session.getAttribute("user");%>
 <%
     //DEBUG TESTING
-
-
     if (session.getAttribute("user") == null)
     {
         User user1 = new User();
@@ -100,6 +98,7 @@
             <li><span class="label">Password:</span><%=user.getPassword()%></li>
             <li><span class="label">Phone Number:</span><%=user.getPhoneNumber()%></li>
             <li><span class="label">Balance:</span>$<%=user.getBalance()%></li>
+            <li><span class="label">Pay Password:</span><%=user.getPayPassword()%></li>
         </ul> </div>
 
 

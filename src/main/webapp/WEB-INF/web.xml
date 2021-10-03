@@ -101,4 +101,13 @@
     <url-pattern>/jsp/UserEditPage</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>ManageUsersServlet</servlet-name>
+    <servlet-class>Servlet.ManageUsersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManageUsersServlet</servlet-name>
+    <url-pattern>/jsp/ManageUsers</url-pattern>
+  </servlet-mapping>
+
 </web-app>
