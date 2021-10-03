@@ -32,18 +32,20 @@ public class ForgotPasswordServlet extends HttpServlet {
 //                session.setAttribute("Change",manager.user_update_password(id,password));
                 manager.user_update_password(id,password);
                 System.out.println("change password");
-
+                request.getRequestDispatcher("/jsp/signin.jsp").forward(request,response);
 
             }else{
                 System.out.println("null");
+
             }
         }catch (SQLException ex) {
             System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //request.getRequestDispatcher("/jsp/signin.jsp").forward(request,response);
+
         error.println("<script language='javascript'>alert('ID is WRONG')</script>");
         error.println("<script language='javascript'>window.location.href='/hotelManagement_war/jsp/ForgotPassword.jsp'</script>");
     }
+
 }
