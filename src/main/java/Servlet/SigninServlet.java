@@ -21,7 +21,7 @@ public class SigninServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         int id = Integer.parseInt(request.getParameter("id"));
-        String password = Encryption_Services.MD5Encryption(request.getParameter("password"));
+        String password = request.getParameter("password");
 
         try
         {

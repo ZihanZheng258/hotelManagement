@@ -27,7 +27,7 @@ public class SignupServlet extends HttpServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        String password = Encryption_Services.MD5Encryption(request.getParameter("password"));
+        String password = request.getParameter("password");
         String type = request.getParameter("type");
         String phoneNumber = request.getParameter("phone_number");
         int picture = Integer.parseInt(request.getParameter("picture_id"));
