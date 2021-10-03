@@ -21,6 +21,7 @@
     user1.setPayPassword("PASSWWORD");
     user1.setPicture(12345);
     session.setAttribute("user", user1);
+
 %>
 <%User user = (User) session.getAttribute("user");%>
 <html>
@@ -83,22 +84,23 @@
 <!--Dash Board-->
 </p>
 <div class="dashboard">
-    <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
-    <h2> Account Info </h2>
-    <ul class="infolist">
-        <li><span class="label">Account ID:</span><input type="text" name="ID" placeholder=<%=user.getID()%>></li>
-        <li><span class="label">Account Name:</span><input type="text" name="Name" placeholder=<%=user.getName()%>></li>
-        <li><span class="label">Account Type:</span><%=user.getType()%></li>
-        <li><span class="label">Password</span><input type="text" name="Password" placeholder=<%=user.getPassword()%>></li>
-        <li><span class="label">Phone Number:</span><input type="text" name="PhoneNumber" placeholder=<%=user.getPhoneNumber()%>></li>
-        <li><span class="label">Balance</span>$<%=user.getBalance()%></li>
-        <li><span class="label">PayPassword</span><input type="text" name="PayPassword" placeholder=<%=user.getPayPassword()%>></li>
-    </ul> </div>
+    <form action="UserEditPage">
+        <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
+        <h2> Account Info </h2>
+        <ul class="infolist">
+            <li><span class="label">Account ID:</span><input type="text" name="ID" placeholder=<%=user.getID()%>></li>
+            <li><span class="label">Account Name:</span><input type="text" name="Name" placeholder=<%=user.getName()%>></li>
+            <li><span class="label">Account Type:</span><%=user.getType()%></li>
+            <li><span class="label">Password</span><input type="text" name="Password" placeholder=<%=user.getPassword()%>></li>
+            <li><span class="label">Phone Number:</span><input type="text" name="PhoneNumber" placeholder=<%=user.getPhoneNumber()%>></li>
+            <li><span class="label">Balance</span>$<%=user.getBalance()%></li>
+            <li><span class="label">PayPassword</span><input type="text" name="PayPassword" placeholder=<%=user.getPayPassword()%>></li>
+        </ul> </div>
 
-    <li class="list-inline-item">
-        <a class="btn btn-link" href="//网站"> <span class="bi bi-pencil-square"></span>Done</a>
-    </li>
-
+        <li class="list-inline-item">
+            <button class="btn btn-link" type="submit" value="Find"> <span class="bi bi-pencil-square"></span>Done</button>
+        </li>
+    </form>
 </div>
 
 

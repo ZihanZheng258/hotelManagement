@@ -16,7 +16,7 @@ import services.Encryption_Services;
 public class UserEditPageServlet extends HttpServlet
 {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         try
         {
@@ -39,7 +39,8 @@ public class UserEditPageServlet extends HttpServlet
             user.setPayPassword(payPassword);
 
             //update user in DB
-            manager.user_update(user);
+            //manager.user_update(user);
+            request.getRequestDispatcher("/jsp/Admin_Manage/UserPage.jsp").forward(request, response);
         }
         catch (Exception e)
         {
