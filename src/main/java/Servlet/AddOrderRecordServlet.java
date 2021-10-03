@@ -27,8 +27,8 @@ public class AddOrderRecordServlet extends HttpServlet {
         order.setAmount(amount);
         order.setStatus(status);
         order.setRemark(remark);
-        order.setStart_time(startTime);
-        order.
+        //order.setStart_time(startTime);
+        //order.
 
 
     }
