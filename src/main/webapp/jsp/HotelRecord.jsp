@@ -19,7 +19,7 @@
 <%--%>--%>
 <head>
     <meta charset="UTF-8">
-    <title>HotelRecord</title>
+    <title>Hotel Record</title>
     <!-- 获得更好的响应式支持 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 引入bootstrap的核心css文件  -->
@@ -40,8 +40,8 @@
 
     <!-- Bootstrap -->
     <link href="../utils/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/max/MyAccountPage.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="../css/max/ManageUserPage.css">
 
 </head>
 <!--Header navigation-->
@@ -71,7 +71,7 @@
         </div>
     </div>
 </nav>
-<hr class="hrcoloured" >
+<hr class="hrcoloured">
 
 <!--创建容器-->
 <div class="container">
