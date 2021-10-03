@@ -26,7 +26,7 @@ public class UserEditPageServlet extends HttpServlet
             //retrieve info from page
             int id = Integer.parseInt(request.getParameter("ID"));
             String name = request.getParameter("Name");
-            String password = Encryption_Services.MD5Encryption(request.getParameter("Password"));
+            String password = request.getParameter("Password");
             String phoneNumber = request.getParameter("PhoneNumber");
             String payPassword = request.getParameter("PayPassword");
 
@@ -37,9 +37,10 @@ public class UserEditPageServlet extends HttpServlet
             user.setPassword(password);
             user.setPhoneNumber(phoneNumber);
             user.setPayPassword(payPassword);
+            session.setAttribute("user", user);
 
             //update user in DB
-            //manager.user_update(user);
+            manager.user_update(user);
             request.getRequestDispatcher("/jsp/Admin_Manage/UserPage.jsp").forward(request, response);
         }
         catch (Exception e)
@@ -55,18 +56,11 @@ public class UserEditPageServlet extends HttpServlet
         try
         {
             HttpSession session = req.getSession();
-
-            //DEBUG TESTING
-            User user = new User();
-            user.setID(12345);
-            user.setName("MAX");
-            user.setPassword("PASSWWORD");
-            user.setType("SUPERMAN");
-            user.setPhoneNumber("04123456789");
-            user.setPicture(123456);
-            user.setBalance(10000.00);
-            user.setPayPassword("PASSWWORD");
+            DaoManager manager = new DaoManager(new DBConnector().openConnection());
+            User user = manager.user_find_by_ID(123);
             session.setAttribute("user", user);
+            //DEBUG TESTING
+
         }
         catch (Exception e)
         {

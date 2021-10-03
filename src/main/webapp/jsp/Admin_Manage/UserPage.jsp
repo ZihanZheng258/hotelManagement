@@ -6,20 +6,29 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="beans.User" %>
+<%@ page import="Dao.DaoManager" %>
+<%@ page import="dbc.DBConnector" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     //DEBUG TESTING
-    User user1 = new User();
-    user1.setID(12345);
-    user1.setName("MAX");
-    user1.setPassword("PASSWWORD");
-    user1.setType("SUPERMAN");
-    user1.setPhoneNumber("04123456789");
-    user1.setPicture(123456);
-    user1.setBalance(10000.00);
-    user1.setPayPassword("PASSWWORD");
-    user1.setPicture(12345);
-    session.setAttribute("user", user1);
+    DaoManager manager = new DaoManager(new DBConnector().openConnection());
+    User user10 = manager.user_find_by_ID(123);
+    session.setAttribute("user", user10);
+
+    if (session.getAttribute("user") == null)
+    {
+        User user1 = new User();
+        user1.setID(12345);
+        user1.setName("MAX");
+        user1.setPassword("PASSWWORD");
+        user1.setType("SUPERMAN");
+        user1.setPhoneNumber("04123456789");
+        user1.setPicture(123456);
+        user1.setBalance(10000.00);
+        user1.setPayPassword("PASSWWORD");
+        user1.setPicture(12345);
+        session.setAttribute("user", user1);
+    }
 %>
 <%User user = (User) session.getAttribute("user");%>
 <html>
@@ -82,21 +91,22 @@
 <!--Dash Board-->
 </p>
 <div class="dashboard">
-    <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
-    <h2> Account Info </h2>
-    <ul class="infolist">
-        <li><span class="label">Account ID:</span><%=user.getID()%></li>
-        <li><span class="label">Account Name:</span><%=user.getName()%></li>
-        <li><span class="label">Account Type:</span><%=user.getType()%></li>
-        <li><span class="label">Password</span><%=user.getPassword()%></li>
-        <li><span class="label">Phone Number:</span><%=user.getPhoneNumber()%></li>
-        <li><span class="label">Balance</span>$<%=user.getBalance()%></li>
-    </ul> </div>
+    <form action="UserEditPage">
+        <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
+        <h2> Account Info </h2>
+        <ul class="infolist">
+            <li><span class="label">Account ID:</span><%=user.getID()%></li>
+            <li><span class="label">Account Name:</span><%=user.getName()%></li>
+            <li><span class="label">Account Type:</span><%=user.getType()%></li>
+            <li><span class="label">Password</span><%=user.getPassword()%></li>
+            <li><span class="label">Phone Number:</span><%=user.getPhoneNumber()%></li>
+            <li><span class="label">Balance</span>$<%=user.getBalance()%></li>
+        </ul> </div>
 
-    <li class="list-inline-item">
-        <a class="btn btn-link" href="UserEditPage.jsp"> <span class="bi bi-pencil-square"></span>Edit</a>
-    </li>
-
+        <li class="list-inline-item">
+            <a class="btn btn-link" href="UserEditPage.jsp"> <span class="bi bi-pencil-square"></span>Edit</a>
+        </li>
+    </form>
 </div>
 
 

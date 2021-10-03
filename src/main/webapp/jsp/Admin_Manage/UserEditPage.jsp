@@ -8,21 +8,7 @@
 <%@ page import="beans.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%
-    //DEBUG TESTING
-    User user1 = new User();
-    user1.setID(12345);
-    user1.setName("MAX");
-    user1.setPassword("PASSWWORD");
-    user1.setType("SUPERMAN");
-    user1.setPhoneNumber("04123456789");
-    user1.setPicture(123456);
-    user1.setBalance(10000.00);
-    user1.setPayPassword("PASSWWORD");
-    user1.setPicture(12345);
-    session.setAttribute("user", user1);
 
-%>
 <%User user = (User) session.getAttribute("user");%>
 <html>
 <head>
