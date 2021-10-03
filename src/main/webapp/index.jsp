@@ -64,11 +64,6 @@
     </div>
 </nav>
 
-
-
-
-
-
 <div class="container">
     <div class="text-left mb-5">
         <h1 class="display-4 mt-10 font-weight-bold text-shadow">Provide you with the best accommodation</h1>

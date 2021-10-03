@@ -147,7 +147,6 @@
                         User user = (User) userList.get(i);
             %>
             <tbody>
-
             <tr>
                 <td><%=user.getID()%></td>
                 <td><%=user.getName()%></td>
