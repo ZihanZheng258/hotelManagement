@@ -51,7 +51,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">  Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.jsp">  Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"> <img src="image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
@@ -78,7 +78,7 @@
 
 <header class="header">
     <%
-        if(hotel.get(0).getType() != null){
+        if(!hotel.isEmpty()){
         String title = hotel.get(0).getType();
         %>
     <h2><b><%=title%> Reservation</b></h2>
@@ -86,7 +86,7 @@
     }else {
         String title = "";
     %>
-    <h2><b><%=title%> Reservation</b></h2>
+    <h2><b>null address </b></h2>
     <%
     }
     %>
@@ -100,8 +100,8 @@
             <div class="hotel-frame">
                 <div class="hotel-info">
                     <div class="hotel-left">
-                        <h3 class="hotel-name"><%= hotel.get(i).getName()%></h3>
-                        <p class="hotel-nation"><%= hotel.get(i).getAddress()%></p>
+                        <h3 class="hotel-name">Hotel name:<%= hotel.get(i).getName()%></h3>
+                        <p class="hotel-nation">Hotel Address<%= hotel.get(i).getAddress()%></p>
                         <img class="hotel-pic" src="image/image1/cabinpicture2.jpg" alt="hotel pic">
 
                         <a href="http://localhost:8080/hotelManagement_war/jsp/Cottagedetail2.jsp" >
@@ -112,7 +112,7 @@
 
                     </div>
                     <div class="/hotelManagement_war/jsp/hotel-right">
-                        <i class="hotel-rate"><%= hotel.get(i).getScore()%></i>
+                        <i class="hotel-rate">Hotel Score: <%= hotel.get(i).getScore()%></i>
                         <i class="hotel-price">250-500$/night</i>
                     </div>
                 </div>

@@ -92,6 +92,15 @@
     <servlet-name>DeletRoomRecordServlet</servlet-name>
     <url-pattern>/jsp/RoomRecord</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>DeletUserServlet</servlet-name>
+    <servlet-class>Servlet.DeletUserServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DeletUserServlet</servlet-name>
+    <url-pattern>/jsp/dManageUsers</url-pattern>
+  </servlet-mapping>
 
   <servlet>
     <servlet-name>RoomServlet</servlet-name>

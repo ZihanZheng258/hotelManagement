@@ -42,7 +42,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">陈总booking</a>
+    <a class="navbar-brand" href="index.jsp">陈总booking</a>
 
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">

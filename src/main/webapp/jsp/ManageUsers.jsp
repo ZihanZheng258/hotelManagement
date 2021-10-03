@@ -158,9 +158,11 @@
                         <button class="btn btn-info btn-sm">Edit</button>
                     </a>
                     <!--添加删除按钮 超级管理员权限-->
-                    <a href="AdminPage.jsp">
-                        <button class="btn btn-danger btn-sm">Delete</button>
-                    </a>
+                    <form action="dManageUsers" method="get">
+                        <input type="hidden" name="userid" value=<%=user.getID()%>>
+                        <input type="submit" value="Delete">
+                        <%--                <button class="btn btn-danger btn-sm" type="submit">Delete</button>--%>
+                    </form>
                 </td>
             </tr>
                 <%   }

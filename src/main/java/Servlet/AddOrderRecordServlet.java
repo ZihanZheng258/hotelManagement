@@ -18,6 +18,7 @@ public class AddOrderRecordServlet extends HttpServlet {
         String status = req.getParameter("status");
         String remark = req.getParameter("remark");
         String startTime = req.getParameter("startTime");
+
         String endTime = req.getParameter("endTime");
 
         Order order = new Order();
@@ -27,7 +28,7 @@ public class AddOrderRecordServlet extends HttpServlet {
         order.setAmount(amount);
         order.setStatus(status);
         order.setRemark(remark);
-        //order.setStart_time(startTime);
+        //order.setStart_time("00/00/2000");
         //order.
 
 

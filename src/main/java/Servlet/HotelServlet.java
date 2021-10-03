@@ -31,6 +31,7 @@ public class HotelServlet extends HttpServlet {
                 session.setAttribute("hotel", hotel);
 
                 System.out.println("show all" + hotel.toString());
+
                 if(hotel != null) {
                     if (type.equals("Cabins")) {
                         request.getRequestDispatcher("/jsp/Cabinsindex.jsp").forward(request, response);

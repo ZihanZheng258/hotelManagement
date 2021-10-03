@@ -94,21 +94,7 @@
 <div class="container">
 
   <h1 class="display-4 mt-10 font-weight-bold text-shadow">Admin page</h1>
-  <a href="AddHotelRecord.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">ADD HOTEL RECORD</button>
-  </a>
-  <hr>
-  <a href="AddOrderRecord.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">ADD ORDER RECORD</button>
-  </a>
-  <hr>
-  <a href="AddRoomRecord.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">ADD ROOM RECORD</button>
-  </a>
-  <hr>
-  <a href="CreateAdmin.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">CREATE ADMIN</button>
-  </a>
+
   <form action="Admin">
   <hr>
   <a href="HotelRecord.jsp">
