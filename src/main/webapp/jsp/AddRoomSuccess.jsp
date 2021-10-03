@@ -74,7 +74,7 @@
 <form action="AdminPage">
   <hr>
   <a href="RoomRecord.jsp">
-    <button class="btn btn-lg btn-link btn-block" type="submit" ><p>Come to Room Record Page</p></button>
+    <p><button class="btn btn-lg btn-link btn-block" type="submit" >Come to Room Record Page</button></p>
   </a>
 </form>
 </body>

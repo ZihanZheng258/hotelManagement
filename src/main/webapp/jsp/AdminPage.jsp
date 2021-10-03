@@ -123,7 +123,7 @@
   <form action="AdminPage">
   <hr>
   <a href="RoomRecord.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">ROOMRECORD</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">ROOM RECORD</button>
   </a>
   </form>
   <hr>

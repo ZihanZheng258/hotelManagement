@@ -74,7 +74,7 @@
 
 <hr>
 <a href="AddRoomRecord.jsp">
-    <button class="btn btn-lg btn-link btn-block"><p>Add Another Room</p></button>
+    <p><button class="btn btn-lg btn-link btn-block">Add Another Room</button></p>
 </a>
 
 </body>
