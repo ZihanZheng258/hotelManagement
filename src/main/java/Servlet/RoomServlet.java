@@ -34,7 +34,7 @@ public class RoomServlet extends HttpServlet {
 
 
         Room room = new Room();
-        room.setHotelID(roomID);
+        room.setId(roomID);
         room.setName(roomName);
         room.setNumber(roomNumber);
         room.setArea(roomArea);
@@ -52,18 +52,18 @@ public class RoomServlet extends HttpServlet {
         try{
               DaoManager manager = new DaoManager(new DBConnector().openConnection());
               manager.room_create(room);
-
+              //System.out.println(roomID);
               Room room1 = manager.room_find_by_ID(roomID);
               if(room1 != null)
               {
                   System.out.println(room);
                   request.setAttribute("room1", room1);
-                  request.getRequestDispatcher("/jsp/RoomRecord.jsp").forward(request,response);
+                  request.getRequestDispatcher("AddRoomSuccess.jsp").forward(request,response);
               }else
               {
 
                   System.out.println("you room add is failed");
-                  request.getRequestDispatcher("/jsp/AddRoomRecord.jsp").forward(request, response);
+                  request.getRequestDispatcher("AddRoomError.jsp").forward(request, response);
 
               }
 
@@ -72,14 +72,17 @@ public class RoomServlet extends HttpServlet {
         catch (SQLException throwables)
         {
             throwables.printStackTrace();
+            request.getRequestDispatcher("AddRoomError.jsp").forward(request, response);
         }
         catch (ClassNotFoundException e)
         {
             e.printStackTrace();
+            request.getRequestDispatcher("AddRoomError.jsp").forward(request, response);
         }
         catch (Exception e)
         {
             e.printStackTrace();
+            request.getRequestDispatcher("AddRoomError.jsp").forward(request, response);
         }
 
     }
