@@ -22,61 +22,62 @@
     <h1 class="text-center">Add New Order <small>Junior/Super Administrator Authority</small></h1>
 
     <!--创建表单-->
-    <form>
+    <form action="AddOrderRecord">
         <div class="form-group">
             <label for="InputOrderID">Order-ID</label>
-            <input class="form-control" id="InputOrderID" placeholder="Please Enter Order-ID">
+            <input class="form-control" id="InputOrderID"  name="orderID" value="" placeholder="Please Enter Order-ID">
         </div>
         <div class="form-group">
             <label for="InputCustomerID">Customer-ID</label>
-            <input class="form-control" id="InputCustomerID" placeholder="Please Enter Customer-ID">
+            <input class="form-control" id="InputCustomerID" name="userID" value="" placeholder="Please Enter Customer-ID">
         </div>
         <div class="form-group">
             <label for="InputRoomID">Room-ID</label>
-            <input class="form-control" id="InputRoomID" placeholder="Please Enter Room-ID">
+            <input class="form-control" id="InputRoomID" name="roomID" value="" placeholder="Please Enter Room-ID">
         </div>
         <div class="form-group">
             <label for="InputAmount">Amount</label>
-            <input class="form-control" id="InputAmount" placeholder="Please Enter Amount">
+            <input class="form-control" id="InputAmount" name="amount" value="" placeholder="Please Enter Amount">
         </div>
         <div class="form-group">
             <label for="InputStatus">Status</label>
-            <input class="form-control" id="InputStatus" placeholder="Please Enter Status">
+            <input class="form-control" id="InputStatus" name="status" value="" placeholder="Please Enter Status">
         </div>
 
         <div class="form-group">
             <label for="InputRemark">Remark</label>
-            <textarea class="form-control" id="InputRemark" placeholder="Please Enter Remark" rows="3"></textarea>
+            <textarea class="form-control" id="InputRemark" name="remark" value="" placeholder="Please Enter Remark" rows="3"></textarea>
         </div>
         <br>
 
         <div class="col-sm-4">
             <label for="InputStartTime">Start Time</label>
-            <input type="date" class="form-control" id="InputStartTime">
+            <input type="date" class="form-control" id="InputStartTime" name="sTime" value="" >
         </div>
         <div class="col-sm-1"></div>
         <div class="col-sm-4">
             <label for="InputEndTime">End Time</label>
-            <input type="date" class="form-control" id="InputEndTime">
+            <input type="date" class="form-control" id="InputEndTime" name="eTime" value="">
         </div>
         <div class="col-sm-3"></div>
 
         <br>
+        <div class="container">
+            <!--添加按钮 将以上所有信息添加并显示到表单-->
+
+                <button type="submit" class="btn btn-success btn-block">ADD</button>
+
+            <!--关闭页面-->
+            <a href="AdminPage.jsp">
+                <button class="btn btn-danger btn-block">CANCEL</button>
+            </a>
+        </div>
 
     </form>
 
 </div>
 <br>
 
-<div class="container">
-    <!--添加按钮 将以上所有信息添加并显示到表单-->
-    <a href="AdminPage.jsp">
-    <button type="submit" class="btn btn-success btn-block">ADD</button>
-    </a>
-    <!--关闭页面-->
-    <a href="AdminPage.jsp">
-    <button class="btn btn-danger btn-block">CANCEL</button>
-    </a>
-</div>
+
 </body>
 </html>

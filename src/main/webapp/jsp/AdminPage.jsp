@@ -101,9 +101,12 @@
   </form>
   <hr>
 
+  <form action="Admin2">
   <a href="OrderRecord.jsp">
     <button class="btn btn-lg btn-primary btn-block" type="submit">ORDER RECORD</button>
   </a>
+  </form>
+
   <form action="AdminPage">
   <hr>
   <a href="RoomRecord.jsp">

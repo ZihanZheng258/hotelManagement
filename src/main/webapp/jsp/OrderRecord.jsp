@@ -1,4 +1,4 @@
-<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%@ page import="beans.Order" %><%--
   Created by IntelliJ IDEA.
   User: yangk
@@ -8,7 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
-<%ArrayList<Order> orders = (ArrayList<Order>)session.getAttribute("orders");%>
+<%List<Order> orderList = (List<Order>)session.getAttribute("orderList");%>
 <head>
   <meta charset="UTF-8">
   <title>Order Record</title>
@@ -61,21 +61,22 @@
       <th>Edit/Delete</th>
     </tr>
     <%
-      if(orders != null){
-        System.out.println(orders.size());
-        for (int i=0; i<orders.size(); i++ ){
+      if(orderList != null){
+        System.out.println(orderList.size());
+        for (int i=0; i<orderList.size(); i++ ){
+          Order order = (Order) orderList.get(i);
 
     %>
     <tbody>
     <tr>
-      <td><%=orders.get(i).getId()%></td>
-      <td><%=orders.get(i).getUserID()%></td>
-      <td><%=orders.get(i).getRoomID()%></td>
-      <td><%=orders.get(i).getStart_time()%></td>
-      <td><%=orders.get(i).getEnd_time()%></td>
-      <td><%=orders.get(i).getAmount()%></td>
-      <td><%=orders.get(i).getRemark()%></td>
-      <td><%=orders.get(i).getStatus()%></td>
+      <td><%=order.getId()%></td>
+      <td><%=order.getUserID()%></td>
+      <td><%=order.getRoomID()%></td>
+      <td><%=order.getStart_time()%></td>
+      <td><%=order.getEnd_time()%></td>
+      <td><%=order.getAmount()%></td>
+      <td><%=order.getRemark()%></td>
+      <td><%=order.getStatus()%></td>
       <!--添加删改按钮-->
       <td>
         <a href="AdminPage.jsp">

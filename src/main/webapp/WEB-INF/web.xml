@@ -73,6 +73,20 @@
     <servlet-name>ShowHotelRecordServlet</servlet-name>
     <url-pattern>/jsp/Admin</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ShowOrderRecordServlet</servlet-name>
+    <servlet-class>Servlet.ShowOrderRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowOrderRecordServlet</servlet-name>
+    <url-pattern>/ShowOrderRecord</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowOrderRecordServlet</servlet-name>
+    <url-pattern>/jsp/Admin2</url-pattern>
+  </servlet-mapping>
+
   <servlet>
     <servlet-name>DeleteHotelRecordServlet</servlet-name>
     <servlet-class>Servlet.DeleteHotelRecordServlet</servlet-class>
