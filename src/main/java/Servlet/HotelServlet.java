@@ -21,13 +21,17 @@ public class HotelServlet extends HttpServlet {
         String type = request.getParameter("type");
         try {
 
+            System.out.println(type);
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             HttpSession session = request.getSession();
             List<Hotel> hotel = manager.hotel_find_by_type_and_address(type,address);
             session.setAttribute("hotel", hotel);
-            request.getRequestDispatcher("/jsp/jing/Cabinsindex.jsp").forward(request, response);
 
                 System.out.println("show all"+hotel.toString());
+                request.getRequestDispatcher("/jsp/jing/Cabinsindex.jsp").forward(request, response);
+
+
+
 
 
         }catch (SQLException ex) {
