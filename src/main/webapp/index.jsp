@@ -121,7 +121,7 @@
     <div class="row">
         <div class="col-lg-3">
             <div class="card card-overlay">
-                <a href="jsp/jing/Cabinsindex.jsp">
+                <a href="jsp/Cabinsindex.jsp">
                     <img class="card-img" src="image/house%20type/Cabins.jpg">
                 </a>
                 <div class="card-img-overlay">
@@ -193,29 +193,29 @@
         <div class="carousel-item active">
             <img  src="image/fongjing/11.jpg" >
             <div class="carousel-caption">
-                <h3>first</h3>
-                <p>price</p>
+                <h3>Blue Mountain</h3>
+                <p>price: 1000000000000000000000</p>
             </div>
         </div>
         <div class="carousel-item">
             <img  src="image/fongjing/Darlin_harbour_siidney.jpg" >
             <div class="carousel-caption">
-                <h3>first</h3>
-                <p>price</p>
+                <h3>Darlin harbour</h3>
+                <p>price: 111111111111111111</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img  src="image/house%20type/Cottages.jpg">
+            <img  src="image/fongjing/bridge.jpg">
             <div class="carousel-caption">
-                <h3>first</h3>
-                <p>price</p>
+                <h3>Sydney Harbour Bridge</h3>
+                <p>price:1000000000000</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img  src="image/house%20type/Cabins.jpg" style="display: inline-block" alt="php">
+            <img  src="image/fongjing/myhouse.jpg" >
             <div class="carousel-caption">
-                <h3>first</h3>
-                <p>price</p>
+                <h3>my house</h3>
+                <p>price： 4000000+love</p>
             </div>
         </div>
     </div>

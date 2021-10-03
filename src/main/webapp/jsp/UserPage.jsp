@@ -103,13 +103,13 @@
         </ul> </div>
 
 
-
+    <a href="UserEditPage.jsp">
+        <li class="list-inline-item">
+            <button class="btn btn-link" value="Find"> <span class="bi bi-pencil-square"></span>Edit</button>
+        </li>
+    </a>
 </div>
-<a href="UserEditPage.jsp">
-    <li class="list-inline-item">
-        <button class="btn btn-link" value="Find"> <span class="bi bi-pencil-square"></span>Edit</button>
-    </li>
-</a>
+
 
 </body>
 </html>
