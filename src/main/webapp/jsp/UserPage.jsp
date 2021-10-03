@@ -13,8 +13,6 @@
 <%User user = (User) session.getAttribute("user");%>
 <%
     //DEBUG TESTING
-
-
     if (session.getAttribute("user") == null)
     {
         User user1 = new User();
@@ -100,16 +98,17 @@
             <li><span class="label">Password:</span><%=user.getPassword()%></li>
             <li><span class="label">Phone Number:</span><%=user.getPhoneNumber()%></li>
             <li><span class="label">Balance:</span>$<%=user.getBalance()%></li>
+            <li><span class="label">Pay Password:</span><%=user.getPayPassword()%></li>
         </ul> </div>
 
 
-
+    <a href="UserEditPage.jsp">
+        <li class="list-inline-item">
+            <button class="btn btn-link" value="Find"> <span class="bi bi-pencil-square"></span>Edit</button>
+        </li>
+    </a>
 </div>
-<a href="UserEditPage.jsp">
-    <li class="list-inline-item">
-        <button class="btn btn-link" value="Find"> <span class="bi bi-pencil-square"></span>Edit</button>
-    </li>
-</a>
+
 
 </body>
 </html>

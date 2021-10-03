@@ -9,11 +9,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shangri La cottage </title>
-    <link rel="stylesheet" href="../../utils/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/jing.css">
-    <script src="../../utils/jquery-3.6.0.min.js"></script>
-    <script src="../../utils/bootstrap/js/bootstrap.js"></script>
+    <title>Rose Cottage</title>
+    <link rel="stylesheet" href="../utils/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jing.css">
+    <script src="../utils/jquery-3.6.0.min.js"></script>
+    <script src="../utils/bootstrap/js/bootstrap.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,13 +50,13 @@
                 <a class="nav-link" href="#">  Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> <img src="../../image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
+                <a class="nav-link" href="#"> <img src="../image/image1/house.svg" alt="Bootstrap" width="20"> Stays</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../../image/image1/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
+                <a class="nav-link" href="#">  <img src="../image/image1/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../../image/image1/car.svg" alt="Bootstrap" width="10" >Car rentals</a>
+                <a class="nav-link" href="#">  <img src="../image/image1/car.svg" alt="Bootstrap" width="10" >Car rentals</a>
             </li>
         </ul>
 
@@ -66,30 +66,30 @@
             </li>
             <li class="list-inline-item">
 
-                <a class="btn btn-success" href="//网站"> <img src="../../image/image1/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
+                <a class="btn btn-success" href="//网站"> <img src="../image/image1/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
             </li>
         </div>
     </div>
 </nav>
 
 <header>
-    <h2><b>Shangri La cottage</b></h2>
+    <h2><b>Rose Cottage</b></h2>
     <hr>
     <div class="container">
-        <img src="../../image/image1/cottagepicture5.jpg" class="hotel-detail-image" alt="hotel image detail">
-        <img src="../../image/image1/cottagepicture6.jpg" class="hotel-detail-image" alt="hotel image detail">
+        <img src="../image/image1/cottagepicture3.jpg" class="hotel-detail-image" alt="hotel image detail">
+        <img src="../image/image1/cottagepicture4.jpg" class="hotel-detail-image" alt="hotel image detail">
     </div>
     <div class="hotel-description container">
-        <p> Shangri La cottage Hotel is located in one area of Orlando, USA. each cottage comes with an outdoor swimming pool and free wifi.</p>
+        <p>The hotel rose cottage is located in kisimi, USA. each villa provides a fully equipped open kitchen and standard guest room.</p>
         <p>Each cottage hotel also offers free WiFi and a free parking in the house</p>
-        <p>The guest room of the cottage also has a large LCD TV and free private parking space</p>
-        <p> There is also a large amusement park 15 kilometers away from the cottage, which is less than 12 minutes away if guest drive</p>
+        <p>The cottage comes with a large garden and playground, as well as entertainment equipment such as barbecue</p>
+        <p>There is a shopping mall 20 kilometers away from the villa. The things inside are good and cheap. Guests can drive or take a bus to go there to shop with their families</p>
     </div>
     <div class="hotel-service container text-warning">
         <h5>Popular services:</h5>
         <ol>
             <li>Free WIFI</li>
-            <li>one swimming pool</li>
+            <li>Barbecue facilities</li>
             <li>Free parking</li>
             <li>Non smoking room</li>
             <li>Family room</li>
@@ -112,30 +112,30 @@
                 <td>
                     <p>Three bedroom guest room</p>
                     <p>Guest room facilities:</p>
-                    <p>Room area: 120 square meters</p>
-                    <p>Bedroom 1: 1 king size single bed: 1.8m x 2m</p>
-                    <p>Bedroom 2: 2 king size single bed: 1.8m x 2m</p>
-                    <p>Bedroom 3: 1 king size double bed: 2.2m x 2m and 1 single bed: 1.8m x 2m</p>
+                    <p>Room area: 100 square meters</p>
+                    <p>Bedroom 1: 2 single bed: 1.5m x 2m</p>
+                    <p>Bedroom 2: 1 king size bed : 2.2m x 2m</p>
+                    <p>Bedroom 3: 1 king size double bed: 2.2m x 2m </p>
                     <p>Free WIFI<br/>
                         Independent shower and bathroom,living room<br/>
-                        Carpet,dryer,sofa,heating<br/>
+                        Carpet,dryer,sofa<br/>
                         Fully open kitchen:<br/>
                         Refrigerator, microwave oven, electric kettle,roaster<br/>
-                        Wardrobe / wardrobe, air conditioner, TV,Barbecue rack<br/>
+                        Wardrobe / wardrobe, air conditioner, TV<br/>
                         Telephone, bedding, Outdoor dining area,large table</p>
 
                 </td>
                 <td>
-                    <p>Six <br/> occupancy</p>
+                    <p>Five <br/> occupancy</p>
                 </td>
                 <td>
-                    <p>600</p>
+                    <p>500</p>
                 </td>
                 <td>
-                    <p>5/10</p>
+                    <p>4/10</p>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
+                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
                 </td>
             </tr>
             <tr class="text-info">
@@ -144,28 +144,28 @@
                     <p>Guest room facilities:</p>
                     <p>Room area: 120 square meters</p>
                     <p>Bedroom 1: 2 single beds: 1.8m x 2m</p>
-                    <p>Bedroom 2: 2 single beds: 1.8m x 2m</p>
-                    <p>Bedroom 3: 1 queens beds: 2.2m x 2m </p>
+                    <p>Bedroom 2: 1 single beds: 1.8m x 2m</p>
+                    <p>Bedroom 3: 1 queens beds: 2.2m x 2m</p>
                     <p>Bedroom 4: 1 double beds: 1.8m x 2m</p>
                     <p>Free WiFi <br/>
                         Independent shower and bathroom,living room<br/>
-                        Carpet,dryer,sofa,heating<br/>
+                        Carpet,dryer,sofa<br/>
                         Fully open kitchen:<br/>
                         Refrigerator, microwave oven, electric kettle,roaster<br/>
-                        Wardrobe / wardrobe, air conditioner, TV,Barbecue rack<br/>
+                        Wardrobe / wardrobe, air conditioner, TV<br/>
                         Telephone, bedding,  Outdoor dining area,large table</p>
                 </td>
                 <td>
-                    <p>eight <br/> occupancy</p>
+                    <p>six <br/> occupancy</p>
                 </td>
                 <td>
-                    <p>800</p>
+                    <p>650</p>
                 </td>
                 <td>
-                    <p>4/10</p>
+                    <p>3/10</p>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
+                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
                 </td>
             </tr>
             <tr class="text-info">
@@ -177,26 +177,26 @@
                     <p>Bedroom 2: 2 single beds: 1.8m x 2m</p>
                     <p>Bedroom 3: 2 single bed: 1.5m x 1.8m</p>
                     <p>Bedroom 4: 1 king bed: 2.2m x 1.8m</p>
-                    <p>Bedroom 5: 2 single bed: 1.5m x 1.8m</p>
+                    <p>Bedroom 5: 1 single bed: 1.5m x 1.8m</p>
                     <p>Free WiFi <br/>
                         Independent shower and bathroom,living room<br/>
-                        Carpet,dryer,sofa,towel,Barbecue rack,heating<br/>
+                        Carpet,dryer,sofa,towel<br/>
                         Fully open kitchen:<br/>
                         Refrigerator, microwave oven, electric kettle,roaster<br/>
                         Wardrobe / wardrobe, air conditioner, TV,Coffee machine<br/>
                         Telephone, bedding,  Outdoor dining area,large table</p>
                 </td>
                 <td>
-                    <p> Ten<br/> occupancy</p>
+                    <p> Eight<br/> occupancy</p>
                 </td>
                 <td>
-                    <p>1000</p>
+                    <p>800</p>
                 </td>
                 <td>
-                    <p>3/10</p>
+                    <p>2/10</p>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="../Payment.jsp" role="button">Book now</a>
+                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
                 </td>
             </tr>
             </tbody>
@@ -205,8 +205,8 @@
     <hr>
     <div class="hotel-comment">
         <h4>Customer comments:</h4>
-        <p><i class="rate">8.9</i> Great</p>
-        <p>-1186 guest comment</p>
+        <p><i class="rate">8.8</i> Great</p>
+        <p>-1079 guest comment</p>
         <p><a href="javascript:void(0)">View all comments</a></p>
     </div>
 </header>

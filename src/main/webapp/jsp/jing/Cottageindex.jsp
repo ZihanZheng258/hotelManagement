@@ -84,7 +84,7 @@
                         <h3 class="hotel-name">Rose Cottage</h3>
                         <p class="hotel-nation">United States</p>
                         <img class="hotel-pic" src="../../image/image1/cottagepicture1.jpg" alt="hotel pic">
-                        <p class="hotel-detail-link"><a href="Cottagedetail1.jsp" target="_blank"><b>View more information</b></a></p>
+                        <p class="hotel-detail-link"><a href="../Cottagedetail1.jsp" target="_blank"><b>View more information</b></a></p>
                     </div>
                     <div class="hotel-right">
                         <i class="hotel-rate">8.8</i>
@@ -100,7 +100,7 @@
                         <h3 class="hotel-name">Shangri-La Cottage</h3>
                         <p class="hotel-nation">United States </p>
                         <img class="hotel-pic" src="../../image/image1/cottagepicture2.jpg" alt="hotel pic">
-                        <p class="hotel-detail-link"><a href="Cottagedetail2.jsp" target="_blank"><b>View more information</b></a></p>
+                        <p class="hotel-detail-link"><a href="../Cottagedetail2.jsp" target="_blank"><b>View more information</b></a></p>
                     </div>
                     <div class="hotel-right">
                         <i class="hotel-rate">8.9</i>
