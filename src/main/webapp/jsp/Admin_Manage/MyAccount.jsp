@@ -80,7 +80,7 @@
   </ul> </div>
 
   <li class="list-inline-item">
-    <a class="btn btn-link" href="UserEditPage.jsp"> <span class="bi bi-pencil-square"></span>Edit</a>
+    <a class="btn btn-link" href="../UserEditPage.jsp"> <span class="bi bi-pencil-square"></span>Edit</a>
   </li>
 
 </div>

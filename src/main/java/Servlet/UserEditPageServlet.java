@@ -18,30 +18,35 @@ public class UserEditPageServlet extends HttpServlet
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
+
+        String name = request.getParameter("Name");
+        String password = request.getParameter("Password");
+        String phoneNumber = request.getParameter("PhoneNumber");
+        String payPassword = request.getParameter("PayPassword");
+
+        //get user from session and update info
+
         try
         {
             HttpSession session = request.getSession();
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
-
-            //retrieve info from page
-            int id = Integer.parseInt(request.getParameter("ID"));
-            String name = request.getParameter("Name");
-            String password = request.getParameter("Password");
-            String phoneNumber = request.getParameter("PhoneNumber");
-            String payPassword = request.getParameter("PayPassword");
-
-            //get user from session and update info
             User user = (User) session.getAttribute("user");
-            user.setID(id);
             user.setName(name);
             user.setPassword(password);
             user.setPhoneNumber(phoneNumber);
             user.setPayPassword(payPassword);
             session.setAttribute("user", user);
+            //retrieve info from page
 
-            //update user in DB
-            manager.user_update(user);
-            request.getRequestDispatcher("/jsp/Admin_Manage/UserPage.jsp").forward(request, response);
+
+            //update user in DB'
+            System.out.println(user.getID());
+
+            boolean check =manager.user_update(user);
+            if (check == false){
+                System.out.println("fail update");
+            }
+            request.getRequestDispatcher("/jsp/UserPage.jsp").forward(request, response);
         }
         catch (Exception e)
         {

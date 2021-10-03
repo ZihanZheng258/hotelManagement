@@ -40,7 +40,7 @@ public class UserDao implements BaseDao<User>{
 
 	@Override
 	public boolean doUpdate(User beanObject) throws Exception {
-		ps = conn.prepareStatement("UPDATE `hotel`.`t_user` SET `name` = ?, `password` = ?, "
+		ps = conn.prepareStatement("UPDATE `t_user` SET `name` = ?, `password` = ?, "
 				+ "`type` = ?, `phone_number` = ?, "
 				+ "`picture_id` = ?, `balance` = ?, `pay_pwd` = ? WHERE `id` = ?;");
         
@@ -52,6 +52,7 @@ public class UserDao implements BaseDao<User>{
         ps.setObject(6,beanObject.getBalance());
         ps.setObject(7,beanObject.getPayPassword());
         ps.setObject(8,beanObject.getID());
+		System.out.print(ps.executeUpdate());
 		return false;
 	}
 

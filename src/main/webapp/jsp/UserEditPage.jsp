@@ -31,8 +31,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <!-- Bootstrap -->
-    <link href="../../utils/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/max/MyAccountPage.css" rel="stylesheet">
+    <link href="../utils/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/max/MyAccountPage.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
@@ -46,13 +46,13 @@
                 <a class="nav-link" href="#">  Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> <img src="../../image/svg/house.svg" alt="Bootstrap" width="20"> Stays</a>
+                <a class="nav-link" href="#"> <img src="../image/svg/house.svg" alt="Bootstrap" width="20"> Stays</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../../image/svg/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
+                <a class="nav-link" href="#">  <img src="../image/svg/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../../image/svg/car.svg" alt="Bootstrap" width="20" >Car rentals</a>
+                <a class="nav-link" href="#">  <img src="../image/svg/car.svg" alt="Bootstrap" width="20" >Car rentals</a>
             </li>
         </ul>
 
@@ -61,7 +61,7 @@
                 <a class="btn btn-link" href="//网站"> <span class="glyphicon glyphicon-user"></span> Sign In</a>
             </li>
             <li class="list-inline-item">
-                <a class="btn btn-success" href="//网站"> <img src="../../image/svg/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
+                <a class="btn btn-success" href="//网站"> <img src="../image/svg/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
             </li>
         </div>
     </div>
@@ -74,7 +74,7 @@
         <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
         <h2> Account Info </h2>
         <ul class="infolist">
-            <li><span class="label">Account ID:</span><input type="text" name="ID" placeholder=<%=user.getID()%>></li>
+            <li><span class="label">Account ID:</span><%=user.getID()%></li>
             <li><span class="label">Account Name:</span><input type="text" name="Name" placeholder=<%=user.getName()%>></li>
             <li><span class="label">Account Type:</span><%=user.getType()%></li>
             <li><span class="label">Password</span><input type="text" name="Password" placeholder=<%=user.getPassword()%>></li>

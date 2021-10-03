@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -25,12 +26,14 @@ public class SigninServlet extends HttpServlet {
 
         try
         {
+            HttpSession session = request.getSession();
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             User user = null;
             user = manager.user_find_for_login(id, password);
+            session.setAttribute("user",user);
             if (user != null) {
                 System.out.println("Login Succeed");
-                request.getRequestDispatcher("/jsp/Admin_Manage/UserPage.jsp").forward(request, response);
+                request.getRequestDispatcher("/jsp/UserPage.jsp").forward(request, response);
             } else {
                 System.out.println("Login failed");
             }

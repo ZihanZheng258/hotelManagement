@@ -98,7 +98,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>UserEditPageServlet</servlet-name>
-    <url-pattern>/jsp/Admin_Manage/UserEditPage</url-pattern>
+    <url-pattern>/jsp/UserEditPage</url-pattern>
   </servlet-mapping>
 
 </web-app>

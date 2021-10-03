@@ -75,7 +75,7 @@
     <button class="btn btn-lg btn-primary btn-block" type="submit">ManageUsers</button>
   </a>
   <hr>
-  <a href="Admin_Manage/UserPage.jsp">
+  <a href="UserPage.jsp">
     <button class="btn btn-lg btn-primary btn-block" type="submit">MyAccount</button>
   </a>
 
