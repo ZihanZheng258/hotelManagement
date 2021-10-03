@@ -91,23 +91,8 @@
     <servlet-name>ShowRoomServlet</servlet-name>
     <url-pattern>/ShowRoom</url-pattern>
   </servlet-mapping>
-
-  <servlet>
-    <servlet-name>UserEditPageServlet</servlet-name>
-    <servlet-class>Servlet.UserEditPageServlet</servlet-class>
-  </servlet>
   <servlet-mapping>
-    <servlet-name>UserEditPageServlet</servlet-name>
-    <url-pattern>/jsp/UserEditPage</url-pattern>
+    <servlet-name>ShowRoomServlet</servlet-name>
+    <url-pattern>/jsp/AdminPage</url-pattern>
   </servlet-mapping>
-
-  <servlet>
-    <servlet-name>ManageUsersServlet</servlet-name>
-    <servlet-class>Servlet.ManageUsersServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ManageUsersServlet</servlet-name>
-    <url-pattern>/jsp/ManageUsers</url-pattern>
-  </servlet-mapping>
-
 </web-app>
