@@ -72,7 +72,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">  Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../index.jsp">  Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"> <img src="../image/svg/house.svg" alt="Bootstrap" width="20"> Stays</a>
@@ -87,10 +87,7 @@
 
             <div class="btn float-right">
                 <li class="list-inline-item">
-                    <a class="btn btn-link" href="//网站"> <span class="glyphicon glyphicon-user"></span> Sign In</a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="btn btn-success" href="//网站"> <img src="../image/svg/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
+                    <a class="btn btn-success" href="../index.jsp"> <img src="../image/svg/sign-out-alt.svg" alt="Bootstrap" width="20" >Sign Out</a>
                 </li>
             </div>
         </div>
@@ -101,7 +98,7 @@
     <!--创建容器-->
     <div class="container">
         <div class="row">
-            <div class="col-sm-8"><h1 class="text-center">Hotel Record <small> HMS-V1.0</small></h1></div>
+            <div class="col-sm-8"><h1 class="text-center">Manage User <small> MUS-V1.0</small></h1></div>
             <div class="col-sm-2"><h3 class="text-center" style="margin-top: 26px">Welcome: <%=currentUser.getName()%></h3>
             </div>
 
