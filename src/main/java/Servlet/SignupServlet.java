@@ -4,6 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import java.util.logging.Level;
@@ -33,6 +34,8 @@ public class SignupServlet extends HttpServlet {
         int picture = Integer.parseInt(request.getParameter("picture_id"));
         double balance = Double.parseDouble(request.getParameter("balance"));
         String paypassword = request.getParameter("paypassword");
+
+        PrintWriter error = response.getWriter();
 
         User user = new User();
         user.setID(id);
@@ -66,5 +69,7 @@ public class SignupServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        error.println("<script language='javascript'>alert('Sign up format is WRONG!! Please try again')</script>");
+        error.println("<script language='javascript'>window.location.href='/hotelManagement_war/jsp/signup.jsp'</script>");
     }
 }

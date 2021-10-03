@@ -3,6 +3,7 @@ package Servlet;
 import Dao.DaoManager;
 import beans.User;
 import dbc.DBConnector;
+import org.eclipse.persistence.internal.sessions.DirectCollectionChangeRecord;
 import services.Encryption_Services;
 
 import javax.servlet.ServletException;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 @WebServlet(name = "SigninServlet", value = "/SigninServlet")
@@ -23,6 +25,8 @@ public class SigninServlet extends HttpServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
         String password = request.getParameter("password");
+
+        PrintWriter error = response.getWriter();
 
         try
         {
@@ -44,6 +48,7 @@ public class SigninServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("/jsp/signin.jsp").forward(request,response);
+        error.println("<script language='javascript'>alert('ID or Password is WRONG')</script>");
+        error.println("<script language='javascript'>window.location.href='/hotelManagement_war/jsp/signin.jsp'</script>");
     }
 }
