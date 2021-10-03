@@ -28,7 +28,7 @@ public class UserDao implements BaseDao<User>{
 
 	        ps.setObject(1,beanObject.getID());
 	        ps.setObject(2,beanObject.getName());
-	        ps.setObject(3,Encryption_Services.MD5Encryption(beanObject.getPassword()));
+	        ps.setObject(3,beanObject.getPassword());
 	        ps.setObject(4,beanObject.getType());
 	        ps.setObject(5,beanObject.getPhoneNumber());
 	        ps.setObject(6,10000);
@@ -40,7 +40,7 @@ public class UserDao implements BaseDao<User>{
 
 	@Override
 	public boolean doUpdate(User beanObject) throws Exception {
-		ps = conn.prepareStatement("UPDATE `hotel`.`t_user` SET `name` = ?, `password` = ?, "
+		ps = conn.prepareStatement("UPDATE `t_user` SET `name` = ?, `password` = ?, "
 				+ "`type` = ?, `phone_number` = ?, "
 				+ "`picture_id` = ?, `balance` = ?, `pay_pwd` = ? WHERE `id` = ?;");
         
@@ -52,13 +52,14 @@ public class UserDao implements BaseDao<User>{
         ps.setObject(6,beanObject.getBalance());
         ps.setObject(7,beanObject.getPayPassword());
         ps.setObject(8,beanObject.getID());
+		System.out.print(ps.executeUpdate());
 		return false;
 	}
 
 	public boolean doUpdate_password(int ID, String password) throws Exception {
 		ps = conn.prepareStatement("UPDATE t_user SET `password` = ? WHERE `id` = ?;");
-        
-        ps.setObject(1,Encryption_Services.MD5Encryption(password));
+
+        ps.setObject(1,password);
         ps.setObject(2,ID);
         ps.executeUpdate();
 		return true;
@@ -88,7 +89,7 @@ public class UserDao implements BaseDao<User>{
 	public User findForLogin(Integer id,String password) throws Exception {
 		ps = conn.prepareStatement("SELECT * FROM t_user WHERE t_user.id = ? And t_user.password = ?;");
 		ps.setObject(1, String.valueOf(id));
-		ps.setObject(2, Encryption_Services.MD5Encryption(password));
+		ps.setObject(2, password);
 		ResultSet result = ps.executeQuery();
 		result.next();
 	    User user = beanfactory.generateBeaninstance(result);

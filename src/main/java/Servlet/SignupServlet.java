@@ -27,7 +27,7 @@ public class SignupServlet extends HttpServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        String password = Encryption_Services.MD5Encryption(request.getParameter("password"));
+        String password = request.getParameter("password");
         String type = request.getParameter("type");
         String phoneNumber = request.getParameter("phone_number");
         int picture = Integer.parseInt(request.getParameter("picture_id"));
@@ -46,14 +46,15 @@ public class SignupServlet extends HttpServlet {
 
         try
         {
+            HttpSession session = request.getSession();
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             manager.user_create(user);
             User user_exist = manager.user_find_by_ID(id);
-
+            session.setAttribute("user", user);
             if (user_exist != null) {
                 System.out.println(user);
                 request.setAttribute("user_exist", user_exist);
-                request.getRequestDispatcher("/jsp/Admin_Manage/UserPage.jsp").forward(request, response);
+                request.getRequestDispatcher("/jsp/UserPage.jsp").forward(request, response);
             } else {
                 System.out.println("Create failed");
                 request.getRequestDispatcher("signup.jsp").forward(request, response);

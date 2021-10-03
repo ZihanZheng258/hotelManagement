@@ -5,7 +5,31 @@
   Time: 9:53 pm
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="beans.User" %>
+<%@ page import="Dao.DaoManager" %>
+<%@ page import="dbc.DBConnector" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%User user = (User) session.getAttribute("user");%>
+<%
+    //DEBUG TESTING
+
+
+    if (session.getAttribute("user") == null)
+    {
+        User user1 = new User();
+        user1.setID(12345);
+        user1.setName("MAX");
+        user1.setPassword("PASSWWORD");
+        user1.setType("SUPERMAN");
+        user1.setPhoneNumber("04123456789");
+        user1.setPicture(123456);
+        user1.setBalance(10000.00);
+        user1.setPayPassword("PASSWWORD");
+        user1.setPicture(12345);
+        session.setAttribute("user", user1);
+    }
+%>
 <html>
 <head>
     <title>My Account</title>
@@ -27,8 +51,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <!-- Bootstrap -->
-    <link href="../../utils/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/max/MyAccountPage.css" rel="stylesheet">
+    <link href="../utils/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/max/MyAccountPage.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
@@ -42,13 +66,13 @@
                 <a class="nav-link" href="#">  Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> <img src="../../image/svg/house.svg" alt="Bootstrap" width="20"> Stays</a>
+                <a class="nav-link" href="#"> <img src="../image/svg/house.svg" alt="Bootstrap" width="20"> Stays</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../../image/svg/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
+                <a class="nav-link" href="#">  <img src="../image/svg/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../../image/svg/car.svg" alt="Bootstrap" width="20" >Car rentals</a>
+                <a class="nav-link" href="#">  <img src="../image/svg/car.svg" alt="Bootstrap" width="20" >Car rentals</a>
             </li>
         </ul>
 
@@ -57,7 +81,7 @@
                 <a class="btn btn-link" href="//网站"> <span class="glyphicon glyphicon-user"></span> Sign In</a>
             </li>
             <li class="list-inline-item">
-                <a class="btn btn-success" href="//网站"> <img src="../../image/svg/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
+                <a class="btn btn-success" href="//网站"> <img src="../image/svg/sign-out-alt.svg" alt="Bootstrap" width="20" >  Sign Up</a>
             </li>
         </div>
     </div>
@@ -66,25 +90,26 @@
 <!--Dash Board-->
 </p>
 <div class="dashboard">
-    <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
-    <h2> Account Info </h2>
-    <ul class="infolist">
-        <li><span class="label">Registered Email:</span>poosh0803@gmail.com</li>
-        <li><span class="label">Account Name:</span>Jui-Ching Wang</li>
-        <li><span class="label">Account Type:</span>HOME USER</li>
-        <li><span class="label">Password</span>[HIDE]HOME USER[ME]</li>
-        <li><span class="label">Phone Number:</span>0415102723</li>
-        <li><span class="label">Balance</span>$1,000,000 AUD</li>
-        <li><span class="label">User Start Time:</span>01/01/2021</li>
-        <li><span class="label">User End Time:</span>01/02/2021</li>
-    </ul> </div>
 
-    <li class="list-inline-item">
-        <a class="btn btn-link" href="//网站"> <span class="bi bi-pencil-square"></span>Edit</a>
-    </li>
+        <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
+        <h2> Account Info </h2>
+        <ul class="infolist">
+            <li><span class="label">Account ID:</span><%=user.getID()%></li>
+            <li><span class="label">Account Name:</span><%=user.getName()%></li>
+            <li><span class="label">Account Type:</span><%=user.getType()%></li>
+            <li><span class="label">Password:</span><%=user.getPassword()%></li>
+            <li><span class="label">Phone Number:</span><%=user.getPhoneNumber()%></li>
+            <li><span class="label">Balance:</span>$<%=user.getBalance()%></li>
+        </ul> </div>
+
+
 
 </div>
-
+<a href="UserEditPage.jsp">
+    <li class="list-inline-item">
+        <button class="btn btn-link" value="Find"> <span class="bi bi-pencil-square"></span>Edit</button>
+    </li>
+</a>
 
 </body>
 </html>

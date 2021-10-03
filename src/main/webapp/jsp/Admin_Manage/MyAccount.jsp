@@ -5,7 +5,9 @@
   Time: 9:53 pm
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="beans.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%User user = (User) session.getAttribute("user");%>
 <html>
 <head>
   <title>My Account</title>
@@ -32,8 +34,8 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
-  <!--Header navigation-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--Header navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">陈总booking</a>
 
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -63,27 +65,25 @@
   </div>
 </nav>
 
-  <!--Dash Board-->
-  </p>
-  <div class="dashboard">
-    <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
-    <h2> Account Info </h2>
-    <ul class="infolist">
-      <li><span class="label">Registered Email:</span>poosh0803@gmail.com</li>
-      <li><span class="label">Account Name:</span>Jui-Ching Wang</li>
-      <li><span class="label">Account Type:</span>HOME USER</li>
-      <li><span class="label">Password</span>[HIDE]HOME USER[ME]</li>
-      <li><span class="label">Phone Number:</span>0415102723</li>
-      <li><span class="label">Balance</span>$1,000,000 AUD</li>
-      <li><span class="label">User Start Time:</span>01/01/2021</li>
-      <li><span class="label">User End Time:</span>01/02/2021</li>
-    </ul> </div>
+<!--Dash Board-->
+</p>
+<div class="dashboard">
+  <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
+  <h2> Account Info </h2>
+  <ul class="infolist">
+    <li><span class="label">Account ID:</span><%=user.getID()%></li>
+    <li><span class="label">Account Name:</span><%=user.getName()%></li>
+    <li><span class="label">Account Type:</span><%=user.getType()%></li>
+    <li><span class="label">Password</span><%=user.getPassword()%></li>
+    <li><span class="label">Phone Number:</span><%=user.getPhoneNumber()%></li>
+    <li><span class="label">Balance</span>$<%=user.getBalance()%></li>
+  </ul> </div>
 
-    <li class="list-inline-item">
-      <a class="btn btn-link" href="//网站"> <span class="bi bi-pencil-square"></span>Edit</a>
-    </li>
+  <li class="list-inline-item">
+    <a class="btn btn-link" href="../UserEditPage.jsp"> <span class="bi bi-pencil-square"></span>Edit</a>
+  </li>
 
-  </div>
+</div>
 
 
 </body>
