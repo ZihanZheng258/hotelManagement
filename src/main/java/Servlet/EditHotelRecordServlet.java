@@ -43,7 +43,7 @@ public class EditHotelRecordServlet extends HttpServlet
             //update hotel in DB
             manager.hotel_update(hotel);
 
-            request.getRequestDispatcher("").forward(request, response);
+            request.getRequestDispatcher("Admin").forward(request, response);
         }
         catch (Exception e)
         {
