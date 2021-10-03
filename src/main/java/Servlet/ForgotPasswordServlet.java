@@ -1,5 +1,6 @@
 package Servlet;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,6 +21,8 @@ public class ForgotPasswordServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         String password = request.getParameter("password");
 
+        PrintWriter error = response.getWriter();
+
         try {
 //            DaoManager manager = (DaoManager) session.getAttribute("manager");
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
@@ -39,6 +42,8 @@ public class ForgotPasswordServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("/jsp/signin.jsp").forward(request,response);
+        //request.getRequestDispatcher("/jsp/signin.jsp").forward(request,response);
+        error.println("<script language='javascript'>alert('ID is WRONG')</script>");
+        error.println("<script language='javascript'>window.location.href='/hotelManagement_war/jsp/ForgotPassword.jsp'</script>");
     }
 }
