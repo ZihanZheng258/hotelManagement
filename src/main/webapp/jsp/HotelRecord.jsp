@@ -112,10 +112,10 @@
                 </a>
 
                 <!--添加删除按钮 超级管理员权限-->
-                <form action="DeleteHotelRecord" method="get">
+                <form action="HotelRecord" method="get">
                     <input type="hidden" name="hotelID" value=<%=hotel.getId()%>>
                     <input type="submit" value="Delete">
-<%--                <button class="btn btn-danger btn-sm" type="submit">Delete</button>--%>
+                    <%--                <button class="btn btn-danger btn-sm" type="submit">Delete</button>--%>
                 </form>
             </td>
         </tr>

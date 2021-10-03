@@ -69,13 +69,20 @@
     <servlet-name>DeleteHotelRecordServlet</servlet-name>
     <servlet-class>Servlet.DeleteHotelRecordServlet</servlet-class>
   </servlet>
-  <servlet-mapping>
-    <servlet-name>DeleteHotelRecordServlet</servlet-name>
-    <url-pattern>/DeleteHotelRecord</url-pattern>
-  </servlet-mapping>
+
   <servlet-mapping>
     <servlet-name>DeleteHotelRecordServlet</servlet-name>
     <url-pattern>/jsp/HotelRecord</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DeletRoomRecordServlet</servlet-name>
+    <servlet-class>Servlet.DeletRoomRecordServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DeletRoomRecordServlet</servlet-name>
+    <url-pattern>/jsp/RoomRecord</url-pattern>
   </servlet-mapping>
 
   <servlet>

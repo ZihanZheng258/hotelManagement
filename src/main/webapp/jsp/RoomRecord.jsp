@@ -132,21 +132,23 @@
         <%
         if(rooms != null){
             System.out.println(rooms.size());
-            for (int i=0; i<rooms.size();i++){ %>
+            for (int i=0; i<rooms.size();i++){
+                Room room = (Room)rooms.get(i);
+        %>
         <tbody>
         <tr>
-            <td><%=rooms.get(i).getId()%></td>
-            <td><%=rooms.get(i).getName()%></td>
-            <td><%=rooms.get(i).getNumber()%></td>
-            <td><%=rooms.get(i).getpicture()%></td>
-            <td><%=rooms.get(i).getType()%></td>
-            <td><%=rooms.get(i).getArea()%></td>
-            <td><%=rooms.get(i).getBedWidth()%></td>
-            <td><%=rooms.get(i).getPrice()%></td>
-            <td><%=rooms.get(i).getBookStatus()%></td>
-            <td><%=rooms.get(i).getScore()%></td>
-            <td><%=rooms.get(i).getRemark()%></td>
-            <td><%=rooms.get(i).getLevel()%></td>
+            <td><%=room.getId()%></td>
+            <td><%=room.getName()%></td>
+            <td><%=room.getNumber()%></td>
+            <td><%=room.getpicture()%></td>
+            <td><%=room.getType()%></td>
+            <td><%=room.getArea()%></td>
+            <td><%=room.getBedWidth()%></td>
+            <td><%=room.getPrice()%></td>
+            <td><%=room.getBookStatus()%></td>
+            <td><%=room.getScore()%></td>
+            <td><%=room.getRemark()%></td>
+            <td><%=room.getLevel()%></td>
 
 
             <td>
@@ -155,28 +157,16 @@
                 <button class="btn btn-info btn-sm">Edit</button>
                 </a>
                 <!--添加删除按钮 超级管理员权限-->
-                    <a href="AdminPage.jsp">
-                <button class="btn btn-danger btn-sm">Delete</button>
-                    </a>
+                <form action="RoomRecord" method="get">
+                    <input type="hidden" name="roomid" value=<%=room.getId()%>>
+                    <input type="submit" value="Delete">
+
+                </form>
             </td>
         </tr>
         <%   }
             }
         %>
-        <tr>
-            <td>r-0000001</td>
-            <td>single bed room</td>
-            <td>15</td>
-            <td>none</td>
-            <td>single</td>
-            <td>60</td>
-            <td>180*120</td>
-            <td>60</td>
-            <td>ocuupied</td>
-            <td>3</td>
-            <td>good</td>
-            <td>h-00000001</td>
-            <td>occupied</td>
 
     </table>
 

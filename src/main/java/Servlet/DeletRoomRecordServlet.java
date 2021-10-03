@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class DeleteHotelRecordServlet extends HttpServlet {
+public class DeletRoomRecordServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int hotelID = Integer.parseInt(req.getParameter("hotelID"));
+        int roomid = Integer.parseInt(req.getParameter("roomid"));
         try {
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
-            manager.hotel_delete(hotelID);
+            manager.room_delete(roomid);
 
-                req.getRequestDispatcher("Admin").forward(req, resp);
+            req.getRequestDispatcher("AdminPage").forward(req, resp);
 
 
         } catch (SQLException throwables) {
@@ -28,7 +28,7 @@ public class DeleteHotelRecordServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        req.getRequestDispatcher("Admin").forward(req, resp);
+        req.getRequestDispatcher("AdminPage").forward(req, resp);
 
     }
 }
