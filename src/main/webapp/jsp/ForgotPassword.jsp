@@ -41,7 +41,7 @@
     <%
         User user = (User)session.getAttribute("user");
         String updated = request.getParameter("updated");
-    %>//meiyong
+    %>
     <form class="form-signin" method="post" action="ForgotPassword">
 
         <h2 class="form-signin-heading">Enter email to reset your password</h2>
