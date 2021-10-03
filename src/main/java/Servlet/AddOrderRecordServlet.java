@@ -18,18 +18,14 @@ import java.util.Date;
 public class AddOrderRecordServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
         int orderID = Integer.parseInt(req.getParameter("orderID"));
         int userID = Integer.parseInt(req.getParameter("userID"));
         int roomID = Integer.parseInt(req.getParameter("roomID"));
         double amount = Double.parseDouble(req.getParameter("amount"));
         String status = req.getParameter("status");
         String remark = req.getParameter("remark");
-        //Date startTime = sdf.parse(req.getParameter("startTime"));
-        //Date endTime = req.getParameter("endTime");
 
-        Date eTime = null;
-        Date sTime = null;
 
 
 
@@ -45,10 +41,11 @@ public class AddOrderRecordServlet extends HttpServlet {
 
 
         try {
-            order.setStart_time(sTime);
-            order.setEnd_time(eTime);
-            sTime = sdf.parse(startTime);
-            eTime = sdf.parse(endTime);
+            SimpleDateFormat fmd = new SimpleDateFormat("yyyy-MM-dd");
+            Date startTime = fmd.parse(req.getParameter("sTime"));
+            Date endTime = fmd.parse(req.getParameter("eTime"));
+            order.setStart_time(startTime);
+            order.setEnd_time(endTime);
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             manager.order_create(order);
             System.out.println(order.toString());

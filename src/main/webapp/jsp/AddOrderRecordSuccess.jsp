@@ -16,7 +16,7 @@
 </head>
 <body>
 <h1 class="text-center">Add New Order Success!!!</h1>
-<form action="Admin">
+<form action="Admin2">
     <hr>
     <a href="OrderRecord.jsp">
         <button class="btn btn-lg btn-link btn-block" type="submit" >Back to Order Record Page</button>
