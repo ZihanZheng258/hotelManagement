@@ -77,7 +77,19 @@
 </nav>
 
 <header class="header">
-    <h2><b>Cabin Reservation</b></h2>
+    <%
+        if(hotel.get(0).getType() != null){
+        String title = hotel.get(0).getType();
+        %>
+    <h2><b><%=title%> Reservation</b></h2>
+    <%
+    }else {
+        String title = "";
+    %>
+    <h2><b><%=title%> Reservation</b></h2>
+    <%
+    }
+    %>
 </header>
 <div class="container hotel-list">
     <div class="row">
@@ -91,9 +103,15 @@
                         <h3 class="hotel-name"><%= hotel.get(i).getName()%></h3>
                         <p class="hotel-nation"><%= hotel.get(i).getAddress()%></p>
                         <img class="hotel-pic" src="image/image1/cabinpicture2.jpg" alt="hotel pic">
-                        <p class="hotel-detail-link"><a href="Cabinsdetail2.jsp" target="_blank"><b>View more information</b></a></p>
+
+                        <a href="http://localhost:8080/hotelManagement_war/jsp/Cottagedetail2.jsp" >
+                        <p class="hotel-detail-link">
+                            <b>View more information</b>
+                        </p>
+                        </a>
+
                     </div>
-                    <div class="hotel-right">
+                    <div class="/hotelManagement_war/jsp/hotel-right">
                         <i class="hotel-rate"><%= hotel.get(i).getScore()%></i>
                         <i class="hotel-price">250-500$/night</i>
                     </div>

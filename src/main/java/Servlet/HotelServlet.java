@@ -19,27 +19,39 @@ public class HotelServlet extends HttpServlet {
             throws ServletException, IOException {
         String address = request.getParameter("address");
         String type = request.getParameter("type");
-        try {
-
-            System.out.println(type);
-            DaoManager manager = new DaoManager(new DBConnector().openConnection());
-            HttpSession session = request.getSession();
-            List<Hotel> hotel = manager.hotel_find_by_type_and_address(type,address);
-            session.setAttribute("hotel", hotel);
-
-                System.out.println("show all"+hotel.toString());
-                request.getRequestDispatcher("/jsp/jing/Cabinsindex.jsp").forward(request, response);
 
 
+            try {
 
 
+                System.out.println(type);
+                DaoManager manager = new DaoManager(new DBConnector().openConnection());
+                HttpSession session = request.getSession();
+                List<Hotel> hotel = manager.hotel_find_by_type_and_address(type, address);
+                session.setAttribute("hotel", hotel);
 
-        }catch (SQLException ex) {
-            System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        request.getRequestDispatcher("/jsp/jing/Cabinsindex.jsp").forward(request,response);
+                System.out.println("show all" + hotel.toString());
+                if(hotel != null) {
+                    if (type.equals("Cabins")) {
+                        request.getRequestDispatcher("/jsp/Cabinsindex.jsp").forward(request, response);
+                    } else if (type.equals("Cotages")) {
+                        request.getRequestDispatcher("/jsp/Cabinsindex.jsp").forward(request, response);
+                    } else if (type.equals("Apartments")) {
+                        request.getRequestDispatcher("/jsp/Cabinsindex.jsp").forward(request, response);
+                    } else if (type.equals("Philadelphia") ) {
+                        request.getRequestDispatcher("/jsp/Cabinsindex.jsp").forward(request, response);
+                    }
+                }else{
+                    request.getRequestDispatcher("/jsp/jing/Cottaheindex.jsp").forward(request, response);
+                }
+
+            } catch (SQLException ex) {
+                System.out.println(ex.getErrorCode() + " and " + ex.getMessage());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            request.getRequestDispatcher("/jsp/Cabinsindex.jsp").forward(request, response);
+
     }
 
 }
