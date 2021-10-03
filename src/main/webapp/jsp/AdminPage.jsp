@@ -16,7 +16,7 @@
   <meta name="author" content="">
   <link rel="icon" href="../../favicon.ico">
 
-  <title>Signin Template for Bootstrap</title>
+  <title>Admin Page List</title>
 
   <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -53,13 +53,12 @@
 
   <!-- Bootstrap -->
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/chenziyong.css" rel="stylesheet">
+  <link href="../css/chenziyong.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/max/ManageUserPage.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
 </head>
 
-<body>
-<!--Header navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">陈总booking</a>
 
@@ -86,7 +85,10 @@
     </div>
   </div>
 </nav>
-<hr class="hrcoloured" >
+<hr class="hrcoloured">
+
+<body>
+<!--Header navigation-->
 
 
 <div class="container">

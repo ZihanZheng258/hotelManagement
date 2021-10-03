@@ -81,6 +81,7 @@
         </div>
     </div>
 </nav>
+<hr class="hrcoloured">
 
 <!--Dash Board-->
 </p>
