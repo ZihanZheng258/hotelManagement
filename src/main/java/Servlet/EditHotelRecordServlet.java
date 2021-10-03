@@ -17,13 +17,13 @@ public class EditHotelRecordServlet extends HttpServlet
     {
         //retrieve info from page
         String name = request.getParameter("Name");
-        String address = request.getParameter("Password");
-        String type = request.getParameter("PhoneNumber");
-        String area = request.getParameter("PayPassword");
-        String star = request.getParameter("PayPassword");
-        String score = request.getParameter("PayPassword");
-        String introduction = request.getParameter("PayPassword");
-        String picture = request.getParameter("PayPassword");
+        String address = request.getParameter("address");
+        String type = request.getParameter("type");
+        String area = request.getParameter("area");
+        String star = request.getParameter("star");
+        String score = request.getParameter("score");
+        String introduction = request.getParameter("v");
+        String picture = request.getParameter("picture");
 
         try
         {
