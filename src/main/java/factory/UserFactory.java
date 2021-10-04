@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import beans.User;
 
 public class UserFactory implements BeanFactory<User> {
-
+	// generate user instance from current node of Iterator resultset
 	@Override
 	public User generateBeaninstance(ResultSet resutleset) throws SQLException {
 		User user = new User();

@@ -8,7 +8,7 @@ public class DBConnector extends DB{
 
 
 		Class.forName(driver);
-
+        // use reflection to test is the driver in classpath
 		conn = DriverManager.getConnection(URL, dbuser, dbpass);
 
 		}

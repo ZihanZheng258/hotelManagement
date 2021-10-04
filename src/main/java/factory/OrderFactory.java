@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import beans.Order;
 
 public class OrderFactory implements BeanFactory<Order>{
-
+	// generate order instance from current node of Iterator resultset
 	@Override
 	public Order generateBeaninstance(ResultSet resutleset) throws SQLException {
 		Order order = new Order();

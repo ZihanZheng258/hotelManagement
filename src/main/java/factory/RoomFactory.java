@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import beans.Room;
 
 public class RoomFactory implements BeanFactory<Room>{
-
+	// generate room instance from current node of Iterator resultset
 	@Override
 	public Room generateBeaninstance(ResultSet resutleset) throws SQLException {
 		Room room = new Room();

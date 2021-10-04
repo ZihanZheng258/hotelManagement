@@ -1,5 +1,5 @@
 package dbc;
-
+// set the information that need to connect to a database
 import java.sql.*;
 public class DB {
     protected String URL = "jdbc:mysql://localhost:3306/chenzonghotel?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true";
