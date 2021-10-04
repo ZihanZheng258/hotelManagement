@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import beans.Hotel;
 
 public class HotelFactory implements BeanFactory<Hotel>{
-
+    // generate hotel instance from current node of Iterator resultset
 	@Override
 	public Hotel generateBeaninstance(ResultSet resutleset) throws SQLException {
 		// TODO Auto-generated method stub

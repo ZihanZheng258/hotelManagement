@@ -9,6 +9,7 @@ import beans.Hotel;
 import beans.Order;
 import beans.Room;
 import beans.User;
+// the proxy and the combination of all daos, provide connections to database , used by servlets
 public class DaoManager {
 	private Connection conn;
 	private HotelDao hotelDao;
