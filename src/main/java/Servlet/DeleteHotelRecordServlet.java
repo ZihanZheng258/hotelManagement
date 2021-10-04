@@ -7,12 +7,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 public class DeleteHotelRecordServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int hotelID = Integer.parseInt(req.getParameter("hotelID"));
+        PrintWriter error = resp.getWriter();
         try {
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             manager.hotel_delete(hotelID);
@@ -27,7 +29,10 @@ public class DeleteHotelRecordServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        req.getRequestDispatcher("Admin").forward(req, resp);
+        error.println("<script language='javascript'>alert('ID is WRONG')</script>");
+        error.println("<script language='javascript'>window.location.href='/hotelManagement_war/jsp/HotelRecord.jsp'</script>");
+
+
 
     }
 }
