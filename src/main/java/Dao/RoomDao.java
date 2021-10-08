@@ -25,7 +25,7 @@ public class RoomDao implements BaseDao<Room>{
 	}
 	@Override
 	public boolean doCreate(Room beanObject) throws Exception {
-        ps = conn.prepareStatement("INSERT INTO `hotel`.`t_room`(`id`, `name`, `number`, "
+        ps = conn.prepareStatement("INSERT INTO `t_room`(`id`, `name`, `number`, "
         		+ "`picture_id`, `type`, `area`, "
         		+ "`bed_width`, `price`, `score`, `remark`, `hotel_id`, `status`, `level`) "
         		+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
@@ -50,7 +50,7 @@ public class RoomDao implements BaseDao<Room>{
 	@Override
 	public boolean doUpdate(Room beanObject) throws Exception {
 		
-		ps = conn.prepareStatement("UPDATE `hotel`.`t_room` SET `name` = ?, `number` = ?, `picture_id` = ?, "
+		ps = conn.prepareStatement("UPDATE `t_room` SET `name` = ?, `number` = ?, `picture_id` = ?, "
 				+ "`type` = ?, `area` = ?, `bed_width` = ?, `price` = ?, `score` = ?, `remark` = ?, "
 				+ "`hotel_id` = ?, `status` = ?, `level` = ? WHERE `id` = ?;");
         

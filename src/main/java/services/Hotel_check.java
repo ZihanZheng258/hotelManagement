@@ -1,11 +1,6 @@
 package services;
 import beans.Hotel;
-
-
-
 public class Hotel_check {
-
-
     public static Hotel hotel(int id) {
         Hotel hotel = new Hotel();
         hotel.setName("id");

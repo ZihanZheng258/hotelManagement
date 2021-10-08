@@ -24,7 +24,7 @@ public class OrderDao implements BaseDao<Order>{
 	}
 	@Override
 	public boolean doCreate(Order beanObject) throws Exception {
-		ps = conn.prepareStatement("INSERT INTO `hotel`.`t_order`(`id`, `user_id`, `room_id`, "
+		ps = conn.prepareStatement("INSERT INTO `t_order`(`id`, `user_id`, `room_id`, "
 				+ "`start_time`, `end_time`, `amount`, `remark`, `status`)"
 				+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
 		ps.setObject(1,beanObject.getId());
@@ -40,7 +40,7 @@ public class OrderDao implements BaseDao<Order>{
 	}
 	@Override
 	public boolean doUpdate(Order beanObject) throws Exception {
-		ps = conn.prepareStatement("UPDATE `hotel`.`t_order` SET `user_id` = ?, `room_id` = ?,"
+		ps = conn.prepareStatement("UPDATE `t_order` SET `user_id` = ?, `room_id` = ?,"
 				+ " `start_time` ="
 				+ " ?, `end_time` = ?, `amount` = ?, `remark` = ?, "
 				+ "`status` = ? WHERE `id` = ?;");
