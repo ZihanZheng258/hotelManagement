@@ -1,6 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import services.Check_Room;
 import services.Remark_check;
 
 public class Remark_check_Test {
