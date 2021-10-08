@@ -7,7 +7,13 @@ class User_check_Test {
 
 	@Test
 	void test() {
-		assertNotNull(User_check.user(123).getID());
+		assertEquals(User_check.user(111).getID(),111);
+		assertNotNull(User_check.user(111).getPassword());
+		assertNotNull(User_check.user(111).getPhoneNumber());
+		assertNotNull(User_check.user(111).getType());
+		assertNotNull(User_check.user(111).getPicture());
+		assertNotNull(User_check.user(111).getBalance());
+		assertNotNull(User_check.user(111).getPayPassword());
 	}
-    
+
 }
