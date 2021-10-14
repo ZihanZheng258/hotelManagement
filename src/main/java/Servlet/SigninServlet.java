@@ -25,6 +25,7 @@ public class SigninServlet extends HttpServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
         String password = request.getParameter("password");
+        String typeCheck = request.getParameter("type");
 
         PrintWriter error = response.getWriter();
 
@@ -34,10 +35,17 @@ public class SigninServlet extends HttpServlet {
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             User user = null;
             user = manager.user_find_for_login(id, password);
+            typeCheck = user.getType();
             session.setAttribute("user",user);
             if (user != null) {
-                System.out.println("Login Succeed");
-                request.getRequestDispatcher("/jsp/UserPage.jsp").forward(request, response);
+                if (typeCheck.equals("manager")) {
+                    System.out.println("Admin Login Succeed");
+                    request.getRequestDispatcher("/jsp/AdminPage.jsp").forward(request, response);
+                } else {
+                    System.out.println("User Login Succeed");
+                    request.getRequestDispatcher("/jsp/UserPage.jsp").forward(request, response);
+                }
+
             } else {
                 System.out.println("Login failed");
             }
