@@ -6,6 +6,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+steps:
 
 - task: Maven@3
   inputs:
@@ -34,6 +35,5 @@ pool:
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-steps:
 - script: mvn package
   displayName: package
