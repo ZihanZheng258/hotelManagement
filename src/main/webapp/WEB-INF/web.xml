@@ -165,4 +165,14 @@
     <url-pattern>/jsp/EditHotelRecord</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>EditRoomRecordServlet</servlet-name>
+    <servlet-class>Servlet.EditRoomRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditRoomRecordServlet</servlet-name>
+    <url-pattern>/jsp/EditRoomRecord</url-pattern>
+  </servlet-mapping>
+
+
 </web-app>

@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+
+import beans.Hotel;
 import beans.Room;
 import Dao.DaoManager;
 import dbc.DBConnector;
@@ -58,10 +60,17 @@ public class EditRoomRecordServlet extends HttpServlet
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         try
         {
+            HttpSession session = request.getSession();
+            DaoManager manager = new DaoManager(new DBConnector().openConnection());
+            Room room = manager.room_find_by_ID(Integer.parseInt(request.getParameter("roomObj")));
+            System.out.println("Editing Room  ID: " + request.getParameter("roomObj"));
+            session.setAttribute("editRoom", room);
+
+            request.getRequestDispatcher("/jsp/EditRoomRecord.jsp").forward(request, response);
 
         }
         catch (Exception e)

@@ -143,14 +143,16 @@
 
             <td>
                 <!--添加编辑按钮 超级管理员及管理员权限-->
-                <a href="AdminPage.jsp">
-                    <button class="btn btn-info btn-sm">Edit</button>
-                </a>
+                < <!--添加编辑按钮 超级管理员及管理员权限-->
+                <form action="EditRoomRecord" method="post">
+                    <input type="hidden" name="roomObj" value=<%=room.getId()%>>
+                    <input type="submit" value="Edit">
+                </form>
+
                 <!--添加删除按钮 超级管理员权限-->
                 <form action="RoomRecord" method="get">
                     <input type="hidden" name="roomid" value=<%=room.getId()%>>
                     <input type="submit" value="Delete">
-
                 </form>
             </td>
         </tr>
