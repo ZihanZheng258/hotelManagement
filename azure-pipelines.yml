@@ -19,6 +19,7 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+    mavenDirectory: 
 
 - task: Maven@3
   inputs:
@@ -37,3 +38,8 @@ steps:
 
 - script: mvn package
   displayName: package
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: 'myWebsiteName' 
