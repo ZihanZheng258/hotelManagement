@@ -13,9 +13,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <%--用jsp语句，将servlet传过来的list数据拿到并放在一个list里--%>
-<%List<Hotel> hotelList = (List<Hotel>)session.getAttribute("hotelList");%>
 <%List<Hotel> hotelListByType = (List<Hotel>)session.getAttribute("hotelListByType");%>
-
 
 <%--<%--%>
 <%--    List hotelList = (List) request.getAttribute("hotelList");--%>
@@ -78,7 +76,6 @@
 
 <!--创建容器-->
 <div class="container">
-<%--第一行--%>
     <div class="row">
         <div class="col-sm-2">
             <a href="AdminPage.jsp">
@@ -86,30 +83,32 @@
             </a>
         </div>
         <div class="col-sm-8"><h1 class="text-center">Hotel Record <small> HMS-V1.0</small></h1></div>
-        <div class="col-sm-2"><h3 class="text-center" style="margin-top: 26px">Welcome！</h3></div>
+<%--        <div class="col-sm-2"><h3 class="text-center" style="margin-top: 26px">Welcome：xxx</h3></div>--%>
     </div>
-
-<%--第二行--%>
+    <!--创建搜索框 按键 以及添加按钮-->
     <div class="row">
-        <form action="SearchHotelRecordByName">
-            <input type="text" class="form-control" name="hotelName"  placeholder="Search By Hotel Name: ">
-            <button class="btn btn-primary btn-md" type="submit">Search</button>
+    <form>
+        <input type="text" class="form-control" name="hotelName"  placeholder="Search By Hotel Name: ">
+        <button class="btn btn-primary btn-md" type="submit">Search</button>
+    </form>
+    <div class="col-sm-2"></div>
+    <form action="SearchHotelRecord">
+        <input type="text" class="form-control" name="hotelType" placeholder="Search By Hotel Type: ">
+        <button class="btn btn-primary btn-md" type="submit">Search</button>
+    </form>
+
+        <form action="Admin">
+            <a href="HotelRecord.jsp">
+                <div class="col-sm-2">
+                    <button class="btn btn-info btn-md" type="submit">Reset</button>
+                </div>
+            </a>
         </form>
-        <div class="col-sm-2"></div>
-        <form action="SearchHotelRecord">
-            <input type="text" class="form-control" name="hotelType" placeholder="Search By Hotel Type: ">
-            <button class="btn btn-primary btn-md" type="submit">Search</button>
-       </form>
-
-           <div class="col-sm-2">
-               <button class="btn btn-info btn-md" type="submit">Reset</button>
-           </div>
-           <div class="col-sm-2">
-               <!--添加酒店功能按钮 超级管理员权限 按下按键跳转到AddHotel.html表单-->
-               <button class="btn btn-success btn-md"><a href="AddHotelRecord.jsp">Add Hotel</a></button>
-           </div>
+    <div class="col-sm-2">
+        <!--添加酒店功能按钮 超级管理员权限 按下按键跳转到AddHotel.html表单-->
+        <button class="btn btn-success btn-md"><a href="AddHotelRecord.jsp">Add Hotel</a></button>
     </div>
-
+    </div>
     <br>
 
     <!--创建表格-->
@@ -135,24 +134,24 @@
 
         <%
 
-            if(hotelList != null){
-                System.out.println(hotelList.size());
-                for (int i=0; i<hotelList.size();i++){
-                    Hotel hotel = (Hotel) hotelList.get(i);
+            if(hotelListByType != null){
+                System.out.println(hotelListByType.size());
+                for (int i=0; i<hotelListByType.size();i++){
+                    Hotel hotel1 = (Hotel) hotelListByType.get(i);
         %>
 
         <tbody>
 
         <tr>
-            <td><%=hotel.getId()%></td>
-            <td><%=hotel.getName()%></td>
-            <td><%=hotel.getAddress()%></td>
-            <td><%=hotel.getArea()%></td>
-            <td><%=hotel.getpicture()%></td>
-            <td><%=hotel.getType()%></td>
-            <td><%=hotel.getStar()%></td>
-            <td><%=hotel.getScore()%></td>
-            <td><%=hotel.getIntroduction()%></td>
+            <td><%=hotel1.getId()%></td>
+            <td><%=hotel1.getName()%></td>
+            <td><%=hotel1.getAddress()%></td>
+            <td><%=hotel1.getArea()%></td>
+            <td><%=hotel1.getpicture()%></td>
+            <td><%=hotel1.getType()%></td>
+            <td><%=hotel1.getStar()%></td>
+            <td><%=hotel1.getScore()%></td>
+            <td><%=hotel1.getIntroduction()%></td>
 
 
 
@@ -162,7 +161,7 @@
 
                 <!--添加编辑按钮 超级管理员及管理员权限-->
                 <form action="EditHotelRecord" method="post">
-                    <input type="hidden" name="hotelObj" value=<%=hotel.getId()%>>
+                    <input type="hidden" name="hotelObj" value=<%=hotel1.getId()%>>
                     <input type="submit" value="Edit">
 
 <%--                    <button class="btn btn-info btn-sm">Edit</button>--%>
@@ -170,7 +169,7 @@
 
                 <!--添加删除按钮 超级管理员权限-->
                 <form action="HotelRecord" method="get">
-                    <input type="hidden" name="hotelID" value=<%=hotel.getId()%>>
+                    <input type="hidden" name="hotelID" value=<%=hotel1.getId()%>>
                     <input type="submit" value="Delete">
                     <%--                <button class="btn btn-danger btn-sm" type="submit">Delete</button>--%>
                 </form>

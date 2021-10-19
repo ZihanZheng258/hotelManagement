@@ -91,6 +91,25 @@
   </servlet-mapping>
 
   <servlet>
+    <servlet-name>SearchHotelRecordByNameServlet</servlet-name>
+    <servlet-class>Servlet.SearchHotelRecordByNameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchHotelRecordByNameServlet</servlet-name>
+    <url-pattern>/jsp/SearchHotelRecordByName</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SearchOrderRecordByCIDServlet</servlet-name>
+    <servlet-class>Servlet.SearchOrderRecordByCIDServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchOrderRecordByCIDServlet</servlet-name>
+    <url-pattern>/jsp/SearchOrderRecordByCID</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet>
     <servlet-name>ShowOrderRecordServlet</servlet-name>
     <servlet-class>Servlet.ShowOrderRecordServlet</servlet-class>
   </servlet>
@@ -101,6 +120,15 @@
   <servlet-mapping>
     <servlet-name>ShowOrderRecordServlet</servlet-name>
     <url-pattern>/jsp/Admin2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SearchHotelRecordServlet</servlet-name>
+    <servlet-class>Servlet.SearchHotelRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchHotelRecordServlet</servlet-name>
+    <url-pattern>/jsp/SearchHotelRecord</url-pattern>
   </servlet-mapping>
 
   <servlet>

@@ -3,7 +3,8 @@
 <%@ page import="beans.Hotel" %>
 <%@ page import="Dao.DaoManager" %>
 <%@ page import="dbc.DBConnector" %>
-<%@ page import="org.eclipse.persistence.sessions.Session" %><%--
+<%@ page import="org.eclipse.persistence.sessions.Session" %>
+<%@ page import="beans.Remark" %><%--
   Created by IntelliJ IDEA.
   User: yangk
   Date: 2021/8/30
@@ -13,16 +14,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <%--用jsp语句，将servlet传过来的list数据拿到并放在一个list里--%>
-<%List<Hotel> hotelList = (List<Hotel>)session.getAttribute("hotelList");%>
-<%List<Hotel> hotelListByType = (List<Hotel>)session.getAttribute("hotelListByType");%>
+<%List<Remark> remarkList = (List<Remark>)session.getAttribute("remarkList");%>
 
 
-<%--<%--%>
-<%--    List hotelList = (List) request.getAttribute("hotelList");--%>
-<%--%>--%>
+
 <head>
     <meta charset="UTF-8">
-    <title>Hotel Record</title>
+    <title>Remark Record</title>
     <!-- 获得更好的响应式支持 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 引入bootstrap的核心css文件  -->
@@ -78,36 +76,36 @@
 
 <!--创建容器-->
 <div class="container">
-<%--第一行--%>
+    <%--第一行--%>
     <div class="row">
         <div class="col-sm-2">
             <a href="AdminPage.jsp">
                 <button class="btn btn-link">Back</button>
             </a>
         </div>
-        <div class="col-sm-8"><h1 class="text-center">Hotel Record <small> HMS-V1.0</small></h1></div>
+        <div class="col-sm-8"><h1 class="text-center">Remark Record <small> HMS-V1.0</small></h1></div>
         <div class="col-sm-2"><h3 class="text-center" style="margin-top: 26px">Welcome！</h3></div>
     </div>
 
-<%--第二行--%>
+    <%--第二行--%>
     <div class="row">
-        <form action="SearchHotelRecordByName">
-            <input type="text" class="form-control" name="hotelName"  placeholder="Search By Hotel Name: ">
+        <form action="">
+            <input type="text" class="form-control" name=""  placeholder="Search By : ">
             <button class="btn btn-primary btn-md" type="submit">Search</button>
         </form>
         <div class="col-sm-2"></div>
-        <form action="SearchHotelRecord">
-            <input type="text" class="form-control" name="hotelType" placeholder="Search By Hotel Type: ">
+        <form action="">
+            <input type="text" class="form-control" name="hotelType" placeholder="Search By : ">
             <button class="btn btn-primary btn-md" type="submit">Search</button>
-       </form>
+        </form>
 
-           <div class="col-sm-2">
-               <button class="btn btn-info btn-md" type="submit">Reset</button>
-           </div>
-           <div class="col-sm-2">
-               <!--添加酒店功能按钮 超级管理员权限 按下按键跳转到AddHotel.html表单-->
-               <button class="btn btn-success btn-md"><a href="AddHotelRecord.jsp">Add Hotel</a></button>
-           </div>
+        <div class="col-sm-2">
+            <button class="btn btn-info btn-md" type="submit">Reset</button>
+        </div>
+        <div class="col-sm-2">
+            <!--添加酒店功能按钮 超级管理员权限 按下按键跳转到AddHotel.html表单-->
+            <button class="btn btn-success btn-md"><a href="AddRemarkRecord.jsp">Add Remark</a></button>
+        </div>
     </div>
 
     <br>
@@ -118,41 +116,35 @@
         <tr style="
         background-color: #FF3D68">
             <!--酒店基本信息-->
-            <th>Hotel ID</th>
-            <th>Hotel Name</th>
-            <th>Hotel Address</th>
-            <th>Floor Area (hectare)</th>
-            <th>Hotel Image</th>
-
-            <!--酒店其他信息-->
-            <th>Hotel Type</th>
-            <th>Stars</th>
+            <th>Remark ID</th>
+            <th>User Name</th>
+            <th>Content</th>
             <th>Score</th>
-            <th>Introduction</th>
+            <th>Room ID</th>
+            <th>UserID</th>
+
             <th>Edit/Delete</th>
         </tr>
         <%--继续使用jsp语句， 循环放入list中的Hotel 实体类数据--%>
 
         <%
 
-            if(hotelList != null){
-                System.out.println(hotelList.size());
-                for (int i=0; i<hotelList.size();i++){
-                    Hotel hotel = (Hotel) hotelList.get(i);
+            if(remarkList != null){
+                System.out.println(remarkList.size());
+                for (int i=0; i<remarkList.size();i++){
+                    Remark remark = (Remark) remarkList.get(i);
         %>
 
         <tbody>
 
         <tr>
-            <td><%=hotel.getId()%></td>
-            <td><%=hotel.getName()%></td>
-            <td><%=hotel.getAddress()%></td>
-            <td><%=hotel.getArea()%></td>
-            <td><%=hotel.getpicture()%></td>
-            <td><%=hotel.getType()%></td>
-            <td><%=hotel.getStar()%></td>
-            <td><%=hotel.getScore()%></td>
-            <td><%=hotel.getIntroduction()%></td>
+            <td><%=remark.getId()%></td>
+            <td><%=remark.getUserName()%></td>
+            <td><%=remark.getContent()%></td>
+            <td><%=remark.getScore()%></td>
+            <td><%=remark.getRoomID()%></td>
+            <td><%=remark.getUserID()%></td>
+
 
 
 
@@ -161,18 +153,18 @@
 
 
                 <!--添加编辑按钮 超级管理员及管理员权限-->
-                <form action="EditHotelRecord" method="post">
-                    <input type="hidden" name="hotelObj" value=<%=hotel.getId()%>>
+                <form action="" method="">
+                    <input type="hidden" name="hotelObj" >
                     <input type="submit" value="Edit">
 
-<%--                    <button class="btn btn-info btn-sm">Edit</button>--%>
+                                        <button class="btn btn-info btn-sm">Edit</button>
                 </form>
 
                 <!--添加删除按钮 超级管理员权限-->
-                <form action="HotelRecord" method="get">
-                    <input type="hidden" name="hotelID" value=<%=hotel.getId()%>>
+                <form action="" method="">
+<%--                    <input type="hidden" name="hotelID" value=<%=hotel.getId()%>>--%>
                     <input type="submit" value="Delete">
-                    <%--                <button class="btn btn-danger btn-sm" type="submit">Delete</button>--%>
+                                    <button class="btn btn-danger btn-sm" type="submit">Delete</button>
                 </form>
 
             </td>

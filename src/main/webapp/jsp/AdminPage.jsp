@@ -123,6 +123,11 @@
   <a href="UserPage.jsp">
     <button class="btn btn-lg btn-primary btn-block" type="submit">MyAccount</button>
   </a>
+  <hr>
+  <a href="RemarkRecord.jsp">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">REMARK RECORD </button>
+  </a>
+
 
   </form>
 
