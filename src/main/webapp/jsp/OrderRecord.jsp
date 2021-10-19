@@ -126,12 +126,16 @@
       <td><%=order.getStatus()%></td>
       <!--添加删改按钮-->
       <td>
+        <!--添加编辑按钮 超级管理员及管理员权限-->
         <a href="AdminPage.jsp">
-        <button class="btn btn-info btn-sm">Edit</button>
+          <button class="btn btn-info btn-sm">Edit</button>
         </a>
-          <a href="AdminPage.jsp">
-        <button class="btn btn-danger btn-sm">Delete</button>
-          </a>
+        <!--添加删除按钮 超级管理员权限-->
+        <form action="OrderRecord" method="get">
+          <input type="hidden" name="orderid" value=<%=order.getId()%>>
+          <input type="submit" value="Delete">
+
+        </form>
       </td>
     </tr>
 

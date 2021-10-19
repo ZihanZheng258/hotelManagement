@@ -11,8 +11,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%ArrayList<Room> rooms = (ArrayList<Room>)session.getAttribute("rooms");%>
-<%ArrayList<Hotel> hotels = (ArrayList<Hotel>)session.getAttribute("hotels");%>
+<%ArrayList<Room> rooms = (ArrayList<Room>)session.getAttribute("Room");%>
+
 
 <!-- 获得更好的响应式支持 -->
 <!-- 引入bootstrap的核心css文件  -->
@@ -81,23 +81,25 @@
     </div>
     <!--创建搜索框 按键 以及添加按钮-->
     <form action="RoomRecord2">
-    <div class="row">
+        <div class="row">
 
-        <div class="col-sm-4">
-            <input type="text" class="form-control" name="Id" placeholder="Search By Hotel Id: ">
-        </div>
-        <div class="col-sm-2">
-            <!--查找酒店按键 管理员及超级管理员权限-->
-            <button class="btn btn-primary btn-md" type="submit">Search</button><br>
-        </div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control"  placeholder="Search By Hotel Id: "name="Id">
+                </div>
+                <div class="col-sm-2">
+                    <!--查找酒店按键 管理员及超级管理员权限-->
+                    <button class="btn btn-primary btn-md" type="submit">Search</button><br>
+                </div>
 
-        <div class="col-sm-2">
-            <!--添加酒店功能按钮 超级管理员权限 按下按键跳转到AddHotel.html表单-->
-            <button class="btn btn-success btn-md"><a href="AddRoomRecord.jsp">Add Room</a></button>
+            <div class="col-sm-2">
+                <!--添加酒店功能按钮 超级管理员权限 按下按键跳转到AddHotel.html表单-->
+                <button class="btn btn-success btn-md"><a href="AddRoomRecord.jsp">Add Room</a></button>
+            </div>
+
         </div>
+        </form>
 
     </div>
-    </form>
     <br>
 
     <!--创建表格-->
