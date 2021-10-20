@@ -14,6 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- 引入bootstrap的核心css文件  -->
   <link rel="stylesheet" href="../utils/bootstrap/css/bootstrap.min.css">
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </head>
 <body style="background-color: #FF6767">
 <div class="container">
@@ -56,11 +59,16 @@
       <textarea class="form-control" id="InputIntroduction" name="hotelIntroduction"  placeholder="Please Enter Introduction" rows="4"></textarea>
     </div>
     <br>
-    <div class="form-group">
-      <label for="exampleInputFile">Upload Hotel image</label>
-      <input type="file" id="exampleInputFile" name="hotelPicture">
-    </div>
-
+<%--    <div class="form-group">--%>
+<%--      <label for="exampleInputFile">Upload Hotel image</label>--%>
+<%--      <input type="file" id="exampleInputFile" name="hotelPicture">--%>
+<%--    </div>--%>
+<%--    <div class="form-inline">--%>
+<%--      <div class="form-group">--%>
+<%--        <input type="file" name="files[]" id="js-upload-files" multiple>--%>
+<%--      </div>--%>
+<%--      <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">上传</button>--%>
+<%--    </div>--%>
 
     <br>
     <div class="container">
@@ -71,12 +79,42 @@
     </div>
 
   </form>
+  <form action="AddHotelRecord3" method="POST" enctype="multipart/form-data">
+<%--    <div class="form-group">--%>
+<%--      <label for="exampleInputFile">Upload Hotel image</label>--%>
+<%--      <input type="file" id="exampleInputFile" name="hotelPicture">--%>
+<%--    </div>--%>
+
+    <input type="file" name="file" />
+    <input type="submit" value="Upload" />
+
+<%--    <div class="file-loading">--%>
+<%--      <input id="input-703" name="kartik-input-703[]" type="file" multiple>--%>
+<%--    </div>--%>
+  </form>
+
+
+
+
   <a href="HotelRecord.jsp">
     <button class="btn btn-danger btn-block">RESET</button>
   </a>
 
 </div>
-
+<%--<script>--%>
+<%--  $(document).ready(function() {--%>
+<%--    $("#input-703").fileinput({--%>
+<%--      uploadUrl: "/image/House",--%>
+<%--      minFileCount: 1,--%>
+<%--      maxFileCount: 5,--%>
+<%--      uploadExtraData: function(previewId, index) {--%>
+<%--        return {key: index};--%>
+<%--      },--%>
+<%--      overwriteInitial: false,--%>
+<%--      initialPreviewAsData: true // identify if you are sending preview data only and not the markup--%>
+<%--    });--%>
+<%--  });--%>
+<%--</script>--%>
 
 
 </body>

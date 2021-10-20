@@ -18,6 +18,15 @@
   </servlet-mapping>
 
   <servlet>
+    <servlet-name>HotelPictureUpload</servlet-name>
+    <servlet-class>Servlet.HotelPictureUpload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HotelPictureUpload</servlet-name>
+    <url-pattern>/jsp/AddHotelRecord3</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
     <servlet-name>HotelServlet</servlet-name>
     <servlet-class>Servlet.HotelServlet</servlet-class>
   </servlet>
