@@ -112,9 +112,14 @@
   <form action="AdminPage">
   <hr>
   <a href="RoomRecord.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">ROOM RECORD</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Remark RECORD</button>
   </a>
   </form>
+  <hr>
+  <a href="UserPage.jsp">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">MyAccount</button>
+  </a>
+
   <hr>
   <a href="ManageUsers.jsp">
     <button class="btn btn-lg btn-primary btn-block" type="submit">ManageUsers</button>
@@ -123,6 +128,7 @@
   <a href="UserPage.jsp">
     <button class="btn btn-lg btn-primary btn-block" type="submit">MyAccount</button>
   </a>
+
 
   </form>
 
