@@ -218,5 +218,14 @@
     <url-pattern>/jsp/EditRoomRecord</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>SearchHotelIdServlet</servlet-name>
+    <servlet-class>Servlet.SearchHotelIdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchHotelIdServlet</servlet-name>
+    <url-pattern>/EditRoomRecord2</url-pattern>
+  </servlet-mapping>
+
 
 </web-app>

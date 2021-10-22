@@ -115,6 +115,7 @@
             <th>Book Status</th>
             <th>Score</th>
             <th>Remark</th>
+            <th>Level</th>
             <th>Hotel ID</th>
             <th>Edit/Delete</th>
         </tr>
@@ -139,6 +140,7 @@
             <td><%=room.getScore()%></td>
             <td><%=room.getRemark()%></td>
             <td><%=room.getLevel()%></td>
+            <td><%=room.getHotelID()%></td>
 
 
             <td>

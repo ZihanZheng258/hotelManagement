@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="beans.Room" %>
+<%@ page import="java.util.List" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,6 +43,7 @@
 </head>
 <body>
 
+<%List<Room> room = (List<Room>)session.getAttribute("room");%>
 
 <!--Header navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -106,99 +109,43 @@
                 <th></th>
             </tr>
             </thead>
+            <%
+                if(room != null){
+                    for(int i =0;i<room.size();i++){
+                        Room rm = (Room) room.get(i);
+            %>
             <tbody>
             <tr class="text-info">
                 <td>
-                    <p>Three bedroom guest room</p>
-                    <p>Guest room facilities:</p>
-                    <p>Room area: 120 square meters</p>
-                    <p>Bedroom 1: 1 king size single bed: 1.8m x 2m</p>
-                    <p>Bedroom 2: 2 king size single bed: 1.8m x 2m</p>
-                    <p>Bedroom 3: 1 king size double bed: 2.2m x 2m and 1 single bed: 1.8m x 2m</p>
-                    <p>Free WIFI<br/>
-                        Independent shower and bathroom,living room<br/>
-                        Carpet,dryer,sofa,heating<br/>
-                        Fully open kitchen:<br/>
-                        Refrigerator, microwave oven, electric kettle,roaster<br/>
-                        Wardrobe / wardrobe, air conditioner, TV,Barbecue rack<br/>
-                        Telephone, bedding, Outdoor dining area,large table</p>
+                    <p>roomHotelID:<%= rm.getHotelID()%><br/>
+                    <p>roomID:<%= rm.getId()%> </p>
+                    <p>roomName:<%= rm.getName()%></p>
+                    <p>roomArea: <%= rm.getArea()%></p>
+                    <p>roomType:<%= rm.getType()%><br/>
+                    <p>BroomBedWidth:<%= rm.getBedWidth()%></p>
+                    <p>roomScore:<%= rm.getScore()%><br/>
+                    <p>roomLevel:<%= rm.getLevel()%><br/>
+                    <p>roomRemark:<%= rm.getRemark()%></p>
 
                 </td>
                 <td>
-                    <p>Six <br/> occupancy</p>
+                    <p>roomBookStatus:<%= rm.getBookStatus()%></p>
                 </td>
                 <td>
-                    <p>600</p>
+                    <p>roomPrice:<%= rm.getPrice()%></p>
                 </td>
                 <td>
-                    <p>5/10</p>
-                </td>
-                <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
-                </td>
-            </tr>
-            <tr class="text-info">
-                <td>
-                    <p>Four bedroom guest room</p>
-                    <p>Guest room facilities:</p>
-                    <p>Room area: 120 square meters</p>
-                    <p>Bedroom 1: 2 single beds: 1.8m x 2m</p>
-                    <p>Bedroom 2: 2 single beds: 1.8m x 2m</p>
-                    <p>Bedroom 3: 1 queens beds: 2.2m x 2m </p>
-                    <p>Bedroom 4: 1 double beds: 1.8m x 2m</p>
-                    <p>Free WiFi <br/>
-                        Independent shower and bathroom,living room<br/>
-                        Carpet,dryer,sofa,heating<br/>
-                        Fully open kitchen:<br/>
-                        Refrigerator, microwave oven, electric kettle,roaster<br/>
-                        Wardrobe / wardrobe, air conditioner, TV,Barbecue rack<br/>
-                        Telephone, bedding,  Outdoor dining area,large table</p>
-                </td>
-                <td>
-                    <p>eight <br/> occupancy</p>
-                </td>
-                <td>
-                    <p>800</p>
-                </td>
-                <td>
-                    <p>4/10</p>
-                </td>
-                <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
-                </td>
-            </tr>
-            <tr class="text-info">
-                <td>
-                    <p>Five bedroom guest room</p>
-                    <p>Guest room facilities:</p>
-                    <p>Room area: 150 square meters</p>
-                    <p>Bedroom 1: 1 Queen bed: 2.2m x 2m,</p>
-                    <p>Bedroom 2: 2 single beds: 1.8m x 2m</p>
-                    <p>Bedroom 3: 2 single bed: 1.5m x 1.8m</p>
-                    <p>Bedroom 4: 1 king bed: 2.2m x 1.8m</p>
-                    <p>Bedroom 5: 2 single bed: 1.5m x 1.8m</p>
-                    <p>Free WiFi <br/>
-                        Independent shower and bathroom,living room<br/>
-                        Carpet,dryer,sofa,towel,Barbecue rack,heating<br/>
-                        Fully open kitchen:<br/>
-                        Refrigerator, microwave oven, electric kettle,roaster<br/>
-                        Wardrobe / wardrobe, air conditioner, TV,Coffee machine<br/>
-                        Telephone, bedding,  Outdoor dining area,large table</p>
-                </td>
-                <td>
-                    <p> Ten<br/> occupancy</p>
-                </td>
-                <td>
-                    <p>1000</p>
-                </td>
-                <td>
-                    <p>3/10</p>
+                    <p>roomNumber:<%= rm.getNumber()%></p>
                 </td>
                 <td>
                     <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
                 </td>
             </tr>
             </tbody>
+            <%
+                    }
+                }
+            %>
         </table>
     </div>
     <hr>
