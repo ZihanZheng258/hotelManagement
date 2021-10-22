@@ -1,9 +1,5 @@
 package Servlet;
 
-import Dao.DaoManager;
-import beans.Hotel;
-import dbc.DBConnector;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
@@ -11,10 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.*;
-import java.sql.SQLException;
 
 @MultipartConfig
 public class HotelPictureUpload extends HttpServlet {
+
+//    String path;
 
     protected void processRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
@@ -23,7 +20,7 @@ public class HotelPictureUpload extends HttpServlet {
             String filename = part.getSubmittedFileName();
 
             String path = getServletContext().getRealPath("/" + "image" + File.separator + filename);
-
+            req.getSession().setAttribute("n", filename);
             InputStream is = part.getInputStream();
 
             boolean success = uploadFile(is, path);
@@ -34,6 +31,7 @@ public class HotelPictureUpload extends HttpServlet {
             }
         }
     }
+
 
     public boolean uploadFile(InputStream is, String path) {
         boolean test = false;

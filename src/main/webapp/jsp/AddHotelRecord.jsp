@@ -59,16 +59,6 @@
       <textarea class="form-control" id="InputIntroduction" name="hotelIntroduction"  placeholder="Please Enter Introduction" rows="4"></textarea>
     </div>
     <br>
-<%--    <div class="form-group">--%>
-<%--      <label for="exampleInputFile">Upload Hotel image</label>--%>
-<%--      <input type="file" id="exampleInputFile" name="hotelPicture">--%>
-<%--    </div>--%>
-<%--    <div class="form-inline">--%>
-<%--      <div class="form-group">--%>
-<%--        <input type="file" name="files[]" id="js-upload-files" multiple>--%>
-<%--      </div>--%>
-<%--      <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">上传</button>--%>
-<%--    </div>--%>
 
     <br>
     <div class="container">
@@ -80,17 +70,13 @@
 
   </form>
   <form action="AddHotelRecord3" method="POST" enctype="multipart/form-data">
-<%--    <div class="form-group">--%>
-<%--      <label for="exampleInputFile">Upload Hotel image</label>--%>
-<%--      <input type="file" id="exampleInputFile" name="hotelPicture">--%>
-<%--    </div>--%>
+
 
     <input type="file" name="file" />
     <input type="submit" value="Upload" />
 
-<%--    <div class="file-loading">--%>
-<%--      <input id="input-703" name="kartik-input-703[]" type="file" multiple>--%>
-<%--    </div>--%>
+    <img src="/image/<%=session.getAttribute("n") %>">
+
   </form>
 
 
@@ -101,21 +87,5 @@
   </a>
 
 </div>
-<%--<script>--%>
-<%--  $(document).ready(function() {--%>
-<%--    $("#input-703").fileinput({--%>
-<%--      uploadUrl: "/image/House",--%>
-<%--      minFileCount: 1,--%>
-<%--      maxFileCount: 5,--%>
-<%--      uploadExtraData: function(previewId, index) {--%>
-<%--        return {key: index};--%>
-<%--      },--%>
-<%--      overwriteInitial: false,--%>
-<%--      initialPreviewAsData: true // identify if you are sending preview data only and not the markup--%>
-<%--    });--%>
-<%--  });--%>
-<%--</script>--%>
-
-
 </body>
 </html>
