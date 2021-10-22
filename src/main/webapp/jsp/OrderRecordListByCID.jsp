@@ -8,7 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
-<%List<Order> orderList = (List<Order>)session.getAttribute("orderList");%>
+<%List<Order> orderListByCID = (List<Order>)session.getAttribute("orderListByCID");%>
 <head>
   <meta charset="UTF-8">
   <title>Order Record</title>
@@ -77,14 +77,14 @@
   <!--创建搜索框 按键 以及添加按钮-->
   <div class="row">
     <form class="form-horizontal" action="SearchOrderRecordByCID">
-      <input type="text" class="form-control" name="userID"  placeholder="Search By CustomerID: ">
-<%--      <button class="btn btn-primary btn-md">Search</button>--%>
-<%--    </form>--%>
+      <input type="text" class="form-control" placeholder="Search By CustomerID: ">
+      <button class="btn btn-primary btn-md">Search</button>
+    </form>
     <div class="col-sm-2"></div>
-<%--    <form class="form-horizontal">--%>
-      <input type="text" class="form-control" name="status" placeholder="Search By Status: ">
+    <form class="form-horizontal">
+      <input type="text" class="form-control" placeholder="Search By OrderID: ">
     <div class="col-sm-1 form-group">
-      <button class="btn btn-primary btn-md" type="submit">Search</button>
+      <button class="btn btn-primary btn-md">Search</button>
     </div>
     </form>
     <!--查找订单按键 管理员及超级管理员权限-->
@@ -113,34 +113,30 @@
       <th>Edit/Delete</th>
     </tr>
     <%
-      if(orderList != null){
-        System.out.println(orderList.size());
-        for (int i=0; i<orderList.size(); i++ ){
-          Order order = (Order) orderList.get(i);
+      if(orderListByCID != null){
+        System.out.println(orderListByCID.size());
+        for (int i=0; i<orderListByCID.size(); i++ ){
+          Order order1 = (Order) orderListByCID.get(i);
 
     %>
     <tbody>
     <tr>
-      <td><%=order.getId()%></td>
-      <td><%=order.getUserID()%></td>
-      <td><%=order.getRoomID()%></td>
-      <td><%=order.getStart_time()%></td>
-      <td><%=order.getEnd_time()%></td>
-      <td><%=order.getAmount()%></td>
-      <td><%=order.getRemark()%></td>
-      <td><%=order.getStatus()%></td>
+      <td><%=order1.getId()%></td>
+      <td><%=order1.getUserID()%></td>
+      <td><%=order1.getRoomID()%></td>
+      <td><%=order1.getStart_time()%></td>
+      <td><%=order1.getEnd_time()%></td>
+      <td><%=order1.getAmount()%></td>
+      <td><%=order1.getRemark()%></td>
+      <td><%=order1.getStatus()%></td>
       <!--添加删改按钮-->
       <td>
-        <!--添加编辑按钮 超级管理员及管理员权限-->
         <a href="AdminPage.jsp">
-          <button class="btn btn-info btn-sm">Edit</button>
+        <button class="btn btn-info btn-sm">Edit</button>
         </a>
-        <!--添加删除按钮 超级管理员权限-->
-        <form action="OrderRecord" method="get">
-          <input type="hidden" name="orderid" value=<%=order.getId()%>>
-          <input type="submit" value="Delete">
-
-        </form>
+          <a href="AdminPage.jsp">
+        <button class="btn btn-danger btn-sm">Delete</button>
+          </a>
       </td>
     </tr>
 
