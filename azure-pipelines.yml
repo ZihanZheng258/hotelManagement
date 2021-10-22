@@ -41,5 +41,5 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '/home/vsts/work/1/s/target/hotelManagement.jar' 
+    targetPath: '/home/vsts/work/1/s/target/hotelManagement.war' 
     artifactName: 'myWebsiteName' 
