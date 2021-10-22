@@ -25,27 +25,27 @@
     <form action="AddRemarkRecord">
         <div class="form-group">
             <label>User Name</label>
-            <input class="form-control" id="" name="" value="" placeholder="Please Enter User Name">
+            <input class="form-control" id="InputUserName" name="userName" value="" placeholder="Please Enter User Name">
         </div>
         <div class="form-group">
             <label >Content</label>
-            <input class="form-control" id="" name="" value="" placeholder="Please Enter Content">
+            <input class="form-control" id="InputContent" name="content" value="" placeholder="Please Enter Content">
         </div>
         <div class="form-group">
             <label >Remark ID</label>
-            <input class="form-control" id="" name="" value="" placeholder="Please Enter Remark ID">
+            <input class="form-control" id="InputRemarkID" name="remarkID" value="" placeholder="Please Enter Remark ID">
         </div>
         <div class="form-group">
             <label >Score</label>
-            <input class="form-control" id="" name="" value="" placeholder="Please Enter Score">
+            <input class="form-control" id="InputScore" name="score" value="" placeholder="Please Enter Score">
         </div>
         <div class="form-group">
             <label >Room ID</label>
-            <input class="form-control" id="" name="" value="" placeholder="Please Enter RoomID">
+            <input class="form-control" id="InputRoomID" name="roomID" value="" placeholder="Please Enter RoomID">
         </div>
         <div class="form-group">
             <label >UserID</label>
-            <input class="form-control" id="" name="" value="" placeholder="Please Enter UserID">
+            <input class="form-control" id="InputUserID" name="userID" value="" placeholder="Please Enter UserID">
         </div>
 
 

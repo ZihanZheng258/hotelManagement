@@ -43,7 +43,9 @@
 </head>
 <body>
 
-<%List<Room> room = (List<Room>)session.getAttribute("room");%>
+<%List<Room> room = (List<Room>)session.getAttribute("room");
+
+%>
 
 <!--Header navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -114,6 +116,7 @@
                     for(int i =0;i<room.size();i++){
                         Room rm = (Room) room.get(i);
             %>
+
             <tbody>
             <tr class="text-info">
                 <td>
@@ -137,9 +140,13 @@
                 <td>
                     <p>roomNumber:<%= rm.getNumber()%></p>
                 </td>
+
+                <form action="Cottagedetail3" method="post">
                 <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
+                    <input type="hidden" name="roomID" value=<%= rm.getId()%>>
+                    <input type="submit" value="Order now">
                 </td>
+                </form>
             </tr>
             </tbody>
             <%

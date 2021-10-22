@@ -52,13 +52,32 @@
     <servlet-name>AddHotelRecordServlet</servlet-name>
     <url-pattern>/jsp/AddHotelRecord</url-pattern>
   </servlet-mapping>
+
   <servlet>
     <servlet-name>AddOrderRecordServlet</servlet-name>
     <servlet-class>Servlet.AddOrderRecordServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddOrderRecordServlet</servlet-name>
-    <url-pattern>/jsp/AddOrderRecord</url-pattern>
+    <url-pattern>/AddOrderRecord2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RemarkRecord</servlet-name>
+    <servlet-class>Servlet.RemarkRecord</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemarkRecord</servlet-name>
+    <url-pattern>/Cottagedetail3</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AddRemarkRecordServlet</servlet-name>
+    <servlet-class>Servlet.AddRemarkRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddRemarkRecordServlet</servlet-name>
+    <url-pattern>/jsp/AddRemarkRecord</url-pattern>
   </servlet-mapping>
 
   <servlet>
@@ -107,7 +126,7 @@
     <servlet-name>SearchOrderRecordByCIDServlet</servlet-name>
     <url-pattern>/jsp/SearchOrderRecordByCID</url-pattern>
   </servlet-mapping>
-  
+
 
   <servlet>
     <servlet-name>ShowOrderRecordServlet</servlet-name>
@@ -121,7 +140,9 @@
     <servlet-name>ShowOrderRecordServlet</servlet-name>
     <url-pattern>/jsp/Admin2</url-pattern>
   </servlet-mapping>
-  
+
+
+
   <servlet>
     <servlet-name>SearchHotelRecordServlet</servlet-name>
     <servlet-class>Servlet.SearchHotelRecordServlet</servlet-class>
