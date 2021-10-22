@@ -7,6 +7,8 @@ import java.util.Set;
 
 import beans.Hotel;
 import beans.Order;
+import beans.Picture;
+import beans.Remark;
 import beans.Room;
 import beans.User;
 // the proxy and the combination of all daos, provide connections to database , used by servlets
@@ -16,12 +18,16 @@ public class DaoManager {
 	private UserDao userDao;
 	private RoomDao roomDao;
 	private OrderDao orderDao;
+	private PictureDao pictureDao;
+	private RemarkDao remarkDao;
 	public DaoManager(Connection conn) throws SQLException {       
 		   this.conn = conn;
 		   hotelDao = new HotelDao(conn);
 		   userDao = new UserDao(conn);
 		   roomDao = new RoomDao(conn);
 		   orderDao = new OrderDao(conn);
+		   pictureDao = new PictureDao(conn);
+		   remarkDao = new RemarkDao(conn); 
 		   
 		   
 		}
@@ -125,5 +131,29 @@ public class DaoManager {
 	}
 	public boolean order_update(Order order)throws Exception{
 		return orderDao.doUpdate(order);
+	}
+	//Picture Dao
+	public boolean picture_Create(Picture picture)throws Exception{
+		return pictureDao.doCreate(picture);
+	}
+	public Picture picture_find_by_id(int ID)throws Exception{
+		return pictureDao.findById(ID);
+	}
+	
+	//Remark Dao
+	public boolean Remark_Create(Remark remark)throws Exception{
+		return remarkDao.doCreate(remark);
+	}
+	public boolean Remark_delect_by_id(int ID)throws Exception{
+		return remarkDao.doRemoveBatch(ID);
+	}
+	public Remark Remark_find_by_id(int ID)throws Exception{
+		return  remarkDao.findById(ID);
+	}
+	public List<Remark> Remark_find_by_roomID(int ID)throws Exception{
+		return remarkDao.findByRoomId(ID);
+	}
+	public List<Remark> Remark_find_by_UserID(int ID)throws Exception{
+		return remarkDao.findByUserId(ID);
 	}
 	}
