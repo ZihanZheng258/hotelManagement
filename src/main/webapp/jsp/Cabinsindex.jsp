@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="beans.Hotel" %>
+
 <%@ page import="java.util.List" %>
 <html lang="en">
 <head>
@@ -104,12 +105,13 @@
                         <p class="hotel-nation">Hotel Address<%= hotel.get(i).getAddress()%></p>
                         <img class="hotel-pic" src="image/image1/cabinpicture2.jpg" alt="hotel pic">
 
-                        <a href="http://localhost:8080/hotelManagement_war/jsp/Cottagedetail2.jsp" >
+                        <form action="EditRoomRecord2" method="get">
+<%--                        /*<a href="http://localhost:8080/hotelManagement_war/jsp/Cottagedetail2.jsp" >*/--%>
                         <p class="hotel-detail-link">
-                            <b>View more information</b>
+                            <input type="hidden" name="hotelid" value=<%=hotel.get(i).getId()%>>
+                            <input type="submit" value="View more information">
                         </p>
-                        </a>
-
+                        </form>
                     </div>
                     <div class="/hotelManagement_war/jsp/hotel-right">
                         <i class="hotel-rate">Hotel Score: <%= hotel.get(i).getScore()%></i>

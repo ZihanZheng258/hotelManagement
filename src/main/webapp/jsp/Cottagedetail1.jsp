@@ -201,7 +201,7 @@
             </tbody>
         </table>
     </div>
-    <hr>
+
     <div class="hotel-comment">
         <h4>Customer comments:</h4>
         <p><i class="rate">8.8</i> Great</p>
