@@ -102,7 +102,7 @@
                     <div class="hotel-left">
                         <h3 class="hotel-name">Hotel name:<%= hotel.get(i).getName()%></h3>
                         <p class="hotel-nation">Hotel Address<%= hotel.get(i).getAddress()%></p>
-                        <img class="hotel-pic" src="image/image1/cabinpicture2.jpg" alt="hotel pic">
+                        <img class="hotel-pic" src="/image/<%=session.getAttribute("n") %>" alt="hotel pic">
 
                         <a href="http://localhost:8080/hotelManagement_war/jsp/Cottagedetail2.jsp" >
                         <p class="hotel-detail-link">

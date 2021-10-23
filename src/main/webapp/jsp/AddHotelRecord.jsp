@@ -75,7 +75,6 @@
     <input type="file" name="file" />
     <input type="submit" value="Upload" />
 
-    <img src="/image/<%=session.getAttribute("n") %>">
 
   </form>
 
