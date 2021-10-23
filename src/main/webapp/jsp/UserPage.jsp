@@ -6,11 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="beans.User" %>
+<%@ page import="beans.Order" %>
 <%@ page import="Dao.DaoManager" %>
 <%@ page import="dbc.DBConnector" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%User user = (User) session.getAttribute("user");%>
+<%List<Order> orderList = (List<Order>) session.getAttribute("orderList");%>
 <%
     //DEBUG TESTING
     if (session.getAttribute("user") == null)
@@ -84,9 +87,7 @@
 <hr class="hrcoloured">
 
 <!--Dash Board-->
-</p>
 <div class="dashboard">
-
         <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
         <h2> Account Info </h2>
         <ul class="infolist">
@@ -105,8 +106,70 @@
             <button class="btn btn-link" value="Find"> <span class="bi bi-pencil-square"></span>Edit</button>
         </li>
     </a>
+
+    <!--Order History-->
+    <div>
+        <h1 class="title">Order History<span class="subtitle">History of you recent orders.</span> </h1> <div id="AccountInfo" class="majorRow">
+        <h2>Recent Orders</h2>
+
+        <%
+            if (orderList == null)
+            {
+        %>
+        <form action="UserPage">
+            <button class="btn btn-link" type="submit">Show</button><br>
+        </form>
+        <%
+            }
+            else
+            {
+        %>
+            <!--create table-->
+        <table class="table  table-hover table-bordered" style="background-color: #FF6767">
+            <tr style="background-color: #FF3D68">
+                <!--Order Information-->
+                <th>Order ID</th>
+                <th>User ID</th>
+                <th>Room ID</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Amount</th>
+                <th>Remark</th>
+                <th>Status</th>
+                <th>Give Remark</th>
+            </tr>
+        <%
+            }
+        %>
+        <%
+            if(orderList != null){
+                System.out.println(orderList.size());
+                for (int i=0; i<orderList.size();i++){
+                    Order order = (Order) orderList.get(i);
+        %>
+        <tbody>
+        <tr>
+            <td><%=order.getId()%></td>
+            <td><%=order.getUserID()%></td>
+            <td><%=order.getRoomID()%></td>
+            <td><%=order.getStart_time()%></td>
+            <td><%=order.getEnd_time()%></td>
+            <td><%=order.getAmount()%></td>
+            <td><%=order.getRemark()%></td>
+            <td><%=order.getStatus()%></td>
+            <td>
+                <!--添加删除按钮 超级管理员权限-->
+                <form action="RemarkPage" method="post">
+                    <input type="hidden" name="orderID" value=<%=order.getId()%>>
+                    <input type="submit" value="Remark">
+                </form>
+            </td>
+        </tr>
+            <%   }
+            }
+        %>
+        </table>
+    </div>
 </div>
-
-
 </body>
 </html>
