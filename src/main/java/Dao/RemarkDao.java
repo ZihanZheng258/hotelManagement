@@ -26,7 +26,7 @@ public class RemarkDao implements BaseDao<Remark>{
 	@Override
 
 	public boolean doCreate(Remark beanObject) throws Exception {
-		 ps = conn.prepareStatement("INSERT INTO `hotel`.`t_remark`(`id`, `user_name`, `content`, `score`,"
+		 ps = conn.prepareStatement("INSERT INTO `t_remark`(`id`, `user_name`, `content`, `score`,"
 		 		+ " `roomID`, `user_id`) VALUES (?, ?, ?, ?, ?, ?);");
 		 ps.setObject(1, beanObject.getId());
 		 ps.setObject(2, beanObject.getUserName());

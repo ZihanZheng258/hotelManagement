@@ -45,7 +45,7 @@ public class UserPageServlet extends HttpServlet
     {
         try
         {
-
+            req.getRequestDispatcher("UserPage.jsp");
         }
         catch (Exception e)
         {
