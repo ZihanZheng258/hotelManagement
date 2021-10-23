@@ -134,7 +134,7 @@
                 <th>Start Time</th>
                 <th>End Time</th>
                 <th>Amount</th>
-                <th>Remark</th>
+                <th>Remarked</th>
                 <th>Status</th>
                 <th>Give Remark</th>
             </tr>
@@ -155,7 +155,15 @@
             <td><%=order.getStart_time()%></td>
             <td><%=order.getEnd_time()%></td>
             <td><%=order.getAmount()%></td>
-            <td><%=order.getRemark()%></td>
+            <td>
+                <%
+                if(order.getRemark().equals(""))
+                {
+                %>NO<%
+                } else {
+                %>YES<%
+                }
+            %></td>
             <td><%=order.getStatus()%></td>
             <td>
                 <!--添加删除按钮 超级管理员权限-->
