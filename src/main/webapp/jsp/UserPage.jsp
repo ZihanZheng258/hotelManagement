@@ -88,7 +88,7 @@
 
 <!--Dash Board-->
 <div class="dashboard">
-        <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div id="AccountInfo" class="majorRow">
+        <h1 class="title">Dashboard <span class="subtitle">A summary of all recent activity on your account.</span> </h1> <div class="majorRow">
         <h2> Account Info </h2>
         <ul class="infolist">
             <li><span class="label">Account ID:</span><%=user.getID()%></li>
@@ -109,7 +109,7 @@
 
     <!--Order History-->
     <div>
-        <h1 class="title">Order History<span class="subtitle">History of you recent orders.</span> </h1> <div id="AccountInfo" class="majorRow">
+        <h1 class="title">Order History<span class="subtitle">History of you recent orders.</span> </h1> <div class="majorRow">
         <h2>Recent Orders</h2>
 
         <%
@@ -178,6 +178,7 @@
         %>
         </table>
     </div>
+</div>
 </div>
 </body>
 </html>
