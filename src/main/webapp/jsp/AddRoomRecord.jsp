@@ -125,14 +125,6 @@
       <textarea class="form-control" id="InputRemark" name = "roomRemark" placeholder="Please Enter Remark" rows="4"></textarea>
     </div>
 
-
-    <br>
-    <div class="form-group">
-      <label for="exampleInputFile">Upload Room Photo</label>
-      <input type="file" id="exampleInputFile">
-    </div>
-
-
     <br>
     <div class="container">
 
@@ -140,8 +132,17 @@
 
     </div>
     <!--关闭页面-->
+  </form>
+
+  <br>
+  <form action="AddRoomRecord3" method="POST" enctype="multipart/form-data">
+
+    <input type="file" name="file" />
+    <input type="submit" value="Upload" />
 
   </form>
+
+  <br>
   <div class="container">
   <a href="RoomRecord.jsp">
     <button type="submit" class="btn btn-danger btn-block">RESET</button>

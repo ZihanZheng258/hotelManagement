@@ -227,5 +227,14 @@
     <url-pattern>/EditRoomRecord2</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>RoomPictureUploadServlet</servlet-name>
+    <servlet-class>Servlet.RoomPictureUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RoomPictureUploadServlet</servlet-name>
+    <url-pattern>/jsp/AddRoomRecord3</url-pattern>
+  </servlet-mapping>
+
 
 </web-app>

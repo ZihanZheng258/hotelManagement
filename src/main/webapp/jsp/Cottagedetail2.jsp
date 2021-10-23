@@ -12,10 +12,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Shangri La cottage </title>
-    <link rel="stylesheet" href="../utils/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jing.css">
-    <script src="../utils/jquery-3.6.0.min.js"></script>
-    <script src="../utils/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="utils/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jing.css">
+    <script src="utils/jquery-3.6.0.min.js"></script>
+    <script src="utils/bootstrap/js/bootstrap.js"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,22 +52,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="../index.jsp">  Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.jsp">  Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"> <img src="../image/svg/house.svg" alt="Bootstrap" width="20"> Stays</a>
+                <a class="nav-link" href="#"> <img src="image/svg/house.svg" alt="Bootstrap" width="20"> Stays</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../image/svg/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
+                <a class="nav-link" href="#">  <img src="image/svg/signpost-split.svg" alt="Bootstrap" width="20">Attractions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">  <img src="../image/svg/car.svg" alt="Bootstrap" width="20" >Car rentals</a>
+                <a class="nav-link" href="#">  <img src="image/svg/car.svg" alt="Bootstrap" width="20" >Car rentals</a>
             </li>
         </ul>
 
         <div class="btn float-right">
             <li class="list-inline-item">
-                <a class="btn btn-success" href="../index.jsp"> <img src="../image/svg/sign-out-alt.svg" alt="Bootstrap" width="20" >Sign Out</a>
+                <a class="btn btn-success" href="index.jsp"> <img src="image/svg/sign-out-alt.svg" alt="Bootstrap" width="20" >Sign Out</a>
             </li>
         </div>
     </div>
@@ -78,8 +78,8 @@
     <h2><b>Shangri La cottage</b></h2>
     <hr>
     <div class="container">
-        <img src="../image/image1/cottagepicture5.jpg" class="hotel-detail-image" alt="hotel image detail">
-        <img src="../image/image1/cottagepicture6.jpg" class="hotel-detail-image" alt="hotel image detail">
+        <img src="/image/<%=session.getAttribute("n") %>"  class="hotel-detail-image" alt="hotel image detail">
+        <img src="/image/<%=session.getAttribute("n") %>"  class="hotel-detail-image" alt="hotel image detail">
     </div>
     <div class="hotel-description container">
         <p> Shangri La cottage Hotel is located in one area of Orlando, USA. each cottage comes with an outdoor swimming pool and free wifi.</p>
