@@ -13,6 +13,7 @@ import java.sql.SQLException;
 
 public class AddHotelRecordServlet extends HttpServlet {
     @Override
+
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
@@ -64,7 +65,5 @@ public class AddHotelRecordServlet extends HttpServlet {
             e.printStackTrace();
             req.getRequestDispatcher("AddHotelRecordError.jsp").forward(req, resp);
         }
-
-
     }
 }

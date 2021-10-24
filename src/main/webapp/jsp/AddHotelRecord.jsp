@@ -14,6 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- 引入bootstrap的核心css文件  -->
   <link rel="stylesheet" href="../utils/bootstrap/css/bootstrap.min.css">
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </head>
 <body style="background-color: #FF6767">
 <div class="container">
@@ -56,11 +59,6 @@
       <textarea class="form-control" id="InputIntroduction" name="hotelIntroduction"  placeholder="Please Enter Introduction" rows="4"></textarea>
     </div>
     <br>
-    <div class="form-group">
-      <label for="exampleInputFile">Upload Hotel image</label>
-      <input type="file" id="exampleInputFile" name="hotelPicture">
-    </div>
-
 
     <br>
     <div class="container">
@@ -71,13 +69,22 @@
     </div>
 
   </form>
+  <form action="AddHotelRecord3" method="POST" enctype="multipart/form-data">
+
+
+    <input type="file" name="file" />
+    <input type="submit" value="Upload" />
+
+
+  </form>
+
+
+
+
   <a href="HotelRecord.jsp">
     <button class="btn btn-danger btn-block">RESET</button>
   </a>
 
 </div>
-
-
-
 </body>
 </html>
