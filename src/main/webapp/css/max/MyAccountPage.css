@@ -33,3 +33,12 @@
 .btnedit{
 
 }
+
+.newRemarkField{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    background-color: #9c9c9c;
+}

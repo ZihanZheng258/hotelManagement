@@ -43,7 +43,9 @@
 </head>
 <body>
 
-<%List<Room> room = (List<Room>)session.getAttribute("room");%>
+<%List<Room> room = (List<Room>)session.getAttribute("room");
+
+%>
 
 <!--Header navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -114,6 +116,7 @@
                     for(int i =0;i<room.size();i++){
                         Room rm = (Room) room.get(i);
             %>
+
             <tbody>
             <tr class="text-info">
                 <td>
@@ -137,9 +140,13 @@
                 <td>
                     <p>roomNumber:<%= rm.getNumber()%></p>
                 </td>
+
+                <form action="Cottagedetail3" method="post">
                 <td>
-                    <a class="btn btn-primary" href="Payment.jsp" role="button">Book now</a>
+                    <input type="hidden" name="roomID" value=<%= rm.getId()%>>
+                    <input type="submit" value="Order now">
                 </td>
+                </form>
             </tr>
             </tbody>
             <%
@@ -149,18 +156,34 @@
         </table>
     </div>
     <hr>
-    <div class="hotel-comment">
-        <h4>Customer comments:</h4>
-        <p><i class="rate">8.9</i> Great</p>
-        <p>-1186 guest comment</p>
-        <p><a href="javascript:void(0)">View all comments</a></p>
+
+   <div class="container mt-4 mb-4">
+    <div class="row justify-content-md-center">
+        <div class="col-md-12 col-lg-8">
+            <h1 class="h2 mb-4">reamark</h1>
+            <label>User input</label>
+            <div class="form-group">
+                <textarea id="editor"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </div>
+    </div>
+
+
 </header>
 <br>
 <div class="container">
 
 </div>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
+<script>
+    tinymce.init({
+        selector: 'textarea#editor',
+        menubar: false
+    });
+</script>
 <footer class="footer">
     ...页脚内容...
     <div class="btn footer-central">
