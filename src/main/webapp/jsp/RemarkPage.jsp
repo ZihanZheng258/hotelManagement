@@ -69,9 +69,6 @@
         <h2>Score</h2>
         <input class=type="text" name="score" placeholder="Please Enter Score">
         <br>
-        <h2>RemarkID</h2>
-        <input class=type="text" name="remarkID" placeholder="Please Enter Remark ID">
-        <br>
         <br>
         <button class="btn btn-primary btn-md" type="submit">Done</button>
         <br>

@@ -41,9 +41,7 @@ public class RemarkPageServlet extends HttpServlet
         {
             String remark = req.getParameter("remark");
             int score = Integer.parseInt(req.getParameter("score"));
-            int remarkID = Integer.parseInt(req.getParameter("remarkID"));
             System.out.println("Remark: " + remark);
-            System.out.println("RemarkID: " + remarkID);
             System.out.println("Score: " + score);
 
             HttpSession session = req.getSession();
@@ -55,10 +53,25 @@ public class RemarkPageServlet extends HttpServlet
             newRemark.setUserID(order.getUserID());
             newRemark.setUserName(user.getName());
             newRemark.setContent(remark);
-            newRemark.setId(remarkID);
+            int index = 1;
+            boolean end = false;
+            while (!end)
+            {
+                try
+                {
+                    manager.Remark_find_by_id(index);
+                    index++;
+                }
+                catch (Exception e)
+                {
+                    newRemark.setId(index);
+                    System.out.println("RemarkID: " + index);
+                    end = true;
+                }
+            }
             newRemark.setScore(score);
             manager.Remark_Create(newRemark);
-            order.setRemark("" + remarkID);
+            order.setRemark("" + index);
             manager.order_update(order);
             List<Order> orderList = manager.order_find_by_userID(user.getID());
             //commit to session
