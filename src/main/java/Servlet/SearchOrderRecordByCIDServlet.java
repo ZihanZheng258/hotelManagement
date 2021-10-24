@@ -19,12 +19,11 @@ public class SearchOrderRecordByCIDServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
        int userID = Integer.parseInt(req.getParameter("userID"));
-       String status = req.getParameter("status");
         try {
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             HttpSession session = req.getSession();
             //调用查询方法,将List数据打包
-            List<Order> orderListByCID = manager.order_find_by_userID_And_Status(userID, status);
+            List<Order> orderListByCID = manager.order_find_by_userID(userID);
             session.setAttribute("order", orderListByCID);
             System.out.println("show all" + orderListByCID.toString());
             req.getRequestDispatcher("/jsp/OrderRecordListByCID.jsp").forward(req, resp);

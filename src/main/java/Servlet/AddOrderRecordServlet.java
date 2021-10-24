@@ -73,7 +73,7 @@ public class AddOrderRecordServlet extends HttpServlet {
 
         } catch (Exception e) {
             e.printStackTrace();
-            req.getRequestDispatcher("AddOrderRecordError.jsp").forward(req, resp);
+            req.getRequestDispatcher("/jsp/AddOrderRecordError.jsp").forward(req, resp);
 
         }
 

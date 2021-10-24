@@ -8,7 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
-<%List<Order> orderListByCID = (List<Order>)session.getAttribute("orderListByCID");%>
+<%List<Order> orderListByCID = (List<Order>)session.getAttribute("order");%>
 <head>
   <meta charset="UTF-8">
   <title>Order Record</title>
@@ -80,11 +80,7 @@
       <input type="text" class="form-control" placeholder="Search By CustomerID: ">
       <button class="btn btn-primary btn-md">Search</button>
     </form>
-    <div class="col-sm-2"></div>
-    <form class="form-horizontal">
-      <input type="text" class="form-control" placeholder="Search By OrderID: ">
-    <div class="col-sm-1 form-group">
-      <button class="btn btn-primary btn-md">Search</button>
+
     </div>
     </form>
     <!--查找订单按键 管理员及超级管理员权限-->

@@ -92,17 +92,17 @@
 
 
         <form action="RemarkRecord">
-            <div class="col-sm-8">
+            <div class="col-sm-4">
             <input type="text" class="form-control" name="Userid" value="0" placeholder="Search By User ID : ">
     </div>
             <div class="col-sm-2">
-            <button class="btn btn-primary btn-md" type="submit">Search</button>
+            <button class="btn btn-primary btn-md" type="submit">Search User ID :</button>
             </div>
         </form>
 
 
         <div class="col-sm-2">
-            <!--添加酒店功能按钮 超级管理员权限 按下按键跳转到AddHotel.html表单-->
+
             <button class="btn btn-success btn-md"><a href="AddRemarkRecord.jsp">Add Remark</a></button>
         </div>
     </div>

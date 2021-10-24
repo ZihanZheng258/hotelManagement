@@ -157,17 +157,11 @@
     </div>
     <hr>
 
-   <div class="container mt-4 mb-4">
-    <div class="row justify-content-md-center">
-        <div class="col-md-12 col-lg-8">
-            <h1 class="h2 mb-4">reamark</h1>
-            <label>User input</label>
-            <div class="form-group">
-                <textarea id="editor"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </div>
+    <div class="hotel-comment">
+        <h4>Customer comments:</h4>
+        <p><i class="rate">8.5</i> Great</p>
+        <p>-793 guest comment</p>
+        <p><a href="javascript:void(0)">View all comments</a></p>
     </div>
 
 

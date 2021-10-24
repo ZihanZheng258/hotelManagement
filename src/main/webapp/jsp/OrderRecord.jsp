@@ -75,28 +75,19 @@
     <div class="col-sm-2"><h3 class="text-center" style="margin-top: 26px">Welcome：xxx</h3></div>
   </div>
   <!--创建搜索框 按键 以及添加按钮-->
-  <div class="row">
-    <form class="form-horizontal" action="SearchOrderRecordByCID">
+
+    <form  action="SearchOrderRecordByCID">
+      <div class="col-sm-5">
       <input type="text" class="form-control" name="userID"  placeholder="Search By CustomerID: ">
-<%--      <button class="btn btn-primary btn-md">Search</button>--%>
-<%--    </form>--%>
-    <div class="col-sm-2"></div>
-<%--    <form class="form-horizontal">--%>
-      <input type="text" class="form-control" name="status" placeholder="Search By Status: ">
-    <div class="col-sm-1 form-group">
+      </div>
+      <div class="col-sm-2">
       <button class="btn btn-primary btn-md" type="submit">Search</button>
     </div>
     </form>
-    <!--查找订单按键 管理员及超级管理员权限-->
-    <div class="col-sm-2">
-      <button class="btn btn-primary btn-md">Reset</button><br>
-    </div>
-    <!--添加订单按钮 超级管理员权限 按下按键跳转到AddOrder.html表单-->
-    <div class="col-sm-2">
-      <button class="btn btn-success btn-md"><a href="AddOrderRecord.jsp"> Add Order</a></button>
-    </div>
 
-  </div>
+    <!--添加订单按钮 超级管理员权限 按下按键跳转到AddOrder.html表单-->
+
+
   <br>
 
   <!--创建表格-->
@@ -147,16 +138,7 @@
     <%     }
     }
     %>
-    <tr>
-      <td>o-0000001</td>
-      <td>u-0000001</td>
-      <td>r-0000001</td>
-      <td>2021/4/3</td>
-      <td>2021/4/9</td>
-      <td>1000</td>
-      <td>good</td>
-      <td>FINISH</td>
-      <!--添加删改按钮-->
+
       <td>
         <a href="AdminPage.jsp">
           <button class="btn btn-info btn-sm">Edit</button>
