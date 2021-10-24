@@ -157,7 +157,7 @@
             <td><%=order.getAmount()%></td>
             <td>
                 <%
-                if(order.getRemark().equals(""))
+                if(order.getRemark().equals("") || order.getRemark().equals(0))
                 {
                 %>NO<%
                 } else {
@@ -167,7 +167,7 @@
             <td><%=order.getStatus()%></td>
             <td>
                 <%
-                    if (order.getRemark().equals(""))
+                    if (order.getRemark().equals("") || order.getRemark().equals(0))
                     {
                 %>
                     <!--give remark-->
