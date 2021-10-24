@@ -90,10 +90,14 @@
     <%--第二行--%>
     <div class="row">
 
-        <div class="col-sm-2"></div>
+
         <form action="RemarkRecord">
+            <div class="col-sm-8">
             <input type="text" class="form-control" name="Userid" value="0" placeholder="Search By User ID : ">
+    </div>
+            <div class="col-sm-2">
             <button class="btn btn-primary btn-md" type="submit">Search</button>
+            </div>
         </form>
 
 
