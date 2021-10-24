@@ -248,5 +248,23 @@
     <url-pattern>/EditRoomRecord2</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>UserPageServlet</servlet-name>
+    <servlet-class>Servlet.UserPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserPageServlet</servlet-name>
+    <url-pattern>/jsp/UserPage</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RemarkPageServlet</servlet-name>
+    <servlet-class>Servlet.RemarkPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemarkPageServlet</servlet-name>
+    <url-pattern>/jsp/RemarkPage</url-pattern>
+  </servlet-mapping>
+
 
 </web-app>
