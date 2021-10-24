@@ -14,7 +14,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <%--用jsp语句，将servlet传过来的list数据拿到并放在一个list里--%>
-<%List<Remark> remarkList = (List<Remark>)session.getAttribute("remarkList");%>
+<%List<Remark> remarkList = (List<Remark>)session.getAttribute("Remark");%>
 
 
 
@@ -89,19 +89,18 @@
 
     <%--第二行--%>
     <div class="row">
-        <form action="">
-            <input type="text" class="form-control" name=""  placeholder="Search By : ">
+
+
+        <form action="RemarkRecord">
+            <div class="col-sm-8">
+            <input type="text" class="form-control" name="Userid" value="0" placeholder="Search By User ID : ">
+    </div>
+            <div class="col-sm-2">
             <button class="btn btn-primary btn-md" type="submit">Search</button>
-        </form>
-        <div class="col-sm-2"></div>
-        <form action="">
-            <input type="text" class="form-control" name="hotelType" placeholder="Search By : ">
-            <button class="btn btn-primary btn-md" type="submit">Search</button>
+            </div>
         </form>
 
-        <div class="col-sm-2">
-            <button class="btn btn-info btn-md" type="submit">Reset</button>
-        </div>
+
         <div class="col-sm-2">
             <!--添加酒店功能按钮 超级管理员权限 按下按键跳转到AddHotel.html表单-->
             <button class="btn btn-success btn-md"><a href="AddRemarkRecord.jsp">Add Remark</a></button>
@@ -153,18 +152,13 @@
 
 
                 <!--添加编辑按钮 超级管理员及管理员权限-->
-                <form action="" method="">
-                    <input type="hidden" name="hotelObj" >
-                    <input type="submit" value="Edit">
 
-                                        <button class="btn btn-info btn-sm">Edit</button>
-                </form>
 
                 <!--添加删除按钮 超级管理员权限-->
-                <form action="" method="">
-<%--                    <input type="hidden" name="hotelID" value=<%=hotel.getId()%>>--%>
+                <form action="RemarkRecord2" method="get">
+                    <input type="hidden" name="Remarkid" value=<%=remark.getId()%>>
                     <input type="submit" value="Delete">
-                                    <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+
                 </form>
 
             </td>
