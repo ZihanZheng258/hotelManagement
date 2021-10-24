@@ -18,6 +18,24 @@
   </servlet-mapping>
 
   <servlet>
+    <servlet-name>DeletRemarkServlet</servlet-name>
+    <servlet-class>Servlet.DeletRemarkServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeletRemarkServlet</servlet-name>
+    <url-pattern>/jsp/RemarkRecord2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ShowRemarkRecordServlet</servlet-name>
+    <servlet-class>Servlet.ShowRemarkRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowRemarkRecordServlet</servlet-name>
+    <url-pattern>/jsp/RemarkRecord</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
     <servlet-name>HotelServlet</servlet-name>
     <servlet-class>Servlet.HotelServlet</servlet-class>
   </servlet>
