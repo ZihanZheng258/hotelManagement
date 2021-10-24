@@ -59,6 +59,10 @@ public class RemarkPageServlet extends HttpServlet
             newRemark.setScore(score);
             manager.Remark_Create(newRemark);
             order.setRemark("" + remarkID);
+            manager.order_update(order);
+            List<Order> orderList = manager.order_find_by_userID(user.getID());
+            //commit to session
+            session.setAttribute("orderList", orderList);
 
         }
         catch (Exception e)

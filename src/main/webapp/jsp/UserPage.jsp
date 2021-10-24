@@ -136,8 +136,7 @@
                 <th>Amount</th>
                 <th>Remarked</th>
                 <th>Status</th>
-                <th>Give Remark</th>
-                <th>View Remark</th>
+                <th>Give/View Remark</th>
             </tr>
         <%
             }
@@ -167,18 +166,22 @@
             %></td>
             <td><%=order.getStatus()%></td>
             <td>
-                <!--give remark-->
-                <form action="RemarkPage" method="post">
-                    <input type="hidden" name="orderID" value=<%=order.getId()%>>
-                    <input type="submit" value="Remark">
-                </form>
-            </td>
-            <td>
+                <%
+                    if (order.getRemark().equals(""))
+                    {
+                %>
+                    <!--give remark-->
+                    <form action="RemarkPage" method="post">
+                        <input type="hidden" name="orderID" value=<%=order.getId()%>>
+                        <input type="submit" value="Remark">
+                    </form>
+                <%} else {%>
                 <!--view remark-->
                 <form action="ViewRemarkPage" method="post">
                     <input type="hidden" name="orderID" value=<%=order.getId()%>>
-                    <input type="submit" value="Remark">
+                    <input type="submit" value="View">
                 </form>
+                <%}%>
             </td>
         </tr>
             <%   }
