@@ -96,30 +96,25 @@
   <h1 class="display-4 mt-10 font-weight-bold text-shadow">Admin page</h1>
 
   <form action="Admin">
-  <hr>
-  <a href="HotelRecord.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit" >HOTEL RECORD</button>
-  </a>
+    <hr>
+    <a href="HotelRecord.jsp">
+      <button class="btn btn-lg btn-primary btn-block" type="submit" >HOTEL RECORD</button>
+    </a>
   </form>
   <hr>
 
   <form action="Admin2">
-  <a href="OrderRecord.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">ORDER RECORD</button>
-  </a>
+    <a href="OrderRecord.jsp">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">ORDER RECORD</button>
+    </a>
   </form>
 
   <form action="AdminPage">
-  <hr>
-  <a href="RoomRecord.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Remark RECORD</button>
-  </a>
+    <hr>
+    <a href="RoomRecord.jsp">
+      <button class="btn btn-lg btn-primary btn-block" type="submit">ROOM RECORD</button>
+    </a>
   </form>
-  <hr>
-  <a href="UserPage.jsp">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">MyAccount</button>
-  </a>
-
   <hr>
   <a href="ManageUsers.jsp">
     <button class="btn btn-lg btn-primary btn-block" type="submit">ManageUsers</button>
@@ -132,7 +127,6 @@
   <a href="RemarkRecord.jsp">
     <button class="btn btn-lg btn-primary btn-block" type="submit">REMARK RECORD </button>
   </a>
-
 
 
   </form>
