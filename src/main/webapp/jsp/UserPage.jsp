@@ -167,7 +167,7 @@
             <td><%=order.getStatus()%></td>
             <td>
                 <%
-                    if (order.getRemark().equals("") || order.getRemark().equals(0))
+                    if (order.getRemark().equals("") || order.getRemark().equals("0"))
                     {
                 %>
                     <!--give remark-->
