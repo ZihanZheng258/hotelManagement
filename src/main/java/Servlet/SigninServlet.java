@@ -43,7 +43,8 @@ public class SigninServlet extends HttpServlet {
                     request.getRequestDispatcher("/jsp/AdminPage.jsp").forward(request, response);
                 } else {
                     System.out.println("User Login Succeed");
-                    request.getRequestDispatcher("/jsp/UserPage.jsp").forward(request, response);
+                    session.removeAttribute("orderList");
+                    request.getRequestDispatcher("UserPage").forward(request, response);
                 }
 
             } else {

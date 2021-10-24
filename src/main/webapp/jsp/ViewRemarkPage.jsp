@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Add New Remark to Order</title>
+    <title>View Recent Remark</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,18 +62,12 @@
 
 <div class="dashboard">
     <form action="RemarkPage" method="get">
-        <h1 class="title">New Remark</h1>
-        <h2>Remark</h2>
-        <textarea class=type="text" name="remark" placeholder="Please Enter Remark" rows="3"></textarea>
-        <br>
-        <h2>Score</h2>
-        <input class=type="text" name="score" placeholder="Please Enter Score">
-        <br>
-        <h2>RemarkID</h2>
-        <input class=type="text" name="remarkID" placeholder="Please Enter Remark ID">
+        <h1 class="title">View Remark</h1>
+        <h2>RemarkID: <%=session.getAttribute("viewingRemarkID")%></h2>
+        <textarea readonly class=type="text" name="remark" rows="3"><%=session.getAttribute("viewingRemark")%></textarea>
         <br>
         <br>
-        <button class="btn btn-primary btn-md" type="submit">Done</button>
+        <a class="btn btn-primary btn-md" href="UserPage.jsp">Done</a>
         <br>
     </form>
 

@@ -137,6 +137,7 @@
                 <th>Remarked</th>
                 <th>Status</th>
                 <th>Give Remark</th>
+                <th>View Remark</th>
             </tr>
         <%
             }
@@ -166,8 +167,15 @@
             %></td>
             <td><%=order.getStatus()%></td>
             <td>
-                <!--添加删除按钮 超级管理员权限-->
+                <!--give remark-->
                 <form action="RemarkPage" method="post">
+                    <input type="hidden" name="orderID" value=<%=order.getId()%>>
+                    <input type="submit" value="Remark">
+                </form>
+            </td>
+            <td>
+                <!--view remark-->
+                <form action="ViewRemarkPage" method="post">
                     <input type="hidden" name="orderID" value=<%=order.getId()%>>
                     <input type="submit" value="Remark">
                 </form>

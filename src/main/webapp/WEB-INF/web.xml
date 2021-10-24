@@ -283,5 +283,13 @@
     <url-pattern>/jsp/RemarkPage</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>ViewRemarkPageServlet</servlet-name>
+    <servlet-class>Servlet.ViewRemarkPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewRemarkPageServlet</servlet-name>
+    <url-pattern>/jsp/ViewRemarkPage</url-pattern>
+  </servlet-mapping>
 
 </web-app>

@@ -45,7 +45,10 @@ public class UserPageServlet extends HttpServlet
     {
         try
         {
-            req.getRequestDispatcher("UserPage.jsp");
+            HttpSession session = req.getSession();
+            //session.removeAttribute("orderList");
+            System.out.println("att Removed");
+            req.getRequestDispatcher("UserPage.jsp").forward(req, resp);
         }
         catch (Exception e)
         {
