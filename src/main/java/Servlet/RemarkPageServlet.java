@@ -55,10 +55,11 @@ public class RemarkPageServlet extends HttpServlet
             newRemark.setUserID(order.getUserID());
             newRemark.setUserName(user.getName());
             newRemark.setContent(remark);
-
             newRemark.setId(remarkID);
             newRemark.setScore(score);
             manager.Remark_Create(newRemark);
+            order.setRemark("" + remarkID);
+
         }
         catch (Exception e)
         {
