@@ -101,10 +101,7 @@
         </form>
 
 
-        <div class="col-sm-2">
 
-            <button class="btn btn-success btn-md"><a href="AddRemarkRecord.jsp">Add Remark</a></button>
-        </div>
     </div>
 
     <br>

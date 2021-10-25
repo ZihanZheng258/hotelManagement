@@ -84,7 +84,7 @@
     <div class="row">
 
         <div class="col-sm-4">
-            <input type="text" class="form-control" name="Id" placeholder="Search By Hotel Id: ">
+            <input type="text" class="form-control" name="Id" placeholder="Search By Room Id: ">
         </div>
         <div class="col-sm-2">
             <!--查找酒店按键 管理员及超级管理员权限-->
@@ -144,14 +144,12 @@
 
 
             <td>
-                <!--添加编辑按钮 超级管理员及管理员权限-->
-                < <!--添加编辑按钮 超级管理员及管理员权限-->
+
                 <form action="EditRoomRecord" method="post">
                     <input type="hidden" name="roomObj" value=<%=room.getId()%>>
                     <input type="submit" value="Edit">
                 </form>
 
-                <!--添加删除按钮 超级管理员权限-->
                 <form action="RoomRecord" method="get">
                     <input type="hidden" name="roomid" value=<%=room.getId()%>>
                     <input type="submit" value="Delete">

@@ -57,7 +57,7 @@ public class SignupServlet extends HttpServlet {
             if (user_exist != null) {
                 System.out.println(user);
                 request.setAttribute("user_exist", user_exist);
-                request.getRequestDispatcher("/jsp/UserPage.jsp").forward(request, response);
+                request.getRequestDispatcher("/jsp/signin.jsp").forward(request, response);
             } else {
                 System.out.println("Create failed");
                 request.getRequestDispatcher("signup.jsp").forward(request, response);

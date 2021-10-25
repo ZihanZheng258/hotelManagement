@@ -71,16 +71,16 @@
             <ul class="infolist">
                 <li><span class="label">Room ID:</span><%=room.getId()%></li>
                 <li><span class="label">Room Name:</span><input type="text" name="Name" placeholder=<%=room.getName()%>></li>
-                <li><span class="label">Room Number:</span><input type="text" name="Number" placeholder=<%=room.getNumber()%>></li>s
+                <li><span class="label">Room Number:</span><input type="text" name="Number" placeholder=<%=room.getNumber()%>></li>
                 <li><span class="label">Room Type:</span><input type="text" name="Type" placeholder=<%=room.getType()%>></li>
                 <li><span class="label">Room Area:</span><input type="text" name="Area" placeholder=<%=room.getArea()%>></li>
                 <li><span class="label">Room Bed Width:</span><input type="text" name="BedWidth" placeholder=<%=room.getBedWidth()%>></li>
                 <li><span class="label">Room Book Status:</span><input type="text" name="BookStatus" placeholder=<%=room.getBookStatus()%>></li>
                 <li><span class="label">Room Price:</span><input type="text" name="Price" placeholder=<%=room.getPrice()%>></li>
                 <li><span class="label">Room Score:</span><input type="text" name="Score" placeholder=<%=room.getScore()%>></li>
-                <li><span class="label">Room Remark:</span><input type="text" name="Remark" placeholder=<%=room.getRemark()%>></li>
+                <li><span class="label">Room Remark:</span><input type="text" name="Remark"value="<%=room.getRemark()%>" placeholder=<%=room.getRemark()%> readonly></li>
                 <li><span class="label">Room Level:</span><input type="text" name="Level" placeholder=<%=room.getLevel()%>></li>
-                <li><span class="label">Room in Hotel ID:</span><input type="text" name="HotelID" placeholder=<%=room.getHotelID()%>></li>
+                <li><span class="label">Room in Hotel ID:</span><input type="text" name="HotelID" value="<%=room.getHotelID()%>" placeholder=<%=room.getHotelID()%> readonly></li>
             </ul> </div>
             <li class="list-inline-item">
                 <button class="btn btn-link" type="submit" value="Find"> <span class="bi bi-pencil-square"></span>Done</button>

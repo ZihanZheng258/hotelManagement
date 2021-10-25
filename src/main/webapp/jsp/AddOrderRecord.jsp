@@ -33,28 +33,17 @@
             <%--        </div>--%>
             <div class="form-group">
                 <label for="InputCustomerID">Customer-ID</label>
-                <input class="form-control" id="InputCustomerID" name="userID" value="" placeholder="Please Enter Customer-ID">
+                <input class="form-control" id="InputCustomerID" name="userID" value="" placeholder="Enter Customer-ID">
             </div>
             <div class="form-group">
 
                 <label for="InputRoomID">Room-ID</label>
-                <input class="form-control" id="InputRoomID" name="roomID" value="<%=remark.getRoomID()%>" placeholder="Please Enter Room-ID">
+                <input  type="text"  id="InputRoomID" name="roomID" value="<%=remark.getRoomID()%>" readonly>
             </div>
             <div class="form-group">
                 <label for="InputAmount">Amount</label>
                 <input class="form-control" id="InputAmount" name="amount" value="" placeholder="Please Enter Amount">
-            </div>
-            <%--传值--%>
-            <%--        <div class="form-group">--%>
-            <%--            <label for="InputStatus">Status</label>--%>
-            <%--            <input class="form-control" id="InputStatus" name="status" value="" placeholder="Please Enter Status">--%>
-            <%--        </div>--%>
-            <%--传值直接为0--%>
-            <%--        <div class="form-group">--%>
-            <%--            <label for="InputRemark">Remark</label>--%>
-            <%--            <textarea class="form-control" id="InputRemark" name="remark" value="" placeholder="Please Enter Remark" rows="3"></textarea>--%>
-            <%--        </div>--%>
-            <br>
+
 
             <div class="col-sm-4">
                 <label for="InputStartTime">Start Time</label>

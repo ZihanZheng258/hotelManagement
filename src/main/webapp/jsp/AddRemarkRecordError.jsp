@@ -18,8 +18,8 @@
 <h1 class="text-center">Woops Something is Error!</h1>
 
 <hr>
-<a href="AddRemarkRecord.jsp">
-    <button class="btn btn-lg btn-link btn-block">Add Another Remark</button>
+<a href="AddOrderRecord.jsp">
+    <button class="btn btn-lg btn-link btn-block" type="submit" >Add Another Remark</button>
 </a>
 
 </body>

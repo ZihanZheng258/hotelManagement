@@ -18,7 +18,7 @@
 <h1 class="text-center">We already have the same order-id!</h1>
 
 <hr>
-<a href="AddOrderRecord.jsp">
+<a href="/jsp/AddOrderRecord.jsp">
     <button class="btn btn-lg btn-link btn-block">Add Another Order Record</button>
 </a>
 
