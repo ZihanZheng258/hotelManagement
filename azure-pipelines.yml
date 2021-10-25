@@ -51,5 +51,5 @@ steps:
     azureSubscription: 'Free Trial (069970bb-164a-4417-be3d-7fbf5bf5b111)'
     appType: 'webApp'
     WebAppName: 'ASDHotel'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/_ZihanZheng258.hotelManagement/myWebsiteName/hotelManagement.war'
+    packageForLinux: '/home/vsts/work/1/s/target/hotelManagement.war'
 
