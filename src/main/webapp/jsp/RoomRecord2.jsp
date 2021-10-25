@@ -117,6 +117,7 @@
             <th>Book Status</th>
             <th>Score</th>
             <th>Remark</th>
+            <th>Level</th>
             <th>Hotel ID</th>
             <th>Edit/Delete</th>
         </tr>
@@ -141,11 +142,12 @@
             <td><%=room.getScore()%></td>
             <td><%=room.getRemark()%></td>
             <td><%=room.getLevel()%></td>
+            <td><%=room.getHotelID()%></td>
 
 
             <td>
                 <!--添加编辑按钮 超级管理员及管理员权限-->
-                < <!--添加编辑按钮 超级管理员及管理员权限-->
+                 <!--添加编辑按钮 超级管理员及管理员权限-->
                 <form action="EditRoomRecord" method="post">
                     <input type="hidden" name="roomObj" value=<%=room.getId()%>>
                     <input type="submit" value="Edit">

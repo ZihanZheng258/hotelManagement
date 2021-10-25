@@ -84,7 +84,7 @@
     <div class="row">
 
         <div class="col-sm-4">
-            <input type="text" class="form-control" name="Id" placeholder="Search By Room Id: ">
+            <input type="text" class="form-control" name="Id" placeholder="Search By Hotel Id: ">
         </div>
         <div class="col-sm-2">
             <!--查找酒店按键 管理员及超级管理员权限-->

@@ -25,15 +25,15 @@ public class ShowRemarkRecordServlet extends HttpServlet {
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
             HttpSession session = req.getSession();
             List<Remark> Remark= manager.Remark_find_by_UserID(RemarkUserid);
-            System.out.println(Remark.toString());
+            if(Remark.size() == 0){
+                error.println("<script language='javascript'>alert('Remark format is WRONG!! Please try again')</script>");
+                error.println("<script language='javascript'>window.location.href='/hotelManagement_war/jsp/RemarkRecord.jsp'</script>");
 
-            //将list数据打包
-
-            session.setAttribute("Remark", Remark);
-            //req.setAttribute("hotelList", hotelList);
-            //转发
-            req.getRequestDispatcher("/jsp/RemarkRecord.jsp").forward(req, resp);
-
+            }else {
+                System.out.println(Remark.toString());
+                session.setAttribute("Remark", Remark);
+                req.getRequestDispatcher("/jsp/RemarkRecord.jsp").forward(req, resp);
+            }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -41,8 +41,6 @@ public class ShowRemarkRecordServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        error.println("<script language='javascript'>alert('Remark format is WRONG!! Please try again')</script>");
-        error.println("<script language='javascript'>window.location.href='/hotelManagement_war/jsp/RemarkRecord.jsp'</script>");
     }
 
 
