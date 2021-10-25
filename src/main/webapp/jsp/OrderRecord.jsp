@@ -139,15 +139,7 @@
     }
     %>
 
-      <td>
-        <a href="AdminPage.jsp">
-          <button class="btn btn-info btn-sm">Edit</button>
-        </a>
-        <a href="AdminPage.jsp">
-          <button class="btn btn-danger btn-sm">Delete</button>
-        </a>
-      </td>
-    </tr>
+
     </tbody>
   </table>
 

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -17,17 +18,13 @@ import java.util.Date;
 import java.util.List;
 
 public class AddOrderRecordServlet extends HttpServlet {
-//    private int getRoomID(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-
-//        return roomID;
-//    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         int roomID = Integer.parseInt(req.getParameter("roomID"));
         System.out.println("add roomID success");
-
+        PrintWriter error = resp.getWriter();
         //跳转页面
         try {
             int orderID;
@@ -35,6 +32,7 @@ public class AddOrderRecordServlet extends HttpServlet {
             double amount = Double.parseDouble(req.getParameter("amount"));
             String status = "Customer Paid";
             String remark = "0";
+
             Order order = new Order();
             //order.setId(orderID);
             order.setUserID(userID);
@@ -50,32 +48,31 @@ public class AddOrderRecordServlet extends HttpServlet {
             order.setStart_time(startTime);
             order.setEnd_time(endTime);
             DaoManager manager = new DaoManager(new DBConnector().openConnection());
-            List<Order> orderList = manager.order_find_all();
-            orderID = orderList.size() +1;
-            order.setId(orderID);
+            int index = 1;
+            boolean end = false;
+            while(!end){
+                try {
+                    manager.order_find_by_ID(index);
+                    index++;
+                }catch (Exception e){
+                    order.setId(index);
+                    System.out.println("OrderID: " + index);
+                    end = true;
+                }
+            }
+
 
             manager.order_create(order);
             System.out.println(order.toString());
             req.getRequestDispatcher("/jsp/AddOrderRecordSuccess.jsp").forward(req, resp);
-            //Order order1 = manager.order_find_by_ID(orderID);
-            //req.setAttribute("order1", order1);
-//            if(order1 != null){
-//                System.out.println(order);
-//                req.setAttribute("order1", order1);
-//
-//                req.getRequestDispatcher("AddOrderRecordSuccess.jsp").forward(req, resp);
-//            }else {
-//                System.out.println("添加失败");
-//
-//                req.getRequestDispatcher("AddOrderRecordError.jsp").forward(req, resp);
-//
-//            }
 
         } catch (Exception e) {
             e.printStackTrace();
-            req.getRequestDispatcher("/jsp/AddOrderRecordError.jsp").forward(req, resp);
+
 
         }
+        error.println("<script language='javascript'>alert('Something is WRONG!! Please try again')</script>");
+        error.println("<script language='javascript'>window.location.href='/hotelManagement_war/jsp/AddOrderRecord.jsp'</script>");
 
 
     }
