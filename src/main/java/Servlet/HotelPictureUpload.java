@@ -20,7 +20,7 @@ public class HotelPictureUpload extends HttpServlet {
             String filename = part.getSubmittedFileName();
 
             String path = getServletContext().getRealPath("/" + "image" + File.separator + filename);
-            req.getSession().setAttribute("n", filename);
+            req.getSession().setAttribute("HPName", filename);
             InputStream is = part.getInputStream();
 
             boolean success = uploadFile(is, path);
